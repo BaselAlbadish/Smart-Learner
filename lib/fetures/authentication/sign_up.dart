@@ -17,12 +17,12 @@ class _SignUpState extends State<SignUp> {
     return SafeArea(
       child: Scaffold(
         body: Container(
-          // decoration: const BoxDecoration(
-          //   image: DecorationImage(
-          //     image: AssetImage("assets/images/welcome.jpg"),
-          //     fit: BoxFit.cover,
-          //   ),
-          // ),
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/images/white.png"),
+              fit: BoxFit.cover,
+            ),
+          ),
           child: Column(
             children: <Widget>[
               const Spacer(),

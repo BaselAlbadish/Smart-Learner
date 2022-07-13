@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_learner/core/welcome_screen/welcome_screen_widget.dart';
 import '../../fetures/authentication/sign_in.dart';
-import '../constant_logic.dart';
 import '../main_constants.dart';
 
 class WelcomingScreen extends StatefulWidget {

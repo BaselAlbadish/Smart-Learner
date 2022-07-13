@@ -99,7 +99,8 @@ class _ProfileState extends State<Profile> {
                         ),
                       ],
                     ),
-                  )),
+                  ),
+              ),
               Row(
                 children: [
                   Container(

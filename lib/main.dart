@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_learner/core/welcome_screen/welcoming_screen.dart';
 
+import 'fetures/ILS_Quiz/ILS_quizz.dart';
 import 'fetures/profile/profile.dart';
 
 void main() async{
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
-          home: const Profile(),
+          home: const ILSQuiz(),
         );
       },
     );
