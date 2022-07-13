@@ -3,15 +3,22 @@ import 'dart:html';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:smart_learner/fetures/ILS_Quiz/ils_Store.dart';
 import 'package:smart_learner/fetures/ILS_Quiz/question_card.dart';
 import '../../core/constant_logic.dart';
 import '../../core/main_constants.dart';
 import '../profile/bottom_content.dart';
 import 'ils_questions.dart';
 
-class ILSQuiz extends StatelessWidget {
+class ILSQuiz extends StatefulWidget {
   const ILSQuiz({Key? key}) : super(key: key);
 
+  @override
+  State<ILSQuiz> createState() => _ILSQuizState();
+}
+
+class _ILSQuizState extends State<ILSQuiz> {
+  int stackIndex = 0;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -20,7 +27,7 @@ class ILSQuiz extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 154.h,
+                height: 120.h,
                 width: getScreenWidth(context),
                 color: white,
                 child: Padding(
@@ -78,19 +85,19 @@ class ILSQuiz extends StatelessWidget {
                       Spacer(),
                       GestureDetector(
                         onTap: () {},
-                        child: Icon(Icons.settings, size: 50.w, color: black),
+                        child: Icon(Icons.settings, size: 40.w, color: black),
                       ),
                       SizedBox(width: 20.w),
                       VerticalDivider(
-                        endIndent: 55.h,
-                        indent: 55.h,
+                        endIndent: 45.h,
+                        indent: 45.h,
                         thickness: 2,
                         color: black,
                       ),
                       SizedBox(width: 20.w),
                       GestureDetector(
                         onTap: () {},
-                        child: Icon(Icons.person_pin, size: 50.w, color: black),
+                        child: Icon(Icons.person_pin, size: 40.w, color: black),
                       ),
                     ],
                   ),
@@ -98,7 +105,7 @@ class ILSQuiz extends StatelessWidget {
               ),
               Container(
                 width: getScreenWidth(context),
-                height: 163.h,
+                height: 100.h,
                 color: primaryColor,
                 child: Center(
                   child: Text(
@@ -112,25 +119,346 @@ class ILSQuiz extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                height: 600.h,
-                color: white,
-                child: GridView.builder(
-                  itemCount: 11,
-                  itemBuilder: (context, index) => QuestionCard(
-                    answerA: inputAnswers[index][0],
-                    answerB: inputAnswers[index][1],
-                    index: index,
-                    question: inputs[index],
+              IndexedStack(
+                index: stackIndex,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(top: 75.h, bottom: 75.h),
+                    child: Container(
+                      height: 600.h,
+                      color: white,
+                      child: GridView.builder(
+                          itemCount: 12,
+                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            childAspectRatio: 6.w,
+                          ),
+                          itemBuilder: (context, index) {
+                            if(index == 11){
+                              return Container(
+                                margin: EdgeInsets.only(left: 260.w,right: 260.w,top: 50.h,bottom: 50.h),
+                                child: Container(
+                                  height: 60.h,
+                                  width: 260.w,
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFF83D6D4),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.grey.withOpacity(0),
+                                        spreadRadius: 2,
+                                        blurRadius: 7,
+                                        offset: const Offset(0, 0), // changes position of shadow
+                                      ),
+                                    ],
+                                    borderRadius: const BorderRadius.all(Radius.circular(5)),
+                                  ),
+                                  child: TextButton(
+                                    onPressed: (){
+                                      setState(() {
+                                        stackIndex++;
+                                      });
+                                    },
+                                    child: Text(
+                                      "Next",
+                                      style: getTextStyle(
+                                        context: context,
+                                        fontSize: 16.sp,
+                                        color: white,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              );
+                            }else{
+                              return QuestionCard(
+                                stackIndex: 0,
+                                answerA: inputAnswers[index][0],
+                                answerB: inputAnswers[index][1],
+                                index: index,
+                                question: inputs[index],
+                              );
+                            }
+                          }),
+                    ),
                   ),
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    childAspectRatio: 2,
+                  Padding(
+                    padding: EdgeInsets.only(top: 75.h, bottom: 75.h),
+                    child: Container(
+                      height: 600.h,
+                      color: white,
+                      child: GridView.builder(
+                          itemCount: 12,
+                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            childAspectRatio: 6.w,
+                          ),
+                          itemBuilder: (context, index) {
+                            if(index == 11){
+                              return Container(
+                                margin: EdgeInsets.only(left: 260.w,right: 260.w,top: 50.h,bottom: 50.h),
+                                child: Container(
+                                  height: 60.h,
+                                  width: 260.w,
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFF83D6D4),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.grey.withOpacity(0),
+                                        spreadRadius: 2,
+                                        blurRadius: 7,
+                                        offset: const Offset(0, 0), // changes position of shadow
+                                      ),
+                                    ],
+                                    borderRadius: const BorderRadius.all(Radius.circular(5)),
+                                  ),
+                                  child: TextButton(
+                                    onPressed: (){
+                                      setState(() {
+                                        stackIndex++;
+                                      });
+                                    },
+                                    child: Text(
+                                      "Next",
+                                      style: getTextStyle(
+                                        context: context,
+                                        fontSize: 16.sp,
+                                        color: white,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              );
+                            }else{
+                              return QuestionCard(
+                                stackIndex: stackIndex,
+                                answerA: perceptionAnswers[index][0],
+                                answerB: perceptionAnswers[index][1],
+                                index: index,
+                                question: perceptions[index],
+                              );
+                            }
+                          }),
+                    ),
                   ),
-                ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 75.h, bottom: 75.h),
+                    child: Container(
+                      height: 600.h,
+                      color: white,
+                      child: GridView.builder(
+                          itemCount: 12,
+                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            childAspectRatio: 6.w,
+                          ),
+                          itemBuilder: (context, index) {
+                            if(index == 11){
+                              return Container(
+                                margin: EdgeInsets.only(left: 260.w,right: 260.w,top: 50.h,bottom: 50.h),
+                                child: Container(
+                                  height: 60.h,
+                                  width: 260.w,
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFF83D6D4),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.grey.withOpacity(0),
+                                        spreadRadius: 2,
+                                        blurRadius: 7,
+                                        offset: const Offset(0, 0), // changes position of shadow
+                                      ),
+                                    ],
+                                    borderRadius: const BorderRadius.all(Radius.circular(5)),
+                                  ),
+                                  child: TextButton(
+                                    onPressed: (){
+                                      setState(() {
+                                        stackIndex++;
+                                      });
+                                    },
+                                    child: Text(
+                                      "Next",
+                                      style: getTextStyle(
+                                        context: context,
+                                        fontSize: 16.sp,
+                                        color: white,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              );
+                            }else{
+                              return QuestionCard(
+                                stackIndex: stackIndex,
+                                answerA: processingAnswers[index][0],
+                                answerB: processingAnswers[index][1],
+                                index: index,
+                                question: processing[index],
+                              );
+                            }
+                          }),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 75.h, bottom: 75.h),
+                    child: Container(
+                      height: 600.h,
+                      color: white,
+                      child: GridView.builder(
+                          itemCount: 12,
+                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            childAspectRatio: 6.w,
+                          ),
+                          itemBuilder: (context, index) {
+                            if(index == 11){
+                              return Container(
+                                margin: EdgeInsets.only(left: 260.w,right: 260.w,top: 50.h,bottom: 50.h),
+                                child: Container(
+                                  height: 60.h,
+                                  width: 260.w,
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFF83D6D4),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.grey.withOpacity(0),
+                                        spreadRadius: 2,
+                                        blurRadius: 7,
+                                        offset: const Offset(0, 0), // changes position of shadow
+                                      ),
+                                    ],
+                                    borderRadius: const BorderRadius.all(Radius.circular(5)),
+                                  ),
+                                  child: TextButton(
+                                    onPressed: (){
+                                      //TODO
+                                      print(IlsStore.inputResult.toString());
+                                      print(IlsStore.perceptionResult.toString());
+                                      print(IlsStore.processingResult.toString());
+                                      print(IlsStore.understandingResult.toString());
+                                    },
+                                    child: Text(
+                                      "Next",
+                                      style: getTextStyle(
+                                        context: context,
+                                        fontSize: 16.sp,
+                                        color: white,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              );
+                            }else{
+                              return QuestionCard(
+                                stackIndex: stackIndex,
+                                answerA: understandingAnswers[index][0],
+                                answerB: understandingAnswers[index][1],
+                                index: index,
+                                question: understanding[index],
+                              );
+                            }
+                          }),
+                    ),
+                  ),
+                  Center(
+                    child: Padding(
+                      padding: EdgeInsets.only(top: 100.h),
+                      child: Container(
+                        height: 450.h,
+                        width: 610.w,
+                        decoration: BoxDecoration(
+                            border: Border.all(color: black),
+                            borderRadius: BorderRadius.all(Radius.circular(10)
+                      ),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Text(
+                              "Your ILS Personality",
+                              style: getTextStyle(
+                                fontWeight: FontWeight.normal,
+                                context: context,
+                                fontSize: 32.sp,
+                                color: black,
+                              ),
+                            ),
+                            Container(
+                              height: 250.h,
+                              width: 470.w,
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFD7E1F5),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: const Color(0xFFD7E1F5).withOpacity(0.3),
+                                    spreadRadius: 2,
+                                    blurRadius: 7,
+                                    offset: const Offset(0, 0),
+                                  ),
+                                ],
+                                borderRadius: const BorderRadius.all(Radius.circular(15)),
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Column(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text(
+                                        "Input : " + IlsStore.inputResult.toString(),
+                                        style: getTextStyle(
+                                          fontWeight: FontWeight.normal,
+                                          context: context,
+                                          fontSize: 25.sp,
+                                          color: black,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Perception : " + IlsStore.perceptionResult.toString(),
+                                        style: getTextStyle(
+                                          fontWeight: FontWeight.normal,
+                                          context: context,
+                                          fontSize: 25.sp,
+                                          color: black,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Column(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text(
+                                        "Processing : " + IlsStore.processingResult.toString(),
+                                        style: getTextStyle(
+                                          fontWeight: FontWeight.normal,
+                                          context: context,
+                                          fontSize: 25.sp,
+                                          color: black,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Understanding : " + IlsStore.understandingResult.toString(),
+                                        style: getTextStyle(
+                                          fontWeight: FontWeight.normal,
+                                          context: context,
+                                          fontSize: 25.sp,
+                                          color: black,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  )
+                ],
               ),
               Container(
-                height: 153.h,
+                height: 120.h,
                 width: getScreenWidth(context),
                 color: black,
                 child: Padding(

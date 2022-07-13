@@ -25,7 +25,7 @@ class _ProfileState extends State<Profile> {
           child: Column(
             children: [
               Container(
-                  height: 154.h,
+                  height: 120.h,
                   width: getScreenWidth(context),
                   color: white,
                   child: Padding(
@@ -83,19 +83,19 @@ class _ProfileState extends State<Profile> {
                         Spacer(),
                         GestureDetector(
                           onTap: () {},
-                          child: Icon(Icons.settings, size: 50.w, color: black),
+                          child: Icon(Icons.settings, size: 40.w, color: black),
                         ),
                         SizedBox(width: 20.w),
                         VerticalDivider(
-                          endIndent: 55.h,
-                          indent: 55.h,
+                          endIndent: 45.h,
+                          indent: 45.h,
                           thickness: 2,
                           color: black,
                         ),
                         SizedBox(width: 20.w),
                         GestureDetector(
                           onTap: () {},
-                          child: Icon(Icons.person_pin, size: 50.w, color: black),
+                          child: Icon(Icons.person_pin, size: 40.w, color: black),
                         ),
                       ],
                     ),
@@ -305,7 +305,7 @@ class _ProfileState extends State<Profile> {
                 ],
               ),
               Container(
-                height: 153.h,
+                height: 120.h,
                 width: getScreenWidth(context),
                 color: black,
                 child: Padding(
