@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:smart_learner/fetures/Home/home.dart';
 import 'package:smart_learner/fetures/authentication/sign_in.dart';
 import 'package:smart_learner/fetures/authentication/text_field_widget.dart';
 import '../../core/main_constants.dart';
@@ -104,7 +105,16 @@ class _SignUpState extends State<SignUp> {
                   ),
                 ),
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return const Home();
+                        },
+                      ),
+                    );
+                  },
                   child: Center(
                     child: Text(
                       "Sign up",

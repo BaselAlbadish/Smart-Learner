@@ -1,13 +1,11 @@
-import 'dart:html';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_learner/fetures/ILS_Quiz/ils_Store.dart';
 import 'package:smart_learner/fetures/ILS_Quiz/question_card.dart';
+import '../../core/appBar.dart';
+import '../../core/bottomBar.dart';
 import '../../core/constant_logic.dart';
 import '../../core/main_constants.dart';
-import '../profile/bottom_content.dart';
 import 'ils_questions.dart';
 
 class ILSQuiz extends StatefulWidget {
@@ -26,83 +24,7 @@ class _ILSQuizState extends State<ILSQuiz> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Container(
-                height: 120.h,
-                width: getScreenWidth(context),
-                color: white,
-                child: Padding(
-                  padding: EdgeInsets.only(left: 70.w, right: 70.w),
-                  child: Row(
-                    children: [
-                      Text(
-                        "Smart Learner",
-                        style: getTextStyle(
-                          fontWeight: FontWeight.bold,
-                          context: context,
-                          fontSize: 32.sp,
-                          color: black,
-                        ),
-                      ),
-                      Spacer(),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          "Home",
-                          style: getTextStyle(
-                            fontWeight: FontWeight.bold,
-                            context: context,
-                            fontSize: 18.sp,
-                            color: black,
-                          ),
-                        ),
-                      ),
-                      SizedBox(width: 25.w),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          "Articles",
-                          style: getTextStyle(
-                            fontWeight: FontWeight.bold,
-                            context: context,
-                            fontSize: 18.sp,
-                            color: black,
-                          ),
-                        ),
-                      ),
-                      SizedBox(width: 25.w),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          "Courses",
-                          style: getTextStyle(
-                            fontWeight: FontWeight.bold,
-                            context: context,
-                            fontSize: 18.sp,
-                            color: black,
-                          ),
-                        ),
-                      ),
-                      Spacer(),
-                      GestureDetector(
-                        onTap: () {},
-                        child: Icon(Icons.settings, size: 40.w, color: black),
-                      ),
-                      SizedBox(width: 20.w),
-                      VerticalDivider(
-                        endIndent: 45.h,
-                        indent: 45.h,
-                        thickness: 2,
-                        color: black,
-                      ),
-                      SizedBox(width: 20.w),
-                      GestureDetector(
-                        onTap: () {},
-                        child: Icon(Icons.person_pin, size: 40.w, color: black),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              MyAppBar(),
               Container(
                 width: getScreenWidth(context),
                 height: 100.h,
@@ -457,37 +379,7 @@ class _ILSQuizState extends State<ILSQuiz> {
                   )
                 ],
               ),
-              Container(
-                height: 120.h,
-                width: getScreenWidth(context),
-                color: black,
-                child: Padding(
-                  padding: EdgeInsets.only(left: 80.w, right: 80.w),
-                  child: Row(
-                    children: [
-                      Text(
-                        "About us\n\nContact us",
-                        style: getTextStyle(
-                          context: context,
-                          fontSize: 14.sp,
-                          color: white,
-                        ),
-                      ),
-                      Spacer(),
-                      BottomContent(),
-                      Spacer(),
-                      Text(
-                        "Help and Support\n\nPrivacy policy",
-                        style: getTextStyle(
-                          context: context,
-                          fontSize: 14.sp,
-                          color: white,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              MyBottomBar(),
             ],
           ),
         ),

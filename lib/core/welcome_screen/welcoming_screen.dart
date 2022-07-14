@@ -26,19 +26,7 @@ class _WelcomingScreenState extends State<WelcomingScreen> {
       pageRouteTransition: PageRouteTransition.slideTransition,
       navigateRoute: Builder(builder: (context) {
         return const SignIn();
-        // return FutureBuilder(
-        //     future: getToken(),
-        //     builder: (context, snapshot) {
-        //       if (snapshot.hasData) {
-        //         if (snapshot.data != "") {
-        //
-        //         } else {
-        //           return Home();
-        //         }
-        //       } else {
-        //         return const CircularProgressIndicator();
-        //       }
-        //     });
+
       }),
       duration: 6000,
       textStyle: getTextStyle(

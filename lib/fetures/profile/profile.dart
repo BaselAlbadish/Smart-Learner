@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:smart_learner/core/constant_logic.dart';
+import 'package:smart_learner/fetures/ILS_Quiz/ILS_quizz.dart';
 import 'package:smart_learner/fetures/profile/profile_button.dart';
 import 'package:smart_learner/fetures/profile/video_item.dart';
+import '../../core/appBar.dart';
+import '../../core/bottomBar.dart';
 import '../../core/main_constants.dart';
 import 'add_goul_textField.dart';
 import 'article_item.dart';
-import 'bottom_content.dart';
 import 'get_previous_knoledge.dart';
 
 class Profile extends StatefulWidget {
@@ -24,83 +25,7 @@ class _ProfileState extends State<Profile> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Container(
-                  height: 120.h,
-                  width: getScreenWidth(context),
-                  color: white,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 70.w, right: 70.w),
-                    child: Row(
-                      children: [
-                        Text(
-                          "Smart Learner",
-                          style: getTextStyle(
-                            fontWeight: FontWeight.bold,
-                            context: context,
-                            fontSize: 32.sp,
-                            color: black,
-                          ),
-                        ),
-                        Spacer(),
-                        TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            "Home",
-                            style: getTextStyle(
-                              fontWeight: FontWeight.bold,
-                              context: context,
-                              fontSize: 18.sp,
-                              color: black,
-                            ),
-                          ),
-                        ),
-                        SizedBox(width: 25.w),
-                        TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            "Articles",
-                            style: getTextStyle(
-                              fontWeight: FontWeight.bold,
-                              context: context,
-                              fontSize: 18.sp,
-                              color: black,
-                            ),
-                          ),
-                        ),
-                        SizedBox(width: 25.w),
-                        TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            "Courses",
-                            style: getTextStyle(
-                              fontWeight: FontWeight.bold,
-                              context: context,
-                              fontSize: 18.sp,
-                              color: black,
-                            ),
-                          ),
-                        ),
-                        Spacer(),
-                        GestureDetector(
-                          onTap: () {},
-                          child: Icon(Icons.settings, size: 40.w, color: black),
-                        ),
-                        SizedBox(width: 20.w),
-                        VerticalDivider(
-                          endIndent: 45.h,
-                          indent: 45.h,
-                          thickness: 2,
-                          color: black,
-                        ),
-                        SizedBox(width: 20.w),
-                        GestureDetector(
-                          onTap: () {},
-                          child: Icon(Icons.person_pin, size: 40.w, color: black),
-                        ),
-                      ],
-                    ),
-                  ),
-              ),
+              MyAppBar(),
               Row(
                 children: [
                   Container(
@@ -197,7 +122,16 @@ class _ProfileState extends State<Profile> {
                               height: 40.h,
                               width: 230.w,
                               text: 'Retake ILS test',
-                              onPress: () {},
+                              onPress: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return const ILSQuiz();
+                                    },
+                                  ),
+                                );
+                              },
                             ),
                           ),
                           Padding(
@@ -304,37 +238,7 @@ class _ProfileState extends State<Profile> {
                       )),
                 ],
               ),
-              Container(
-                height: 120.h,
-                width: getScreenWidth(context),
-                color: black,
-                child: Padding(
-                  padding: EdgeInsets.only(left: 80.w, right: 80.w),
-                  child: Row(
-                    children: [
-                      Text(
-                        "About us\n\nContact us",
-                        style: getTextStyle(
-                          context: context,
-                          fontSize: 14.sp,
-                          color: white,
-                        ),
-                      ),
-                      Spacer(),
-                      BottomContent(),
-                      Spacer(),
-                      Text(
-                        "Help and Support\n\nPrivacy policy",
-                        style: getTextStyle(
-                          context: context,
-                          fontSize: 14.sp,
-                          color: white,
-                        ),
-                      ),
-                    ],
-                      ),
-                ),
-              )
+              MyBottomBar(),
             ],
           ),
         ),

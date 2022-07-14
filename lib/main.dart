@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_learner/core/welcome_screen/welcoming_screen.dart';
-
-import 'fetures/ILS_Quiz/ILS_quizz.dart';
-import 'fetures/profile/profile.dart';
+import 'package:smart_learner/fetures/Home/home.dart';
 
 void main() async{
   SystemChrome.setSystemUIOverlayStyle(
@@ -27,7 +25,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(1440, 900),
+      designSize: const Size(1920, 1080),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context , child) {
@@ -37,7 +35,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
-          home: const ILSQuiz(),
+          home: const WelcomingScreen(),
         );
       },
     );
