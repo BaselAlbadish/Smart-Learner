@@ -4,6 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_learner/core/welcome_screen/welcoming_screen.dart';
 import 'package:smart_learner/fetures/Home/home.dart';
 
+import 'fetures/courses/courses.dart';
+
 void main() async{
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
@@ -35,7 +37,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
-          home: const WelcomingScreen(),
+          home: const Courses(),
         );
       },
     );

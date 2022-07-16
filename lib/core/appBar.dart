@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_learner/fetures/Home/home.dart';
+import '../fetures/courses/courses.dart';
 import '../fetures/profile/profile.dart';
 import 'constant_logic.dart';
 import 'main_constants.dart';
@@ -64,7 +65,16 @@ class MyAppBar extends StatelessWidget {
             ),
             SizedBox(width: 25.w),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const Courses();
+                    },
+                  ),
+                );
+              },
               child: Text(
                 "Courses",
                 style: getTextStyle(
