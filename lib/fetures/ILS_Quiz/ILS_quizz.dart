@@ -24,7 +24,7 @@ class _ILSQuizState extends State<ILSQuiz> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              MyAppBar(),
+              const MyAppBar(),
               Container(
                 width: getScreenWidth(context),
                 height: 100.h,
@@ -290,7 +290,7 @@ class _ILSQuizState extends State<ILSQuiz> {
                         width: 610.w,
                         decoration: BoxDecoration(
                             border: Border.all(color: black),
-                            borderRadius: BorderRadius.all(Radius.circular(10)
+                            borderRadius: const BorderRadius.all(Radius.circular(10)
                       ),
                         ),
                         child: Column(
@@ -379,7 +379,7 @@ class _ILSQuizState extends State<ILSQuiz> {
                   )
                 ],
               ),
-              MyBottomBar(),
+              const MyBottomBar(),
             ],
           ),
         ),

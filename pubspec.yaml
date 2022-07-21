@@ -22,6 +22,8 @@ dependencies:
   flutter_bloc: ^8.0.1
   google_fonts: ^3.0.1
   carousel_slider: ^4.1.1
+  file_picker: ^4.6.1
+  flutter_typeahead: ^4.0.0
 
 dev_dependencies:
   flutter_test:

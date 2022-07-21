@@ -1,10 +1,8 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_learner/core/appBar.dart';
 import 'package:smart_learner/core/bottomBar.dart';
 import 'package:smart_learner/core/constant_logic.dart';
-import 'package:smart_learner/fetures/Home/articles.dart';
 import 'package:smart_learner/fetures/Home/study_plan_subjects.dart';
 import 'package:smart_learner/fetures/Home/subject_card.dart';
 
@@ -26,7 +24,7 @@ class _HomeState extends State<Home> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              MyAppBar(),
+              const MyAppBar(),
               Container(
                 width: getScreenWidth(context),
                 height: 250.h,
@@ -85,7 +83,7 @@ class _HomeState extends State<Home> {
                       width: 550.w,
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.black38),
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        borderRadius: const BorderRadius.all(Radius.circular(10)),
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -168,7 +166,7 @@ class _HomeState extends State<Home> {
                       width: 550.w,
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.black38),
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        borderRadius: const BorderRadius.all(Radius.circular(10)),
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -273,7 +271,7 @@ class _HomeState extends State<Home> {
                   ],
                 )
               ),
-              MyBottomBar(),
+              const MyBottomBar(),
             ],
           ),
         ),

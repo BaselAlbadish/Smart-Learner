@@ -15,15 +15,15 @@ class TextFieldWidget extends StatelessWidget {
 
   TextFieldWidget(
       {this.initValue,
-        required this.title,
-        this.errorLabel,
-        required this.fontSizeForTitle,
-        required this.onChange,
-        this.titleColor = primaryColor,
-        this.type,
-        this.height,
-        this.width,
-        Key? key})
+      required this.title,
+      this.errorLabel,
+      required this.fontSizeForTitle,
+      required this.onChange,
+      this.titleColor = primaryColor,
+      this.type,
+      this.height,
+      this.width,
+      Key? key})
       : super(key: key);
 
   @override
@@ -42,7 +42,7 @@ class TextFieldWidget extends StatelessWidget {
               height: height,
               width: width,
               decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black12),
+                border: Border.all(color: Colors.black12),
                 borderRadius: const BorderRadius.all(Radius.circular(5)),
               ),
             ),

@@ -43,7 +43,7 @@ class _CoursesState extends State<Courses> {
                           color: black,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       TextButton(
                         onPressed: () {
                           Navigator.push(
@@ -100,7 +100,7 @@ class _CoursesState extends State<Courses> {
                           ),
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       GestureDetector(
                         onTap: () {},
                         child: Icon(Icons.settings, size: 40.w, color: black),
@@ -157,7 +157,7 @@ class _CoursesState extends State<Courses> {
                         child: Icon(Icons.search, size: 30.w),
                       ),
                       hintText: "Search",
-                      hintStyle: TextStyle(color: Colors.black),
+                      hintStyle: const TextStyle(color: Colors.black),
                       border: InputBorder.none,
                     ),
                     onChanged: (value) {
@@ -172,10 +172,10 @@ class _CoursesState extends State<Courses> {
                 width: 1650.w,
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: Color(0xFFD9D9D9),
+                    color: const Color(0xFFD9D9D9),
                     width: 2.w,
                   ),
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  borderRadius: const BorderRadius.all(Radius.circular(10)),
                 ),
                 child: Row(),
               )

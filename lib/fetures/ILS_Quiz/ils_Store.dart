@@ -3,6 +3,7 @@ class IlsStore {
   static int perceptionResult = 0;
   static int processingResult = 0;
   static int understandingResult = 0;
+  static List<String> subjects = [];
 
   static calculate(int stackIndex, int answerIndex) {
     if (stackIndex == 0) {

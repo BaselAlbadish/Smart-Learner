@@ -4,16 +4,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../core/main_constants.dart';
 import '../ILS_Quiz/ils_Store.dart';
 
-class SubjectCard extends StatefulWidget {
-  SubjectCard({required this.subjectName, Key? key}) : super(key: key);
+class ProfileSubjectCard extends StatefulWidget {
+  ProfileSubjectCard({required this.subjectName, Key? key}) : super(key: key);
 
   String subjectName;
 
   @override
-  State<SubjectCard> createState() => _SubjectCardState();
+  State<ProfileSubjectCard> createState() => _ProfileSubjectCardState();
 }
 
-class _SubjectCardState extends State<SubjectCard> {
+class _ProfileSubjectCardState extends State<ProfileSubjectCard> {
   bool valueT = false;
 
   @override
@@ -31,7 +31,9 @@ class _SubjectCardState extends State<SubjectCard> {
               value: valueT,
               onChanged: (inputValue) {
                 setState(() {
+                  IlsStore.subjects.add(widget.subjectName.toString());
                   valueT = !valueT;
+                  print(IlsStore.subjects);
                 });
               },
             ),

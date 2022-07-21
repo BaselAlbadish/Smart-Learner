@@ -18,7 +18,7 @@ class VideoItem extends StatelessWidget {
             height: 90.h,
             width: 150.w,
             color: grey,
-            child: SizedBox(),
+            child: const SizedBox(),
           ),
           SizedBox(width: 70.w,),
           Text(

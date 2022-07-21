@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_learner/fetures/authentication/sign_up.dart';
 import 'package:smart_learner/fetures/authentication/text_field_widget.dart';
-import 'package:smart_learner/fetures/profile/profile.dart';
 import '../../core/main_constants.dart';
 import '../Home/home.dart';
 

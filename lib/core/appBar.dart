@@ -28,7 +28,7 @@ class MyAppBar extends StatelessWidget {
                 color: black,
               ),
             ),
-            Spacer(),
+            const Spacer(),
             TextButton(
               onPressed: () {
                 Navigator.push(
@@ -85,7 +85,7 @@ class MyAppBar extends StatelessWidget {
                 ),
               ),
             ),
-            Spacer(),
+            const Spacer(),
             GestureDetector(
               onTap: () {},
               child: Icon(Icons.settings, size: 40.w, color: black),

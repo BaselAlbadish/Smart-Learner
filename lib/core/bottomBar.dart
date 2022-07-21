@@ -24,7 +24,7 @@ class MyBottomBar extends StatelessWidget {
                 color: white,
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Row(
               children: [
                 Text(
@@ -61,7 +61,7 @@ class MyBottomBar extends StatelessWidget {
                         child: Image.asset("assets/images/youtube.png", fit: BoxFit.cover))),
               ],
             ),
-            Spacer(),
+            const Spacer(),
             Text(
               "Help and Support\n\nPrivacy policy",
               style: getTextStyle(
