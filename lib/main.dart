@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_learner/core/welcome_screen/welcoming_screen.dart';
 import 'package:smart_learner/fetures/Home/home.dart';
 
+import 'fetures/authentication/build_profile.dart';
 import 'fetures/courses/courses.dart';
 
 void main() async{
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
-          home: const Courses(),
+          home: const BuildProfile(),
         );
       },
     );
