@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'fetures/authentication/build_profile.dart';
+import 'package:smart_learner/fetures/articles/articles_directory.dart';
+import 'package:smart_learner/fetures/articles/articles_screen.dart';
 
 void main() async{
   SystemChrome.setSystemUIOverlayStyle(
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
-          home: const BuildProfile(),
+          home: const ArticlesScreen(),
         );
       },
     );

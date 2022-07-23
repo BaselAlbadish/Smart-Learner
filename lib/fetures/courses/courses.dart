@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:smart_learner/core/appBar.dart';
 
 import '../../core/constant_logic.dart';
 import '../../core/main_constants.dart';
@@ -16,6 +17,7 @@ class Courses extends StatefulWidget {
 class _CoursesState extends State<Courses> {
   @override
   Widget build(BuildContext context) {
+
     return SafeArea(
       child: Scaffold(
         body: Container(
@@ -27,7 +29,7 @@ class _CoursesState extends State<Courses> {
           ),
           child: Column(
             children: [
-              SizedBox(
+              /*     SizedBox(
                 height: 120.h,
                 width: getScreenWidth(context),
                 child: Padding(
@@ -129,6 +131,10 @@ class _CoursesState extends State<Courses> {
                     ],
                   ),
                 ),
+              ),*/
+              MyAppBar(
+                isBlack: false,
+                selectedIndex: 2,
               ),
               SizedBox(height: 75.h),
               Text(
