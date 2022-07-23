@@ -5,6 +5,8 @@ import 'fetures/authentication/build_profile.dart';
 import 'package:smart_learner/fetures/articles/articles_directory.dart';
 import 'package:smart_learner/fetures/articles/articles_screen.dart';
 
+import 'fetures/study_plans/study_plans_directory.dart';
+
 void main() async{
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
-          home: const ArticlesScreen(),
+          home: const StudyPlansDirectory(),
         );
       },
     );

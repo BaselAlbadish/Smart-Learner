@@ -17,7 +17,6 @@ class Courses extends StatefulWidget {
 class _CoursesState extends State<Courses> {
   @override
   Widget build(BuildContext context) {
-
     return SafeArea(
       child: Scaffold(
         body: Container(
@@ -183,7 +182,207 @@ class _CoursesState extends State<Courses> {
                   ),
                   borderRadius: const BorderRadius.all(Radius.circular(10)),
                 ),
-                child: Row(),
+                child: Flexible(
+                  fit: FlexFit.loose,
+                  child: Container(
+                    width: double.infinity,
+                    padding:
+                        EdgeInsets.symmetric(vertical: 20.h, horizontal: 50.w),
+                    child: SingleChildScrollView(
+                      child: Wrap(
+                        alignment: WrapAlignment.start,
+                        children: [
+                          Container(
+                            width: 250.w,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  '# A',
+                                  style: TextStyle(
+                                      fontSize: 24.sp, color: Colors.white),
+                                ),
+                                SizedBox(
+                                  height: 60.h,
+                                ),
+                                Column(
+                                  children: [
+                                    Text(
+                                      "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
+                                      style: TextStyle(
+                                          fontSize: 16.sp, color: Colors.white),
+                                    ),
+                                    SizedBox(
+                                      height: 50.h,
+                                    ),
+                                    Text(
+                                      "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
+                                      style: TextStyle(
+                                          fontSize: 16.sp, color: Colors.white),
+                                    ),
+                                    SizedBox(
+                                      height: 50.h,
+                                    ),
+                                    Text(
+                                      "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
+                                      style: TextStyle(
+                                          fontSize: 16.sp, color: Colors.white),
+                                    ),
+                                    SizedBox(
+                                      height: 50.h,
+                                    ),
+                                    Text(
+                                      "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
+                                      style: TextStyle(
+                                          fontSize: 16.sp, color: Colors.white),
+                                    ),
+                                    SizedBox(
+                                      height: 50.h,
+                                    ),
+                                    Text(
+                                      "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
+                                      style: TextStyle(
+                                          fontSize: 16.sp, color: Colors.white),
+                                    ),
+                                    SizedBox(
+                                      height: 50.h,
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            width: 360.w,
+                          ),
+                          Container(
+                            width: 250.w,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  '# B',
+                                  style: TextStyle(
+                                      fontSize: 24.sp, color: Colors.white),
+                                ),
+                                SizedBox(
+                                  height: 60.h,
+                                ),
+                                Column(
+                                  children: [
+                                    Text(
+                                      "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
+                                      style: TextStyle(
+                                          fontSize: 16.sp, color: Colors.white),
+                                    ),
+                                    SizedBox(
+                                      height: 50.h,
+                                    ),
+                                    Text(
+                                      "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
+                                      style: TextStyle(
+                                          fontSize: 16.sp, color: Colors.white),
+                                    ),
+                                    SizedBox(
+                                      height: 50.h,
+                                    ),
+                                    Text(
+                                      "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
+                                      style: TextStyle(
+                                          fontSize: 16.sp, color: Colors.white),
+                                    ),
+                                    SizedBox(
+                                      height: 50.h,
+                                    ),
+                                    Text(
+                                      "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
+                                      style: TextStyle(
+                                          fontSize: 16.sp, color: Colors.white),
+                                    ),
+                                    SizedBox(
+                                      height: 50.h,
+                                    ),
+                                    Text(
+                                      "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
+                                      style: TextStyle(
+                                          fontSize: 16.sp, color: Colors.white),
+                                    ),
+                                    SizedBox(
+                                      height: 50.h,
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            width: 360.w,
+                          ),
+                          Container(
+                            width: 250.w,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  '# C',
+                                  style: TextStyle(
+                                      fontSize: 24.sp, color: Colors.white),
+                                ),
+                                SizedBox(
+                                  height: 60.h,
+                                ),
+                                Column(
+                                  children: [
+                                    Text(
+                                      "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
+                                      style: TextStyle(
+                                          fontSize: 16.sp, color: Colors.white),
+                                    ),
+                                    SizedBox(
+                                      height: 50.h,
+                                    ),
+                                    Text(
+                                      "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
+                                      style: TextStyle(
+                                          fontSize: 16.sp, color: Colors.white),
+                                    ),
+                                    SizedBox(
+                                      height: 50.h,
+                                    ),
+                                    Text(
+                                      "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
+                                      style: TextStyle(
+                                          fontSize: 16.sp, color: Colors.white),
+                                    ),
+                                    SizedBox(
+                                      height: 50.h,
+                                    ),
+                                    Text(
+                                      "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
+                                      style: TextStyle(
+                                          fontSize: 16.sp, color: Colors.white),
+                                    ),
+                                    SizedBox(
+                                      height: 50.h,
+                                    ),
+                                    Text(
+                                      "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
+                                      style: TextStyle(
+                                          fontSize: 16.sp, color: Colors.white),
+                                    ),
+                                    SizedBox(
+                                      height: 50.h,
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
               )
             ],
           ),
