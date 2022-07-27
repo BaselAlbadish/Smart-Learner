@@ -24,7 +24,7 @@ class _ILSQuizState extends State<ILSQuiz> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              const MyAppBar(),
+               MyAppBar(),
               Container(
                 width: getScreenWidth(context),
                 height: 100.h,

@@ -25,7 +25,7 @@ class _ProfileState extends State<Profile> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              const MyAppBar(),
+               MyAppBar(),
               Row(
                 children: [
                   Container(

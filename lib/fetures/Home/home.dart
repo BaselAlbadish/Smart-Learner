@@ -19,18 +19,20 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
+
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
           child: Column(
             children: [
-              const MyAppBar(),
+              MyAppBar(selectedIndex: 0,),
               Container(
+
                 width: getScreenWidth(context),
                 height: 250.h,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/images/s_blue.jpg"),
+                    image: AssetImage("assets/images/s_blue.png"),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -248,9 +250,10 @@ class _HomeState extends State<Home> {
                 ),
               ),
               Container(
-                height: 450.h,
+                height: 480.h,
                 width: getScreenWidth(context),
                   decoration: BoxDecoration(
+                    //TODO: replace with 0xFFF7F9FD color
                     color: Colors.grey.shade200,
                     boxShadow: [
                       BoxShadow(
@@ -261,13 +264,21 @@ class _HomeState extends State<Home> {
                       ),
                     ],
                   ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                child: Column(
                   children: [
-                    ArticleCard(index: 0),
-                    ArticleCard(index: 1),
-                    ArticleCard(index: 3),
-                    ArticleCard(index: 2),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 52.h),
+                      child: Center(child: Text('Recommended Articles',style: TextStyle(fontSize: 32.sp,fontWeight: FontWeight.w300,),),),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        ArticleCard(index: 0),
+                        ArticleCard(index: 1),
+                        ArticleCard(index: 3),
+                        ArticleCard(index: 2),
+                      ],
+                    ),
                   ],
                 )
               ),
