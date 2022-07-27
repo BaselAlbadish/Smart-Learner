@@ -3,10 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_learner/core/appBar.dart';
 import 'package:smart_learner/core/bottomBar.dart';
 import 'package:smart_learner/core/constant_logic.dart';
-import 'package:smart_learner/fetures/Home/article_card.dart';
-import 'package:smart_learner/fetures/Home/study_plan_subjects.dart';
-import 'package:smart_learner/fetures/Home/subject_card.dart';
-
 import '../../core/main_constants.dart';
 
 String testText =  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem'

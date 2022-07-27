@@ -7,6 +7,7 @@ import 'package:smart_learner/fetures/Home/study_plan_subjects.dart';
 import 'package:smart_learner/fetures/Home/subject_card.dart';
 
 import '../../core/main_constants.dart';
+import '../study_plans/study_plans_directory.dart';
 import 'article_card.dart';
 
 class Home extends StatefulWidget {
@@ -228,7 +229,16 @@ class _HomeState extends State<Home> {
                                   borderRadius: const BorderRadius.all(Radius.circular(10)),
                                 ),
                                 child: TextButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) {
+                                          return const StudyPlansDirectory();
+                                        },
+                                      ),
+                                    );
+                                  },
                                   child: Text(
                                     "View study plans  >",
                                     style: getTextStyle(

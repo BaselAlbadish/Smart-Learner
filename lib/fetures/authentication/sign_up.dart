@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_learner/fetures/Home/home.dart';
+import 'package:smart_learner/fetures/authentication/build_profile.dart';
 import 'package:smart_learner/fetures/authentication/sign_in.dart';
 import 'package:smart_learner/fetures/authentication/text_field_widget.dart';
 import '../../core/main_constants.dart';
+import '../ILS_Quiz/ils_Store.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -55,7 +57,9 @@ class _SignUpState extends State<SignUp> {
                 child: TextFieldWidget(
                   height: 60.h,
                   width: 550.w,
-                  onChange: (value) {},
+                  onChange: (value) {
+                    IlsStore.name = value;
+                  },
                   fontSizeForTitle: 14.sp,
                   titleColor: grey,
                   title: 'Name',
@@ -66,7 +70,9 @@ class _SignUpState extends State<SignUp> {
                 child: TextFieldWidget(
                   height: 60.h,
                   width: 550.w,
-                  onChange: (value) {},
+                  onChange: (value) {
+                    IlsStore.email = value;
+                  },
                   fontSizeForTitle: 14.sp,
                   titleColor: grey,
                   title: 'Email',
@@ -77,7 +83,9 @@ class _SignUpState extends State<SignUp> {
                 child: TextFieldWidget(
                   height: 60.h,
                   width: 550.w,
-                  onChange: (value) {},
+                  onChange: (value) {
+                    IlsStore.password = value;
+                  },
                   fontSizeForTitle: 14.sp,
                   titleColor: grey,
                   title: 'Password',
@@ -88,7 +96,9 @@ class _SignUpState extends State<SignUp> {
                 child: TextFieldWidget(
                   height: 60.h,
                   width: 550.w,
-                  onChange: (value) {},
+                  onChange: (value) {
+                    IlsStore.accountType = value;
+                  },
                   fontSizeForTitle: 14.sp,
                   titleColor: grey,
                   title: 'Account type',
@@ -110,7 +120,7 @@ class _SignUpState extends State<SignUp> {
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return const Home();
+                          return const BuildProfile();
                         },
                       ),
                     );

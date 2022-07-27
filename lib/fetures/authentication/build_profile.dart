@@ -64,21 +64,7 @@ class _BuildProfileState extends State<BuildProfile> {
                           backgroundImage: const AssetImage("assets/images/default_image.png"),
                           radius: 75.w,
                         ),
-                  onTap: () {
-                    // var res;
-                    // try{
-                    //   res = await FilePicker.platform.pickFiles(
-                    //     type: FileType.custom,
-                    //     allowedExtensions: ['jpg', 'png'],
-                    //   );
-                    // }on PlatformException catch (e){
-                    //   print(e.message);
-                    // }
-                    //
-                    // setState((){
-                    //   result = res;
-                    // });
-                  },
+                  onTap: () {},
                 ),
               ),
               SizedBox(height: 15.h),
@@ -98,10 +84,10 @@ class _BuildProfileState extends State<BuildProfile> {
                 fontSizeForTitle: 18.sp,
                 text: TextEditingController(),
                 items: [
-                  ProfileSubjectCard(subjectName: "Java"),
-                  ProfileSubjectCard(subjectName: "Algorithm"),
-                  ProfileSubjectCard(subjectName: "AI"),
-                  ProfileSubjectCard(subjectName: "python")
+                  ProfileSubjectCard(subjectName: "Java",type: "subject"),
+                  ProfileSubjectCard(subjectName: "Algorithm",type: "subject"),
+                  ProfileSubjectCard(subjectName: "AI",type: "subject"),
+                  ProfileSubjectCard(subjectName: "python",type: "subject")
                 ],
                 errorText: '',
                 hintText: 'Subjects',
@@ -156,16 +142,18 @@ class _BuildProfileState extends State<BuildProfile> {
                 fontSizeForTitle: 18.sp,
                 text: TextEditingController(),
                 items: [
-                  ProfileSubjectCard(subjectName: "Java"),
-                  ProfileSubjectCard(subjectName: "Algorithm"),
-                  ProfileSubjectCard(subjectName: "AI"),
-                  ProfileSubjectCard(subjectName: "python")
+                  ProfileSubjectCard(subjectName: "Java",type: "topic"),
+                  ProfileSubjectCard(subjectName: "Algorithm",type: "topic"),
+                  ProfileSubjectCard(subjectName: "AI",type: "topic"),
+                  ProfileSubjectCard(subjectName: "python",type: "topic")
                 ],
                 errorText: '',
                 hintText: 'topics',
                 width: 360.w,
                 height: 50.h,
-                onChange: (val) {},
+                onChange: (val) {
+                  //TODO
+                },
               ),
               const Spacer(),
             ],

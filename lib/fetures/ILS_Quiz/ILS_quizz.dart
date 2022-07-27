@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_learner/fetures/ILS_Quiz/ils_Store.dart';
 import 'package:smart_learner/fetures/ILS_Quiz/question_card.dart';
+import 'package:smart_learner/models/student.dart';
 import '../../core/appBar.dart';
 import '../../core/bottomBar.dart';
 import '../../core/constant_logic.dart';
@@ -17,6 +18,7 @@ class ILSQuiz extends StatefulWidget {
 
 class _ILSQuizState extends State<ILSQuiz> {
   int stackIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -24,7 +26,7 @@ class _ILSQuizState extends State<ILSQuiz> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-               MyAppBar(),
+              MyAppBar(),
               Container(
                 width: getScreenWidth(context),
                 height: 100.h,
@@ -56,9 +58,9 @@ class _ILSQuizState extends State<ILSQuiz> {
                             childAspectRatio: 6.w,
                           ),
                           itemBuilder: (context, index) {
-                            if(index == 11){
+                            if (index == 11) {
                               return Container(
-                                margin: EdgeInsets.only(left: 260.w,right: 260.w,top: 50.h,bottom: 50.h),
+                                margin: EdgeInsets.only(left: 260.w, right: 260.w, top: 50.h, bottom: 50.h),
                                 child: Container(
                                   height: 60.h,
                                   width: 260.w,
@@ -75,7 +77,7 @@ class _ILSQuizState extends State<ILSQuiz> {
                                     borderRadius: const BorderRadius.all(Radius.circular(5)),
                                   ),
                                   child: TextButton(
-                                    onPressed: (){
+                                    onPressed: () {
                                       setState(() {
                                         stackIndex++;
                                       });
@@ -91,7 +93,7 @@ class _ILSQuizState extends State<ILSQuiz> {
                                   ),
                                 ),
                               );
-                            }else{
+                            } else {
                               return QuestionCard(
                                 stackIndex: 0,
                                 answerA: inputAnswers[index][0],
@@ -115,9 +117,9 @@ class _ILSQuizState extends State<ILSQuiz> {
                             childAspectRatio: 6.w,
                           ),
                           itemBuilder: (context, index) {
-                            if(index == 11){
+                            if (index == 11) {
                               return Container(
-                                margin: EdgeInsets.only(left: 260.w,right: 260.w,top: 50.h,bottom: 50.h),
+                                margin: EdgeInsets.only(left: 260.w, right: 260.w, top: 50.h, bottom: 50.h),
                                 child: Container(
                                   height: 60.h,
                                   width: 260.w,
@@ -134,7 +136,7 @@ class _ILSQuizState extends State<ILSQuiz> {
                                     borderRadius: const BorderRadius.all(Radius.circular(5)),
                                   ),
                                   child: TextButton(
-                                    onPressed: (){
+                                    onPressed: () {
                                       setState(() {
                                         stackIndex++;
                                       });
@@ -150,7 +152,7 @@ class _ILSQuizState extends State<ILSQuiz> {
                                   ),
                                 ),
                               );
-                            }else{
+                            } else {
                               return QuestionCard(
                                 stackIndex: stackIndex,
                                 answerA: perceptionAnswers[index][0],
@@ -174,9 +176,9 @@ class _ILSQuizState extends State<ILSQuiz> {
                             childAspectRatio: 6.w,
                           ),
                           itemBuilder: (context, index) {
-                            if(index == 11){
+                            if (index == 11) {
                               return Container(
-                                margin: EdgeInsets.only(left: 260.w,right: 260.w,top: 50.h,bottom: 50.h),
+                                margin: EdgeInsets.only(left: 260.w, right: 260.w, top: 50.h, bottom: 50.h),
                                 child: Container(
                                   height: 60.h,
                                   width: 260.w,
@@ -193,7 +195,7 @@ class _ILSQuizState extends State<ILSQuiz> {
                                     borderRadius: const BorderRadius.all(Radius.circular(5)),
                                   ),
                                   child: TextButton(
-                                    onPressed: (){
+                                    onPressed: () {
                                       setState(() {
                                         stackIndex++;
                                       });
@@ -209,7 +211,7 @@ class _ILSQuizState extends State<ILSQuiz> {
                                   ),
                                 ),
                               );
-                            }else{
+                            } else {
                               return QuestionCard(
                                 stackIndex: stackIndex,
                                 answerA: processingAnswers[index][0],
@@ -233,9 +235,9 @@ class _ILSQuizState extends State<ILSQuiz> {
                             childAspectRatio: 6.w,
                           ),
                           itemBuilder: (context, index) {
-                            if(index == 11){
+                            if (index == 11) {
                               return Container(
-                                margin: EdgeInsets.only(left: 260.w,right: 260.w,top: 50.h,bottom: 50.h),
+                                margin: EdgeInsets.only(left: 260.w, right: 260.w, top: 50.h, bottom: 50.h),
                                 child: Container(
                                   height: 60.h,
                                   width: 260.w,
@@ -252,8 +254,17 @@ class _ILSQuizState extends State<ILSQuiz> {
                                     borderRadius: const BorderRadius.all(Radius.circular(5)),
                                   ),
                                   child: TextButton(
-                                    onPressed: (){
+                                    onPressed: () {
                                       //TODO
+
+                                      Student student = Student(
+                                          name: IlsStore.name,
+                                          input: IlsStore.inputResult,
+                                          perception: IlsStore.perceptionResult,
+                                          processing: IlsStore.processingResult,
+                                          understanding: IlsStore.understandingResult);
+
+                                      IlsStore.student = student;
                                       print(IlsStore.inputResult.toString());
                                       print(IlsStore.perceptionResult.toString());
                                       print(IlsStore.processingResult.toString());
@@ -270,7 +281,7 @@ class _ILSQuizState extends State<ILSQuiz> {
                                   ),
                                 ),
                               );
-                            }else{
+                            } else {
                               return QuestionCard(
                                 stackIndex: stackIndex,
                                 answerA: understandingAnswers[index][0],
@@ -289,9 +300,8 @@ class _ILSQuizState extends State<ILSQuiz> {
                         height: 450.h,
                         width: 610.w,
                         decoration: BoxDecoration(
-                            border: Border.all(color: black),
-                            borderRadius: const BorderRadius.all(Radius.circular(10)
-                      ),
+                          border: Border.all(color: black),
+                          borderRadius: const BorderRadius.all(Radius.circular(10)),
                         ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,

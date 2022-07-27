@@ -1,9 +1,18 @@
+
+import 'package:smart_learner/models/student.dart';
+
 class IlsStore {
   static int inputResult = 0;
   static int perceptionResult = 0;
   static int processingResult = 0;
   static int understandingResult = 0;
   static List<String> subjects = [];
+  static List<String> topics = [];
+  static Student student = Student();
+  static String name = "";
+  static String email = "";
+  static String password = "";
+  static String accountType = "";
 
   static calculate(int stackIndex, int answerIndex) {
     if (stackIndex == 0) {
@@ -32,4 +41,5 @@ class IlsStore {
       }
     }
   }
+
 }
