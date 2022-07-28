@@ -6,9 +6,13 @@ class IlsStore {
   static int perceptionResult = 0;
   static int processingResult = 0;
   static int understandingResult = 0;
+
   static List<String> subjects = [];
-  static List<String> topics = [];
+  static List<String> previousKnowledge = [];
+  static String goal = "";
+
   static Student student = Student();
+
   static String name = "";
   static String email = "";
   static String password = "";

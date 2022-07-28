@@ -4,7 +4,7 @@ import 'package:smart_learner/core/appBar.dart';
 import 'package:smart_learner/core/bottomBar.dart';
 import 'package:smart_learner/core/constant_logic.dart';
 import 'package:smart_learner/fetures/Home/study_plan_subjects.dart';
-import 'package:smart_learner/fetures/Home/subject_card.dart';
+import 'package:smart_learner/fetures/authentication/subject_card.dart';
 
 import '../../core/main_constants.dart';
 import '../study_plans/study_plans_directory.dart';
@@ -28,7 +28,6 @@ class _HomeState extends State<Home> {
             children: [
               MyAppBar(selectedIndex: 0,),
               Container(
-
                 width: getScreenWidth(context),
                 height: 250.h,
                 decoration: const BoxDecoration(
@@ -123,7 +122,7 @@ class _HomeState extends State<Home> {
                                     child: ListView.builder(
                                       itemCount: subjects.length,
                                       itemBuilder: (BuildContext context, int index) {
-                                        return SubjectCard(subjectName: subjects[index]);
+                                        return Text(subjects[index]);
                                       },
                                     ),
                                   ),

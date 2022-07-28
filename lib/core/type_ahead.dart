@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
-import '../fetures/authentication/profile_subject_card.dart';
 
 class TypeAhead extends StatelessWidget {
   String hintText;
-  List<ProfileSubjectCard> items;
+  List<String> items;
   TextEditingController text;
   Function(Object) onChange;
   String? errorText;
@@ -63,13 +62,13 @@ class TypeAhead extends StatelessWidget {
               width: (width! - 25.w),
               child: Padding(
                 padding: EdgeInsets.only(left: 25.w,top: 20.h),
-                child: TypeAheadField<ProfileSubjectCard>(
+                child: TypeAheadField<String>(
                   textFieldConfiguration: TextFieldConfiguration(
                       controller: text,
-                      // onSubmitted: (value) {
-                      //   text.text = value;
-                      //   onChange(text.text);
-                      // },
+                      onSubmitted: (value) {
+                        text.text = value;
+                        onChange(text.text);
+                      },
                       style: TextStyle(color: titleColor, fontSize: 20.sp),
                       decoration: InputDecoration(
                         suffixIcon: Icon(Icons.keyboard_arrow_down),
@@ -81,9 +80,9 @@ class TypeAhead extends StatelessWidget {
                       )),
                   suggestionsCallback: (pattern) {
                     if (pattern.isNotEmpty) {
-                      List<ProfileSubjectCard> suggestions = [];
+                      List<String> suggestions = [];
                       for (int i = 0; i < items.length; i++) {
-                        if(pattern.toString().toLowerCase() == items[i].subjectName.toLowerCase().substring(0,pattern.length)){
+                        if(pattern.toString().toLowerCase() == items[i].toLowerCase().substring(0,pattern.length)){
                           suggestions.add(items[i]);
                         }
                       }
@@ -92,16 +91,16 @@ class TypeAhead extends StatelessWidget {
                       return items;
                     }
                   },
-                  itemBuilder: (context, ProfileSubjectCard? suggestion) {
+                  itemBuilder: (context, String? suggestion) {
                     return ListTile(
-                      title: suggestion,
+                      title: Text(suggestion!),
                     );
                   },
                   hideSuggestionsOnKeyboardHide: false,
                   hideOnEmpty: true,
                   onSuggestionSelected: (suggestion) {
-                    // text.text = suggestion.subjectName.toString();
-                    // onChange(text.text);
+                    text.text = suggestion.toString();
+                    onChange(text.text);
                   },
                   suggestionsBoxDecoration: const SuggestionsBoxDecoration(elevation: 0.0),
                   transitionBuilder: (context, suggestionsBox, controller) {

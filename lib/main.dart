@@ -9,9 +9,6 @@ void main() async{
       statusBarColor: Colors.white,
       statusBarBrightness: Brightness.dark,
       statusBarIconBrightness: Brightness.dark,
-      //systemNavigationBarDividerColor: Colors.white,
-      //systemNavigationBarIconBrightness: Brightness.dark,
-      //systemNavigationBarColor: Colors.white,
     ),
   );
   WidgetsFlutterBinding.ensureInitialized();
