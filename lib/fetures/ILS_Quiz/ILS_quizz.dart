@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:smart_learner/fetures/Home/home.dart';
 import 'package:smart_learner/fetures/ILS_Quiz/ils_Store.dart';
 import 'package:smart_learner/fetures/ILS_Quiz/question_card.dart';
 import 'package:smart_learner/models/student.dart';
@@ -255,8 +256,6 @@ class _ILSQuizState extends State<ILSQuiz> {
                                   ),
                                   child: TextButton(
                                     onPressed: () {
-                                      //TODO
-
                                       Student student = Student(
                                           name: IlsStore.name,
                                           input: IlsStore.inputResult,
@@ -265,10 +264,19 @@ class _ILSQuizState extends State<ILSQuiz> {
                                           understanding: IlsStore.understandingResult);
 
                                       IlsStore.student = student;
-                                      print(IlsStore.inputResult.toString());
-                                      print(IlsStore.perceptionResult.toString());
-                                      print(IlsStore.processingResult.toString());
-                                      print(IlsStore.understandingResult.toString());
+                                      print("input : " + IlsStore.inputResult.toString());
+                                      print("perception : "+IlsStore.perceptionResult.toString());
+                                      print("processing : "+IlsStore.processingResult.toString());
+                                      print("understanding : "+IlsStore.understandingResult.toString());
+
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) {
+                                            return const Home();
+                                          },
+                                        ),
+                                      );
                                     },
                                     child: Text(
                                       "Next",

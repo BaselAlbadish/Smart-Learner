@@ -91,7 +91,7 @@ class _HomeState extends State<Home> {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Text(
-                            "Generate study plan",
+                            "Your Curriculum",
                             style: getTextStyle(
                               fontWeight: FontWeight.normal,
                               context: context,
@@ -102,8 +102,8 @@ class _HomeState extends State<Home> {
                           Column(
                             children: [
                               Container(
-                                height: 250.h,
-                                width: 350.w,
+                                height: 300.h,
+                                width: 400.w,
                                 decoration: BoxDecoration(
                                   color: const Color(0xFFe8ecf4),
                                   boxShadow: [
@@ -118,41 +118,14 @@ class _HomeState extends State<Home> {
                                 ),
                                 child: SingleChildScrollView(
                                   child: SizedBox(
-                                    height: 250.h,
+                                    height: 300.h,
                                     child: ListView.builder(
                                       itemCount: subjects.length,
                                       itemBuilder: (BuildContext context, int index) {
-                                        return Text(subjects[index]);
+                                        return Padding(
+                                            padding: EdgeInsets.all(10),
+                                            child: Text(subjects[index]));
                                       },
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              SizedBox(height: 10.h),
-                              Container(
-                                height: 60.h,
-                                width: 350.w,
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFF83D6D4),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black38.withOpacity(0.2),
-                                      spreadRadius: 1,
-                                      blurRadius: 5,
-                                      offset: const Offset(0, 1),
-                                    ),
-                                  ],
-                                  borderRadius: const BorderRadius.all(Radius.circular(10)),
-                                ),
-                                child: TextButton(
-                                  onPressed: () {},
-                                  child: Text(
-                                    "submit",
-                                    style: getTextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      context: context,
-                                      fontSize: 26.sp,
-                                      color: white,
                                     ),
                                   ),
                                 ),
@@ -229,6 +202,7 @@ class _HomeState extends State<Home> {
                                 ),
                                 child: TextButton(
                                   onPressed: () {
+                                    //TODO""""" remote data
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
@@ -262,8 +236,7 @@ class _HomeState extends State<Home> {
                 height: 480.h,
                 width: getScreenWidth(context),
                   decoration: BoxDecoration(
-                    //TODO: replace with 0xFFF7F9FD color
-                    color: Colors.grey.shade200,
+                    color: const Color(0xFFF7F9FD),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey.withOpacity(0.2),

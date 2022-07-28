@@ -19,7 +19,7 @@ class _SubjectCardState extends State<SubjectCard> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 25.w,top: 10.h),
+      padding: EdgeInsets.only(left: 25.w, top: 10.h),
       child: Row(
         children: [
           SizedBox(
@@ -31,7 +31,13 @@ class _SubjectCardState extends State<SubjectCard> {
               value: valueT,
               onChanged: (inputValue) {
                 setState(() {
-                  valueT = !valueT;
+                  if (!valueT) {
+                    IlsStore.previousKnowledge.add(widget.subjectName);
+                    valueT = !valueT;
+                  } else {
+                    IlsStore.previousKnowledge.remove(widget.subjectName);
+                    valueT = !valueT;
+                  }
                 });
               },
             ),

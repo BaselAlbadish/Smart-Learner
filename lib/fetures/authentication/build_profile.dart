@@ -6,6 +6,7 @@ import '../../core/main_constants.dart';
 import '../../core/type_ahead.dart';
 import '../Home/home.dart';
 import '../Home/study_plan_subjects.dart';
+import '../ILS_Quiz/ILS_quizz.dart';
 import 'subject_card.dart';
 
 class BuildProfile extends StatefulWidget {
@@ -165,7 +166,7 @@ class _BuildProfileState extends State<BuildProfile> {
                                   context,
                                   MaterialPageRoute(
                                     builder: (context) {
-                                      return const Home();
+                                      return const ILSQuiz();
                                     },
                                   ),
                                 );
