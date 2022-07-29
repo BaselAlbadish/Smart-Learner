@@ -1,0 +1,88 @@
+,Question,Answers,Right Index
+0,Which Code sample will eventually cause the computer to run out of memory?,[':'],0
+1,What will this code print on the screen?,[':'],-1
+2,What is the name for calling a function inside the same function?,[':'],-1
+3,What does the declaration of variable c2 demonstrate?,[':'],-1
+4,What is this declaration an example of?,[':'],0
+5,"Header files are listed using the preprocessing directive #include, and can have one of the following formats: #include <fileA> or #include ""fileB"". What is the difference between these two formats?",[':'],-1
+6,"Using a for loop, how could you write a C code to count down from 10 to 1 and display each number on its own line?",[':'],-1
+7,What is not one of the reserved words in standard C?,['Nothing is printed on Screen'],-1
+8,What does the program shown below return?,"['recursion', 'subfunction', 'inner call', 'infinite loop']",0
+9,"Using the Union declaration below, how many bytes of memory space will the data of this type occupy?","['character arithmetic', 'undefined assignment', 'type conversion', 'invalid declaration']",0
+10,"In this code sample, what is not a problem for C compiler?","['a node', 'a linked list', 'a stack', 'a binary tree']",0
+11,Which is the smallest program to compile and run without errors?,"['The preprocessor will try to locate fileA in same directory as the source file, and the fileB in a predetermined directory path.', 'The preprocessor will try to locate fileA in the fixed system directory. It will try to locate fileB in the directory path designated by the -I option added to the command line while compiling the source code.', 'The file using the fileA syntax must be system files, of unlimited number; fileB must be a user file at a maximun of one per source file.', 'The preprocessor will try to locate fileA in a predetermined directory path. It will try to locate fileB in the same directory as the source file along with a custom directory path.']",3
+12,What is optional in a function declaration?,[':'],-1
+13,"C treats all devices, such as the display and the keyboard, as files. Which file opens automatically when a program executes?",[':'],-1
+14,In which segment does dynamic memory allocation takes place?,[':'],-1
+15,Which function do you use to deallocate memory?,[':'],0
+16,In C language what are the basic building blocks that are constructed together to write a program?,"['volatile', 'typeof', 'register', 'typedef']",1
+17,When is memory for a variable allocated?,"['1', '3', '2', '0']",0
+18,C uses the call by value method to pass arguments to functions. How can you invoke the call by reference method?,"['32', '54', '30', '52']",2
+19,A union allows you to store different ___ in the same ___.,"['The value of PI needs to be set to 3.141593, not 3.14', 'The declaration of PI needs to say const, not constant.', 'The data type of PI needs to be float not int.', 'The printf statement needs to use PI, not pi.']",0
+20,What is the output of this program?,"['main()', 'int main() {return 0;}', 'main() { }', 'main() { ; }']",2
+21,What is the difference between scanf() and sscanf() functions?,"['data type of parameters', 'return type of function', 'parameter names', 'number of parameters']",2
+22,What is not a valid command with this declaration?,"['stdout', 'stdio.h', 'default.h', 'string.h']",0
+23,What is the expression player->name equivalent to?,"['BSS Segment', 'stack', 'heap', 'data segment']",2
+24,Which program will compile and run without errors?,"['dalloc()', 'dealloc()', 'release()', 'free()']",3
+25,What does this function call return?,"['keywords', 'identifiers', 'tokens', 'functions']",2
+26,What does this program create?,"['during the assigment of the variable', 'during the initialization of the variable', 'during the declaration of the variable', 'during the definition of the variable']",2
+27,What is an alternative way to write the expression (*x).y?,"['by using pointers', 'by declaring functions separately from defining them', 'by using recursive functions', 'by using global variables']",0
+28,Compile time errors are static errors that can be found where in the code?,"['Objects; Structure', 'Variables; Declaration', 'Data types; Memory space', 'Arrays; Header file']",2
+29,File input and output (I/O) in C is heavily based on the way it is done ___?,"['32', 'Runtime error', '-32', '0']",2
+30,"What does the strcmp(str1, str2); function return?","['The scanf() function reads data formatted as a string; The sscanf() function reads string input from the screen.', 'The scanf() function reads formatted data from the keyboard; The sscanf() function reads formatted input from a string.', 'The scanf() function reads string data from the keyboard; The sscanf() function reads string data from a string.', 'The scanf() function reads formatted data from a file; The sscanf() function reads input from a selected string']",1
+31,What is the output of this program?,"['printf(""%c"", string[1][2]);', 'printf(""%s"", string[1][2]);', 'printf(""%s"", string[1]);', 'printf(string[1]);']",1
+32,Which is not a correct way to declare a string variable?,"['player.name', '(*player).name', '*player.name', 'player.*name']",1
+33,Which choice is an include guard for the header file mylib.h?,[':'],-1
+34,How many times does the code inside the while loop get executed in this program?,[':'],0
+35,File input and output (I/O) in C is done through what?,[':'],-1
+36,Directives are translated by the?,[':'],-1
+37,"The main loop structures in C programming are the for loop, the while loop, and which other loop?","['2', '2.000000', 'a runtime error', 'a compiler error']",3
+38,"By default, C Functions are what type of functions?","['a runtime error', 'a NULL pointer', 'a compile error', 'a void pointer']",1
+39,You have written a function that you want to include as a member of structure a. How is such as structure member defiened?,"['There is no equivalent.', 'x->y', '*x->y', 'y->x']",1
+40,"A Stack data structure allows all data operations at one end only, making it what kind of an implementation?","['in declarations and definitions', 'in functions and expressions', 'in syntax and semantics', 'in objects and statements']",0
+41,What does this program display?,"['in Unix', 'in C++', 'in C#', 'in DOS']",0
+42,Describe the relationship between lvalue and rvalue.,"['0 if str1 and str2 are the same, a negative number if str1 is less than str2, a positive number if str1 is greater than str2', 'true (1) if str1 and str2 are the same, false (0) if str1 and str2 are not the same', 'true (1) if str1 and str2 are the same, NULL if str1 and str2 are not the same', '0 if str1 and str2 are the same, a negative number if str2 is less than str1, a positive number if str2 is greater than str1']",0
+43,Which operator is used to access the address of a variable?,"['100', '200', '5', '50']",0
+44,Which add function properly returns the updated value of result?,"['char *string = ""Hello World"";', 'char string = ""Hello World"";', ""char string[20] = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd'};"", 'char string[] = ""Hello World"";']",1
+45,"Consider the number of the Fibonacci series below 100: 0,1,1,2,3,5,8,13,21,34,55,89. Which piece of code outputs the sequence?",[':'],-1
+46,Which is not a storage class specifier?,[':'],0
+47,"Which line of code, after execution, results in i having the value of 1?",[':'],-1
+48,What is the value of variable c at the end of this program?,[':'],-1
+49,What is not one of the basic data types in C,"['100', '3', '5', '50']",1
+50,What is the member access operator for a structure?,"['syntax-driven components', 'native interfaces', 'system objects', 'function calls']",3
+51,What standard data type provides the smallest storage size and can be used in computations?,"['Pre-processor', 'Compiler', 'Linker', 'Editor']",0
+52,what does the ctype tolower() function do?,"['do...while', 'for...in', 'repeat...until', 'do...until']",0
+53,Void pointer vptr is assigned the address of float variable g. What is a valid way to dereference vptr to assign its pointed value to a float variable named f later in the program?,"['global', 'static', 'library', 'system']",2
+54,The dynamic memory allocation functions are defined in which system header file ?,[':'],0
+55,A function is a set of _.,[':'],-1
+56,How are static functions different from global functions?,[':'],-1
+57,"Which code example creates the string ""Hello Mars"" in storage buffer hello.",[':'],-1
+58,"If you use the fopen() function with the ""a"" mode, what happens if the named file doesn't exist?","['FIFO', 'LIFO', 'LILO', 'LOLI']",1
+59,What does this function return?,"['K', 'M', 'H', 'G']",3
+60,,"['An lvalue may appear only on the left-hand side of an assignment; an rvalue may appear only on the right-hand side.', 'An lvalue may appear only on the left-hand side of an assignment; an rvalue may appear on either the left-hand or right-hand side.', 'An lvalue and an rvalue may appear on either left-hand or right-hand side of an assignment.', 'An lvalue may appear on the left-hand or right-hand side of an assignment; an rvalue may appear only on the right-hand side.']",3
+61,,"['%', '**', '*', '&']",3
+62,,[':'],0
+63,,[':'],-1
+64,,[':'],-1
+65,,[':'],-1
+66,,[':'],-1
+67,,[':'],-1
+68,,[':'],0
+69,,[':'],-1
+70,,"['intern', 'extern', 'register', 'static']",0
+71,,"['for(i=1; i<=1; i++);', 'for(i=1; i=10; i++);', 'for(i=1; i==10; i++);', 'for(i=10; i>=1; i--);']",2
+72,,"['50', '5', '0', '500']",2
+73,,"['long double', 'unsigned char', 'array', 'float']",2
+74,,"[',', '[]', '.', ':']",2
+75,,"['char', 'float', 'int', 'short']",0
+76,,"['It returns TRUE for lowercase letters of the alphabet.', 'It ensures that text output uses only ASCII values (0 through 127).', 'It returns FALSE for lowercase letters of the alphabet.', 'It converts an uppercase letter of the alphabet to lowercase.']",3
+77,,"['f=(float *)vptr;', 'f=*(float *)vptr;', 'f=*(float)vptr;', 'f=(float)*vptr;']",1
+78,,"['stdio.h', 'stdlib.h', 'limits.h', 'stddef.h']",1
+79,,"['declarations', 'statements', 'variables', 'objects']",1
+80,,"['Static functions must be declared in advance of being defined.', 'Static functions must be declared is a separate header file.', 'Static functions always return the same value.', 'Static functions can be accessed only in the file where they are declared.']",3
+81,,[':'],-1
+82,,[':'],0
+83,,[':'],-1
+84,,[':'],-1
+85,,"['The file is created and opened for reading.', 'The file is created and opened for writing.', 'The fopen() function returns a NULL indicating that the operation has failed.', 'The file is created and opened for both writing and reading']",1
+86,,"['compiler error', 'the smaller value of the two passed parameters', 'runtime error', 'the greater value of the two passed parameters']",3

@@ -1,0 +1,11 @@
+,Question,Answers,Right Index
+0,"In WordPress, what is the Loop used to do?","['It displays a single page.', 'It displays posts on an archive.', 'It displays a single post.', 'all of these answers']",3.0
+1,Who owns the trademark for WordPress and WordCamp names and logos?,"['WordPress Foundation (The WordPress Foundation owns and oversees the trademarks for the WordPress and WordCamp names and logos.)', 'WordPress.com', 'Matt Mullenweg', 'Automattic']",0.0
+2,What is the name of the open-source project that serves as a bug tracker and project management tool for WordPress?,"['HackerOne', 'Redmine', 'Trac', 'GitHub Issues']",2.0
+3,The REST API is a simple way to get data in and out of WordPress over HTTP. Applications using the REST API should be written in which programming language?,"['PHP', 'any programming language that can make HTTP requests and interpret JSON', 'Java', 'Node.js']",1.0
+4,"How many minutes does it take to install WordPress according to the ""Famous X-Minute Installation"" instructions on WordPress.org?","['5', '30', '15', '10']",0.0
+5,"In WordPress, what is true of plugins?","['Plugins are available in free or premium (paid) versions.', 'Plugins can extend WordPress core functionality.', 'all of these answers', 'Plugins add site-specific features.']",2.0
+6,Akismet is a plugin that comes automatically installed with WordPress. What does it do?,"['It connects your site to Google Analytics.', 'It displays a blog feed from websites similar to yours.', 'It protects your site from comment spam.', 'It hardens site security by enforcing strong passwords.']",2.0
+7,What would you do to improve your site's performance?,"['Only load scripts and styles on pages where they are needed.', 'Minify CSS and JavaScript files.', 'all of these answers', 'Use a CDN.']",2.0
+8,The REST API utilizes which data format?,"['YAML', 'JSON', 'TXT', 'XML']",1.0
+9,What color is the paragraph nested within the div?,,

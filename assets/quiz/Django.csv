@@ -1,0 +1,85 @@
+,Question,Answers,Right Index
+0,"To cache your entire site for an application in Django, you add all except which of these settings?","['django.middleware.common.CommonMiddleware', 'django.middleware.cache.UpdateCacheMiddleware', 'django.middleware.cache.FetchFromCacheMiddleware', 'django.middleware.cache.AcceleratedCacheMiddleware']",3
+1,In which programming language is Django written?,"['C++', 'Java', 'Python', 'Ruby']",2
+2,"To automatically provide a value for a field, or to do validation that requires access to more than a single field, you should override the ___ method in the ___ class.","['validate(); Model', 'group(); Model', 'validate(); Form', 'clean(); Field']",3
+3,"A client wants their site to be able to load ""Rick & Morty"" episodes by number or by titleâ€”e.g., shows/3/3 or shows/picklerick. Which URL pattern do you recommend?",[''],-1
+4,How do you determine at startup time if a piece of middleware should be used?,[''],0
+5,How do you turn off Djangoâ€™s automatic HTML escaping for part of a web page?,[''],-1
+6,"Which step would NOT help you troubleshoot the error ""django-admin: command not found""?",[''],-1
+7,"Every time a user is saved, their quiz_score needs to be recalculated. Where might be an ideal place to add this logic?","['Raise MiddlewareNotUsed in the init function of your middleware.', 'Implement the not_used method in your middleware class.', 'List the middleware beneath an entry of django.middleware.IgnoredMiddleware.', 'Write code to remove the middleware from the settings in [app]/init.py.']",0
+8,"What is the correct way to begin a class called ""Rainbow"" in Python?","['Place that section between paragraph tags containing the autoescape=off switch.', 'Wrap that section between { percentage mark autoescape off percentage mark} and {percentage mark endautoescape percentage mark} tags.', 'Wrap that section between {percentage mark autoescapeoff percentage mark} and {percentage mark endautoescapeoff percentage mark} tags.', ""You don't need to do anythingâ€”autoescaping is off by default.""]",3
+9,You have inherited a Django project and need to get it running locally. It comes with a requirements.txt file containing all its dependencies. Which command should you use?,"['Check that the bin folder inside your Django directory is on your system path.', 'Make sure you have activated the virtual environment you have set up containing Django.', 'Check that you have installed Django.', 'Make sure that you have created a Django project.']",3
+10,Which best practice is NOT relevant to migrations?,"['template', 'model', 'database', 'view']",1
+11,"What will this URL pattern match? url(r'^\$', views.hello)","['Rainbow {}', 'export Rainbow:', 'class Rainbow:', 'def Rainbow:']",2
+12,What is the typical order of an HTTP request/response cycle in Django?,"['django-admin startproject requirements.txt', 'python install -r requirements.txt', 'pip install -r requirements.txt', 'pip install Django']",2
+13,Django's class-based generic views provide which classes that implement common web development tasks?,"['To make sure that your migrations are up to date, you should run updatemigrations before running your tests.', 'You should back up your production database before running a migration.', 'Your migration code should be under source control.', 'If a project has a lot of data, you should test against a staging copy before running the migration on production.']",0
+14,Which skills do you need to maintain a set of Django templates?,"['a string beginning with the letter Ra string beginning with the letter R', 'an empty string at the server root', 'a string containing ^ and $a string containing ^ and $', 'an empty string anywhere in the URLan empty string anywhere in the URL']",1
+15,How would you define the relationship between a star and a constellation in a Django model?,"['URL > view > template', 'form > model > view', 'template > view > model', 'URL > template > view > model']",0
+16,Which is NOT a valid step in configuring your Django 2.x instance to serve up static files such as images or CSS?,"['concrete', 'thread-safe', 'abstract', 'dynamic']",2
+17,What is the correct way to make a variable available to all of your templates?,"['template syntax', 'HTML and template syntax', 'Python, HTML, and template syntax', 'Python and template syntax']",1
+18,Should you create a custom user model for new projects?,[''],0
+19,"You want to create a page that allows editing of two classes connected by a foreign key (e.g., a question and answer that reside in separate tables). What Django feature can you use?",[''],-1
+20,"Why are QuerySets considered ""lazy""?",[''],-1
+21,You receive a MultiValueDictKeyError when trying to access a request parameter with the following code: request.GET['search_term']. Which solution will NOT help you in this scenario?,[''],-1
+22,Which function of Django's Form class will render a form's fields as a series of  tags?,"['In your urls file, add a pattern that includes the name of your static directory.', 'Create a directory named static inside your app directory.', 'Create a directory named after the app under the static directory, and place static files inside.', 'Use the template tag {percentage mark load static percentage mark}.']",0
+23,You have found a bug in Django and you want to submit a patch. Which is the correct procedure?,"['Set a session variable.', 'Use a global variable.', 'Add a dictionary to the template context.', 'Use RequestContext.']",3
+24,Django supplies sensible default values for settings. In which Python module can you find these settings?,"['No. Using a custom user model could break the admin interface and some third-party apps.', 'Yes. It is easier to make changes once it goes into production.', ""No. Django's built-in models.User class has been tried and testedâ€”no point in reinventing the wheel."", 'Yes, as there is no other option.']",2
+25,Which variable name is best according to PEP 8 guidelines?,"['actions', 'admin', 'mezcal', 'inlines']",0
+26,A project has accumulated 500 migrations. Which course of action would you pursue?,"['The results of a QuerySet are not ordered.', 'QuerySets do not create any database activity until they are evaluated.', 'QuerySets do not load objects into memory until they are needed.', 'Using QuerySets, you cannot execute more complex queries.']",1
+27,What does an F() object allow you when dealing with models?,"['Switch to using POST instead of GET as the request method.', 'Make sure the input field in your form is also named ""search_term"".', ""Use MultiValueDict's GET method instead of hitting the dictionary directly like this: request.GET.get('search_term', '')."", 'Check if the search_term parameter is present in the request before attempting to access it.']",0
+28,Which is not a Django filed type for integers?,"['show_fields()', 'as_p()', 'as_table()', 'fields()']",1
+29,Which will show the currently installed version?,"['Fork the Django repository GitHub.', 'Submit a pull request.', 'all of these answers.', ""Run Django's test suite.""]",2
+30,You should use the http method ___ to read data and ___ to update or create data,"['django.utils.default_settings.py', 'django.utils.global_settings.py', 'django.conf.default_settings.py', 'django.conf.global_settings.py']",3
+31,When should you employ the POST method over GET for submitting data?,"['numFingers', 'number-of-Fingers', 'number_of_fingers', 'finger_num']",2
+32,When to use the Django sites framework?,"['Manually merge your migration files to reduce the number', ""Don't worry about the number"", 'Try to minimize the number of migrations', 'Use squashmigrations to reduce the number']",3
+33,Which infrastructure do you need:,"['perform db operations without fetching a model object', 'define db transaction isolation levels', 'use aggregate functions more easily', 'build reusable QuerySets']",0
+34,What decorator is used to require that a view accepts only the get and head methods?,"['SmallIntegerField', 'NegativeIntegerField', 'BigAutoField', 'PositiveIntegerField']",1
+35,How would you define the relation between a book and an author - book has only one author.,"['print (django.version)', 'import django django.getVersion()', 'import django django.get_version()', 'python -c django --version']",2
+36,What is a callable that takes a value and raises an error if the value fails?,"['READ; WRITE', 'GET; POST', 'POST; GET', 'GET; PATCH']",1
+37,"To secure an API endpoint, making it accessible to registered users only, you can replace the rest_framework.permissions.allowAny value in the default_permissions section of your settings.py to","['when efficiency is important', 'when you want the data to be cached', 'when you want to use your browser to help with debugging', 'when the data in the form may be sensitive']",3
+38,Which command would you use to apply a migration?,"['if your single installation powers more than one site', 'if you need to serve static as well as dynamic content', 'if you want your app have a fully qualified domain name', 'if you are expecting more than 10.000 users']",0
+39,Which type of class allows QuerySets and model instances to be converted to native Python data types for use in APIs?,"['inizialized array called validators', 'a validators file containing a function called validate_spelling imported at the top of model', 'a validators file containing a function called validate imported at the top of model', 'spelling package imported at the top of model']",1
+40,How should the code end?,"['require_safe()', 'require_put()', 'require_post()', 'require_get()']",0
+41,Which code block will create a serializer?,[''],-1
+42,Which class allows you to automatically create a Serializer class with fields and validators that correspond to your model's fields?,[''],0
+43,Which command to access the built-in admin tool for the first time?,[''],-1
+44,Virtual environments are for managing dependencies. Which granularity works best?,[''],-1
+45,What executes various Django commands such as running a webserver or creating an app?,[''],-1
+46,"What do Django best practice suggest should be ""fat""?","['validator', 'deodorizer', 'mediator', 'regular expression']",0
+47,Which is not part of Django's design philosophy?,"['rest_framework.permissions.IsAdminUser', 'rest_framework.permissions.IsAuthenticated', 'rest_framework.permissions.IsAuthorized', 'rest_framework.permissions.IsRegistered']",1
+48,What is the result of this template code?,"['makemigration', 'update_db', 'applymigration', 'migrate']",3
+49,When does this code load data into memory?,"['objectwriters', 'serializers', 'picklers', 'viewsets']",1
+50,You are building a web application using a React front end and a Django back end. For what will you need to provision?**,"['{ percentage else percentage}', '{percentage endif percentage}', 'Nothing needed', '{percentage end percentage}']",1
+51,"To expose an existing model via an API endpoint, what do you need to implement?**",[''],0
+52,How would you stop Django from performing database table creation or deletion operations via migrations for a particular model?**,[''],-1
+53,what method can you use to check if form data has changed when using a form instance?,[''],-1
+54,What is WSGI?,[''],-1
+55,Which generic view should be used for displaying the tittles of all Django Reinhardt's songs?,"['ModelSerializer', 'Model', 'DataSerializer', 'ModelToSerializer']",0
+56,"Which statement is most accurate, regarding using the default SQLite database on your local/development machine but Postgres in production","['django-admin setup', 'django-admin runserver', 'python manage.py createuser', 'python manage.py createsuperuser']",3
+57,Why might you want to write a custom model Manager?,"['you should set up a new virtualenv for each Django project', 'They should not be used', 'Use the same venv for all your Django work', 'Use a new venv for each Django app']",0
+58,"In Django, what are used to customize the data that is sent to the templates?","['migrate.py', 'wsgi.py', 'manage.py', 'runserver']",2
+59,"To complete the conditional, what should this block of code end with?","['models', 'controllers', 'programmers', 'clients']",0
+60,When should you employ the POST method over the GET method for submitting data from a form?,"['Loose Coupling', 'Less Code', 'Fast Development', 'Implicit over explicit']",3
+61,What is a callable that takes a value and raises an error if the value fails to meet some criteria?,"['live long and ...', 'live long and', 'a compilation error', 'liv']",0
+62,You are uploading a file to Django from a form and you want to save the received file as a field on a model object. You can simply assign the file object from_to a field of type__in the model.,"['line 1', 'It depends on how many results return by query.', 'It depends on cache.', 'line 2']",1
+63,What python module might be used to store the current state of a Django model in a file?,"['an NGINX web server', 'a NoSQL database', 'a larger hard drive', 'CORS middleware']",-1
+64,"To add a new app to an existing Django project, you must edit the  section of the  file.","['an HTTP request', 'a JSON object', 'a query', 'a serializer']",3
+65,Which is not a third-party package commonly used for authentication?,"['Run the migrate command with --exclude=[model_name].', 'Move the model definition from models.py into its own file.', 'Set managed=False inside the model.', ""Don't run the migrate command.""]",2
+66,Which function in the django.urls package can help you avoid hardcoding URLS by generating a URL given the name of a view?,"['has_changed()', 'its_changed()', 'has_updated()', 'None of This']",0
+67,Which is Fictional HTTP request method?,"['a server', 'an interface specification', 'a Python module', 'a framework']",0
+68,Which helper function is not provided as a part of django.shortcuts package? ref-,"['DetailView', 'TittleView', 'SongView', 'ListView']",3
+69,Which is a nonstandard place to store templates?,"[""There's less chance of introducing bugs since SQLite already works out the box"", ""It's fine, you just need to keep both instances synchronized"", ""It's a bad idea and could lead to issues down the road"", ""It's the most efficient way to build a project""]",0
+70,If you left the 8080 off the command python manage.py runserver 8080 what port would Django use as default?,"['to perform database queries', 'to set up a database for testing', 'to modify the initial QuerySet that the Manager returns', 'to filter the results that a database query returns']",2
+71,,"['models', 'views', 'forms', 'serializers']",1
+72,,"['% endif %', 'Nothing else is needed.', '% end%', '% else %']",0
+73,,"['when the data in the form may be sensitive', 'when you want the data to be cached', 'when you want to use your browser to help with debugging', 'when efficiency is important']",0
+74,,"['mediator', 'validator', 'regular expression', 'deodorizer']",1
+75,,"['request.META; FileField', 'request.FILES; BLOBField', 'request.FILES; FileField', 'request.META.Files; CLOBField']",2
+76,,"['pickle', 'struct', 'marshal', 'serialize']",0
+77,,"['ALLOWED_HOSTS; settings.py', 'APPS; manage.py', 'INSTALLED_APPS; settings.py', 'TEMPLATES; urls.py']",2
+78,,"['django-guardian', 'django-rest-auth', 'authtoken', 'django-rest-framework-jwt']",3
+79,,"['get_script_prefix()', 'redirect()', 'reverse()', 'resolve()']",2
+80,,"['POST', 'PUT', 'PAUSE', 'PATCH']",2
+81,,"['render_to_request()', 'render()', 'redirect()', 'get_object_or_404()']",0
+82,,"['at the root level of a project', 'inside the application', 'in the database', 'on Github']",0
+83,,"['8080', '80', '8000', 'It would fail to start']",0

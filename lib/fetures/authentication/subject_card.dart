@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../core/main_constants.dart';
 import '../ILS_Quiz/ils_Store.dart';
 
@@ -27,7 +26,6 @@ class _SubjectCardState extends State<SubjectCard> {
             height: 30.w,
             child: Checkbox(
               shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(25.0))),
-              // Rounded Checkbox
               value: valueT,
               onChanged: (inputValue) {
                 setState(() {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:smart_learner/data_source/local_data.dart';
 import 'package:smart_learner/fetures/authentication/sign_up.dart';
 import 'package:smart_learner/fetures/authentication/text_field_widget.dart';
 import '../../core/main_constants.dart';
@@ -84,14 +85,17 @@ class _SignInState extends State<SignIn> {
                 ),
                 child: TextButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return const Home();
-                        },
-                      ),
-                    );
+                    LocalData local = LocalData();
+                    local.initQuiz("C");
+
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (context) {
+                    //       return const Home();
+                    //     },
+                    //   ),
+                    // );
                   },
                   child: Center(
                     child: Text(

@@ -1,0 +1,61 @@
+,Question,Answers,Right Index
+0,How does a matrix differ from a data frame?,"['A matrix may contain numeric values only.', 'A matrix must not be singular.', 'A data frame may contain variables that have different modes.', 'A data frame may contain variables of different lengths.']",2
+1,What value does this statement return?,"['1', '365', '4', '12']",1
+2,What do you use to take an object such as a data frame out of the workspace?,"['remove()', 'erase()', 'detach()', 'delete()']",0
+3,Review the following code. What is the result of line 3?,"['[1] 1 2 3', '[1] ""1"" 2 ""3""', '[1] ""1"" ""2"" ""3""', '[1] 7 9']",2
+4,The variable height is a numeric vector in the code below. Which statement returns the value 35?,"['height(length(height))', 'height[length(height)]', 'height[length[height]]', 'height(5)']",1
+5,"In the image below, the data frame is named rates. The statement sd(rates[, 2]) returns 39. As what does R regard Ellen's product ratings?","['sample with replacement', 'population', 'trimmed sample', 'sample <-- not sure']",3
+6,Which choice does R regard as an acceptable name for a variable?,"['Var_A!', '\\_VarA', '.2Var_A', 'Var2_A']",3
+7,What is the principal difference between an array and a matrix?,"['A matrix has two dimensions, while an array can have three or more dimensions.', 'An array is a subtype of the data frame, while a matrix is a separate type entirely.', ""A matrix can have columns of different lengths, but an array's columns must all be the same length."", 'A matrix may contain numeric values only, while an array can mix different types of values.']",0
+8,Which is not a property of lists and vectors?,"['type', 'length', 'attributes', 'scalar']",3
+9,"In the image below, the data frame on lines 1 through 4 is named StDf. State and Capital are both factors. Which statement returns the results shown on lines 6 and 7?","['StDf[1:2,-3]', 'StDf[1:2,1]', 'StDf[1:2,]', 'StDf[1,2,]']",1
+10,Which function displays the first five rows of the data frame named pizza?,"['BOF(pizza, 5)', 'first(pizza, 5)', 'top(pizza, 5)', 'head(pizza, 5)']",3
+11,"You accidentally display a large data frame on the R console, losing all the statements you entered during the current session. What is the best way to get the prior 25 statements back?","['console(-25)', 'console(reverse=TRUE)', 'history()', 'history(max.show = 25)']",3
+12,"d.pizza is a data frame. It's a column named temperature contains only numbers. If you extract temperature using the [] accessors, its class defaults to numeric. How can you access temperature so that it retains the class of data.frame?","['class( d.pizza( , ""temperature"" ) )', 'class( d.pizza[ , ""temperature"" ] )', 'class( d.pizza$temperature )', 'class( d.pizza[ , ""temperature"", drop=F ] )']",3
+13,What does c contain?,"['[1] NaN', '[1] -4', '[1] 4 -1 -1 2', '[1] TRUE FALSE FALSE TRUE']",3
+14,"Review the statements below. Does the use of the dim function change the class of y, and if so what is y's new class?","['No, y\'s new class is ""array"".', 'Yes, y\'s new class is ""matrix"".', 'No, y\'s new class is ""vector"".', 'Yes, y\'s new class is ""integer"".']",1
+15,What is mydf$y in this code?,"['list', 'string', 'factor', 'character vector']",3
+16,How does a vector differ from a list?,"['Vectors are used only for numeric data, while lists are useful for both numeric and string data.', 'Vectors and lists are the same thing and can be used interchangeably.', 'A vector contains items of a single data type, while a list can contain items of different data types.', 'Vectors are like arrays, while lists are like data frames.']",2
+17,What statement shows the objects on your workspace?,"['list.objects()', 'print.objects()', 'getws()', 'ls()']",3
+18,What function joins two or more column vectors to form a data frame?,"['rbind()', 'cbind()', 'bind()', 'coerce()']",1
+19,Review line 1 below. What does the statement in line 2 return?,"['[1] 1 2 4 5', '""C""', '[1] ""1"" ""2"" ""C"" ""4"" ""5""', '[1] 1 2 C 4 5']",2
+20,What is the value of y in this code?,"['Inf', 'Null', 'NaN', 'NA']",3
+21,"Two variable in the mydata data frame are named Var1 and Var2. How do you tell a bivariate function, such as cor.test, which two variables you want to analyze?","['cor.test(Var1 ~ Var2)', 'cor.test(mydata$(Var1,Var2))', 'cor.test(mydata$Var1,mydata$Var2)', 'cor.test(Var1,Var2, mydata)']",2
+22,A data frame named d.pizza is part of the DescTools package. A statement is missing from the following R code and an error is therefore likely to occur. Which statement is missing?,"['attach(d.pizza)', 'summarize(deliver)', 'mean <- rbind(d.pizza,count)', 'deliver[!complete.cases(deliver),]']",0
+23,How to name rows and columns in DataFrames and Matrices F in R?,"['data frame: names() and rownames() matrix: colnames() and row.names()', 'data frame: names() and row.names() matrix: dimnames() (not sure)', 'data frame: colnames() and row.names() matrix: names() and rownames()', 'data frame: colnames() and rownames() matrix: names() and row.names()']",1
+24,Which set of two statements-followed by the cbind() function-results in a data frame named vbound?,[''],-1
+25,ournames is a character vector. What values does the statement below return to Cpeople?,[''],-1
+26,What is the value of names(v[4])?,[''],-1
+27,Which of the following statements doesn't yield the code output below. Review the following code. What is the result of line 3?,"['records where the first character is a C', 'any record with a value containing a C', 'TRUE or FALSE, depending on whether any character in ournames is C', 'TRUE and FALSE values, depending on whether the first character in an ournames record is C']",3
+28,"Given DFMerged <- merge(DF1, DF2) and the image below, how manu rows are in DFMerged?","['""""', 'd', 'NULL', 'NA']",0
+29,What does R return in response to the final statement?,"['x[c(2, 3, 4)]', 'x[-1]', 'x[c(-1, 0, 0, 0)]', 'x[c(-1, 2, 3, 4)]']",3
+30,"How do you return ""October"" from x in this code?","['6', '9', '3', '0']",3
+31,How will R respond to the last line of this code?,"['e f g h\n      ""5"" ""6"" ""7"" ""8""', '5 6 7 8', 'e f g h', 'e f g h\n      5 6 7 8']",3
+32,What does R return?,"['attr()', 'months(x)', 'as.month(x)', 'month(x)']",1
+33,What does the expression mtrx * mtrx do ?,"['>', '[,2]Ind', 'invalid factor level, NA generated', 'Ind']",2
+34,Which function in R combines different values into a single object?,"['""1970-01-02""', 'time difference of one day', 'time difference of two days', 'error in x-y: nonnumeric argument to binary operator']",2
+35,Which file contains settings that R uses for all users of a given installation of R?,"['it transpose mtrx', 'it premultiplies the current netwmat row by the newmat column.', 'it returns the results of a matrix multiplication', 'It squares each cell in mtrx']",3
+36,"If mdf is a data frame, which statement is true ?","['connect()', 'concat()', 'contact()', 'c()']",3
+37,"A list can contain a list as an element. MyList has five columns, and the third column's item is a list of three items. How do you put all seven values in MyList into a single vector?","['Rdefaults.site', 'Renviron.site', 'Rprofile.site', 'Rstatus.site']",2
+38,"Which strings could be returned by the function ls(path = ""^V"")?","['ncol(mdf) equals length(mdf).', 'The number of rows must equals the number of columns.', 'The legnth of any column in mdf may differ from any other column in mdf', 'All columns must have the same data type.']",0
+39,"StDf is a data frame. Based on this knowledge, what does this statement return?","['vector(MyList, length = 7)', 'coerce(MyList, nrows = 1)', 'unlist(MyList)', 'coerce(MyList, nrows = 7)']",2
+40,Which statement enables you to interactively open a single file?,"['ANOVAData, anovadata', 'VisitPCA, VarX', 'VisitPCA, varx', 'Xvar, Yvar']",1
+41,"How are these data types alike: logical, integer, numeric, and character?","['all but the first row and first column of StDf', 'all but the final column of StDf', 'all but the first column of StDf', 'only the first column of StDf']",2
+42,"What does the MyMat[ ,3] subsetting operation return for this code?","['file.list()', 'file.select()', 'file.choose()', 'file.open()']",2
+43,What does the function power.anova.test return?,"['Each is a type of data frame.', 'Each is a type of atomic vector.', 'Each is a type of complex vector.', 'Each is a type of raw vector.']",1
+44,Review the statement below. What is the effect of covariate:factor on the analysis?,[''],-1
+45,A variable whose type is numeric can contain which items?,[''],0
+46,What is the legitimate name of a data class in R?,[''],-1
+47,How do you extract the values above the main diagonal from a square matrix named Rmat?,[''],-1
+48,"x is a vector of type integer, as shown on line 1 below. What is the type of the result returned by the statement > median(x)?","['the probability of making a Type I error', 'the probability of not making a Type II error', 'the probability of making a Type II error', 'the probability of not making a Type I error']",1
+49,A list named a is created using the statement below. Which choice returns TRUE?,"['It forces the intercepts of the individual regressions to zero.', 'It calls for the effect of the covariate within each level of the factor.', 'It calls for the effect of each variable from covariate to factor in testcoef.', 'It forces the covariate to enter the equation before the factor levels.']",1
+50,How do you obtain the row numbers in a data frame named pizza for which the value of pizza$delivery_min is greater than or equal to 30?,"['integers and real values', 'integers, real, and raw values', 'real values only', 'integers, real, and logical values']",2
+51,Which function returns [1] TRUE FALSE TRUE?,"['property', 'integer', 'number', 'variant']",1
+52,,"['Rmat[upper.tri(Rmat)]', 'upper.triangular(Rmat)', 'upper.tri(Rmat)', 'upper.diag(Rmat)']",0
+53,,"['numeric', 'integer', 'single', 'double']",3
+54,,"['is.list(a[1])', 'is.numeric(a[1])', 'is.logical(a[1])', 'is.character(a[1])']",0
+55,,[''],-1
+56,,[''],-1
+57,,[''],0
+58,,[''],0
+59,,"['grepl(""[Rd|Ave|Dr|St]"", indat)', 'grepl(""Rd|Ave|Dr|St"", indat)', 'grepl(""Rd,Ave,Dr,St"", indat)', 'grepl(""[Rd],[Ave],[Dr],[St]"", indat)']",1

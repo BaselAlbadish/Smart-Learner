@@ -1,0 +1,149 @@
+,Question,Answers,Right Index
+0,"Given the string ""strawberries"" saved in a variable called fruit, what would fruit.substring(2, 5) return?","['rawb', 'raw', 'awb', 'traw']",1
+1,How can you achieve runtime polymorphism in Java?,"['first argument being the index to start(includes that char at 2)', 'the second the index of the string to end the substring(excludes the char at 5).', 'ings in Java are like arrays of chars.', 'refore, the method will return ""raw"" as those are the chars in indexes 2,3, and 4.', 'can also take the ending index and subtract the beginning index from it, to determine how many chars will be included in the substring (5-2=3).']",-1
+2,"Given the following definitions, which of these expression will NOT evaluate to true?","['method overloading', 'method overrunning', 'method overriding', 'method calling']",2
+3,What is the output of this code?,"['(i1 | i2) == 3', 'i2 && b1', 'b1 || !b2', '(i1 ^ i2) < 4']",1
+4,"Which of the following can replace the CODE SNIPPET to make the code below print ""Hello World""?","['It will not compile because of line 4.', 'It will not compile because of line 3.', '123', '1234']",0
+5,What does the following code print?,"['super1.print(); super2.print();', 'this.print();', 'super.print();', 'Interface1.print(); Interface2.print();']",3
+6,What is the result of this code?,"['CD', 'CDE', 'D', '""abcde""']",3
+7,Which class can compile given these declarations?,"['It will show a stack trace with a runtime exception.', '""java.lang.Exception""', 'It will run and throw an exception.', 'It will not compile.']",1
+8,What is the output of this code?,['A'],-1
+9,"Given the following two classes, what will be the output of the Main class?",['B'],-1
+10,What is the result of this code?,['C'],-1
+11,"Given this code, which command will output ""2""?",['D'],0
+12,What is the output of this code?,"['The code does not compile.', 'truefalse', 'truetrue', 'falsetrue']",2
+13,What is the output of this code?,"['Lines 1 and 2 generate compiler errors due to class name conflicts.', '""-123""', 'It will throw an exception on line 5.', '""123""']",3
+14,How do you write a foreach loop that will iterate over ArrayList\<Pencil>pencilCase?,"['It will not compile because of line 10.', '""Hello!""', 'It will not compile because of line 2.', '""World!""']",0
+15,What does this code print?,"['java Main 1 2 ""3 4"" 5', 'java Main 1 ""2"" ""2"" 5', 'java Main.class 1 ""2"" 2 5', 'java Main 1 ""2"" ""3 4"" 5']",1
+16,You have an ArrayList of names that you want to sort alphabetically. Which approach would NOT work?,"['""123451234512345""', 'Nothing - this will not compile.', 'a negative integer value', '""12345100000""']",1
+17,"By implementing encapsulation, you cannot directly access the class's _ properties unless you are writing code inside the class itself.","['The code does not compile.', 'A runtime exception is thrown.', '""world!!world""', '""world!world!""']",1
+18,Which is the most up-to-date way to instantiate the current date?,"['for (Pencil pencil : pencilCase) {}', 'for (pencilCase.next()) {}', 'for (Pencil pencil : pencilCase.iterator()) {}', 'for (pencil in pencilCase) {}']",0
+19,Fill in the blank to create a piece of code that will tell whether int0 is divisible by 5:,"['0', 'positive number', 'negative number', 'compilation error']",2
+20,"How many times will this code print ""Hello World!""?","['names.sort(Comparator.comparing(String::toString))', 'Collections.sort(names)', 'names.sort(List.DESCENDING)', 'names.stream().sorted((s1, s2) -> s1.compareTo(s2)).collect(Collectors.toList())']",2
+21,The runtime system starts your program by calling which function first?,"['private', 'protected', 'no-modifier', 'public']",0
+22,What code would you use in Constructor A to call Constructor B?,"['new SimpleDateFormat(""yyyy-MM-dd"").format(new Date())', 'new Date(System.currentTimeMillis())', 'LocalDate.now()', 'Calendar.getInstance().getTime()']",2
+23,Which statement is NOT true?,"['int0 / 5 ? true: false', 'int0 % 5 == 0', 'int0 % 5 != 5', 'Math.isDivisible(int0, 5)']",1
+24,What will this program print out to the console when executed?,"['10 times', '9 times', '5 times', 'infinite number of times']",0
+25,What is the output of this code?,"['print', 'iterative', 'hello', 'main']",3
+26,Object-oriented programming is a style of programming where you organize your program around _ rather than _ and data rather than logic.,"['Jedi(name, species, false)', 'new Jedi(name, species, false)', 'this(name, species, false)', 'super(name, species, false)']",2
+27,"What statement returns true if ""nifty"" is of type String?","['An anonymous class may specify an abstract base class as its base type.', 'An anonymous class does not require a zero-argument constructor.', 'An anonymous class may specify an interface as its base type.', 'An anonymous class may specify both an abstract class and interface as base types.']",1
+28,What is the output of this code?,"['[5, 1, 10]', '[10, 5, 1]', '[1, 5, 10]', '[10, 1, 5]']",0
+29,What is the result of this code?,"['""Hello""', 'A runtime exception is thrown.', 'The code does not compile.', '""ello""']",1
+30,What method can be used to create a new instance of an object?,"['functions; actions', 'objects; actions', 'actions; functions', 'actions; objects']",1
+31,Which is the most reliable expression for testing whether the values of two string variables are the same?,"['""nifty"".getType().equals(""String"")', '""nifty"".getType() == String', '""nifty"".getClass().getSimpleName() == ""String""', '""nifty"" instanceof String']",3
+32,Which letters will print when this code is run?,"['A runtime exception is thrown.', '3false', '2true', '3true']",3
+33,What is the output of this code?,"['It will not compile because of line 7.', 'Hello!Hello!', 'Hello!World!', 'It will not compile because of line 11.']",2
+34,What is the output of this code?,"['another instance', 'field', 'constructor', 'private method']",2
+35,What is the output of this code?,"['string1 == string2', 'string1 = string2', 'string1.matches(string2)', 'string1.equals(string2)']",3
+36,What is displayed when this code is compiled and executed?,"['A, B, and D', 'A, C, and D', 'C and D', 'A and D']",3
+37,Which approach cannot be used to iterate over a List named theList?,"['It will throw a runtime exception.', 'It will not compile.', 'It will print ""Hello World!"" three times.', 'It will run forever.']",2
+38,What method signature will work with this code?,"['[abc, 0, 2, 10]', 'The code does not compile.', '[abc, 2, 10, 0]', '[0, 10, 2, abc]']",3
+39,Which are valid keywords in a Java module descriptor (module-info.java)?,"['Hello World!', 'HelloHelloWorld!', 'Hello Hello World!', 'Hello HelloWorld!']",1
+40,Which type of variable keeps a constant value once it is assigned?,"['x', 'null', '10', '5']",2
+41,How does the keyword volatile affect how a variable is handled?,['A'],-1
+42,What is the result of this code?,['B'],-1
+43,You get a NullPointerException. What is the most likely cause?,['C'],0
+44,How would you fix this code so that it compiles?,['D'],-1
+45,"Add a Duck called ""Waddles"" to the ArrayList ducks.","['public void isHealthy(String avocado)', 'boolean isHealthy(String string)', 'public isHealthy(""avocado"")', 'private String isHealthy(String food)']",1
+46,If you encounter UnsupportedClassVersionError it means the code was ___ on a newer version of Java than the JRE ___ it.,"['provides, employs', 'imports, exports', 'consumes, supplies', 'requires, exports']",3
+47,"Given this class, how would you make the code compile?","['non-static', 'static', 'final', 'private']",2
+48,How many times f will be printed?,"['It will be read by only one thread at a time.', 'It will be stored on the hard drive.', 'It will never be cached by the CPU.', 'It will be preferentially garbage collected.']",2
+49,Which statements about abstract classes are true?,"['an alphanumeric character', 'a negative number', 'a positive number', 'a ClassCastException']",2
+50,Which keyword lets you call the constructor of a parent class?,"['A file that needs to be opened cannot be found.', 'A network connection has been lost in the middle of communications.', 'Your code has used up all available memory.', 'The object you are using has not been instantiated.']",3
+51,What is the result of this code?,"['Make age static.', 'Make age global.', 'Make age public.', 'Initialize age to a number.']",0
+52,"Normally, to access a static member of a class such as Math.PI, you would need to specify the class ""Math"". What would be the best way to allow you to use simply ""PI"" in your code?","['Duck waddles = new Duck();\nducks.add(waddles);', 'Duck duck = new Duck(""Waddles"");\nducks.add(waddles);', 'ducks.add(new Duck(""Waddles""));', 'ducks.add(new Waddles());']",2
+53,Which keyword lets you use an interface?,"['executed; interpreting', 'executed; compiling', 'compiled; executing', 'compiled, translating']",2
+54,Why are ArrayLists better than arrays?,['A'],-1
+55,Declare a variable that holds the first four digits of خ,['B'],-1
+56,Use the magic power to cast a spell,['C'],0
+57,What language construct serves as a blueprint containing an object's properties and functionality?,['D'],-1
+58,What does this code print?,"['4', '3', '5', 'A Runtime exception will be thrown']",0
+59,What is the result of this code?,"['1, 2, and 3', 'only 3', '2 and 3', 'only 2']",2
+60,Which is not a java keyword,"['parent', 'super', 'this', 'new']",1
+61,Which operator would you use to find the remainder after division?,"['It will throw an ArithmeticException.', 'It will run and output 0.', 'It will not compile because of line 3.', 'It will run and output infinity.']",0
+62,Which choice is a disadvantage of inheritance?,"['Add a static import.', 'Declare local copies of the constant in your code.', 'This cannot be done. You must always qualify references to static members with the class form which they came from.', 'Put the static members in an interface and inherit from that interface.']",0
+63,Declare and initialize an array of 10 ints.,"['extends', 'implements', 'inherits', 'import']",1
+64,Refactor this event handler to a lambda expression:,"[""You don't have to decide the size of an ArrayList when you first make it."", 'You can put more items into an ArrayList than into an array.', 'ArrayLists can hold more kinds of objects than arrays.', ""You don't have to decide the type of an ArrayList when you first make it.""]",0
+65,Which functional interfaces does Java provide to serve as data types for lambda expressions?,"['int pi = 3.141;', 'decimal pi = 3.141;', 'double pi = 3.141;', 'float pi = 3.141;']",2
+66,What is a valid use of the hashCode() method?,"['new MagicPower().castSpell(""expecto patronum"")', 'MagicPower magicPower = new MagicPower();\nmagicPower.castSpell();', 'MagicPower.castSpell(""expelliarmus"");', 'new MagicPower.castSpell();']",0
+67,"What kind of relationship does ""extends"" denote?","['constructor', 'instance', 'class', 'method']",2
+68,How do you force an object to be garbage collected?,"['10 10', '5 10', '10 5', '5 5']",1
+69,"Java programmers commonly use design patterns. Some examples are the _, which helps create instances of a class, the _, which ensures that only one instance of a class can be created; and the _, which allows for a group of algorithms to be interchangeable.","['Hello World', 'It will not compile because the second catch statement is unreachable', 'Hello World!', 'It will throw runtime exception']",1
+70,"Using Java's Reflection API, you can use _ to get the name of a class and _ to retrieve an array of its methods.","['finally', 'native', 'interface', 'unsigned']",3
+71,Which is not a valid lambda expression?,"['%', '//', '/', 'DIV']",0
+72,Which access modifier makes variables and methods visible only in the class where they are declared?,"['Overridden methods of the parent class cannot be reused.', 'Responsibilities are not evenly distributed between parent and child classes.', 'Classes related by inheritance are tightly coupled to each other.', 'The internal state of the parent class is accessible to its children.']",2
+73,What type of variable can be assigned to only once?,"['Array<Integer> numbers = new Array<Integer>(10);', 'Array[int] numbers = new Array[int](10);', 'int[] numbers = new int[10];', 'int numbers[] = int[10];']",2
+74,How would you convert a String to an Int?,"['groucyButton.addActionListener(ActionListener listener -> System.out.println(""Press me one more time...""));', 'groucyButton.addActionListener((event) -> System.out.println(""Press me one more time...""));', 'groucyButton.addActionListener(new ActionListener(ActionEvent e) {() -> System.out.println(""Press me one more time..."");});', 'groucyButton.addActionListener(() -> System.out.println(""Press me one more time...""));']",1
+75,What method should be added to the Duck class to print the name Moby?,"['Observer, Observable', 'Collector, Builder', 'Filter, Map, Reduce', 'Consumer, Predicate, Supplier']",3
+76,Which operator is used to concatenate Strings in Java,"['encrypting user passwords', 'deciding if two instances of a class are equal', 'enabling HashMap to find matches faster', 'moving objects from a List to a HashMap']",1
+77,"How many times does this loop print ""exterminate""?","['uses-a', 'is-a', 'has-a', 'was-a']",1
+78,What is the value of myCharacter after line 3 is run?,"['Set object to null and call Runtime.gc()', 'Set object to null and call System.gc()', 'Set object to null and call Runtime.getRuntime().runFinalization()', 'There is no way to force an object to be garbage collected']",1
+79,When should you use a static method?,"['static factory method; singleton; strategy pattern', 'strategy pattern; static factory method; singleton', 'creation pattern; singleton; prototype pattern', 'singleton; strategy pattern; static factory method']",0
+80,What phrase indicates that a function receives a copy of each argument passed to it rather than a reference to the objects themselves?,"['this.getClass().getSimpleName(); this.getClass().getDeclaredMethods()', 'this.getName(); this.getMethods()', 'Reflection.getName(this); Reflection.getMethods(this)', 'Reflection.getClass(this).getName(); Reflection.getClass(this).getMethods()']",0
+81,"In Java, what is the scope of a method's argument or parameter?","['a -> false;', '(a) -> false;', 'String a -> false;', '(String a) -> false;']",2
+82,What is the output of this code?,"['public', 'protected', 'nonmodifier', 'private']",3
+83,Which change will make this code compile successfully?,"['private', 'non-static', 'final', 'static']",2
+84,What is the output of this code?,"['""21"".intValue()', 'String.toInt(""21"")', 'Integer.parseInt(""21"")', 'String.valueOf(""21"")']",2
+85,Which code snippet is valid?,"['public String toString() { return name; }', 'public void println() { System.out.println(name); }', 'String toString() { return this.name; }', 'public void toString() { System.out.println(this.name); }']",0
+86,What is the output of this code?,"['+', '&', '.', '-']",0
+87,How would you use the TaxCalculator to determine the amount of tax on $50?,"['two', 'four', 'three', 'five']",1
+88,Which characteristic does not apply to instances of java.util.HashSet=,"['p', 'r', 'e', 'i']",2
+89,What is the output?,"[""when your method is related to the object's characteristics"", 'when you want your method to be available independently of class instances', ""when your method uses an object's instance variable"", 'when your method is dependent on the specific instance that calls it']",1
+90,"What will this code print, assuming it is inside the main method of a class?","['pass by reference', 'pass by occurrence', 'pass by value', 'API call']",2
+91,"You have an instance of type Map named instruments containing the following key-value pairs: guitar=1200, cello=3000, and drum=2000. If you add the new key-value pair cello=4500 to the Map using the put method, how many elements do you have in the Map when you call instruments.size()?","['inside the method', 'both inside and outside the method', 'neither inside nor outside the method', 'outside the method']",0
+92,Which class acts as root class for Java Exception hierarchy?,"['5', '8', '1', '3']",3
+93,Which class does not implement the java.util.Collection interface?,"['Change line 2 to public static final String message', 'Change line 6 to public void print2(){}', 'Remove the body of the print2 method and add a semicolon.', 'Remove the body of the print method.']",3
+94,You have a variable of named employees of type List<Employee> containing multiple entries. The Employee type has a method getName() that returns te employee name. Which statement properly extracts a list of employee names?,"['falsefalse', 'truetrue', 'falsetrue', 'truefalse']",1
+95,This code does not compile. What needs to be changed so that it does?,"['ArrayList<String> words = new ArrayList<String>(){""Hello"", ""World""};', 'ArrayList words = Arrays.asList(""Hello"", ""World"");', 'ArrayList<String> words = {""Hello"", ""World""};', 'ArrayList<String> words = new ArrayList<>(Arrays.asList(""Hello"", ""World""));']",3
+96,Which language feature ensures that objects implementing the AutoCloseable interface are closed when it completes?,"['A runtime exception is thrown.', '""HelloWorld!""', '""hello""', '????']",0
+97,What code should go in line 3?,"['TaxCalculator.calculate(50);', 'new TaxCalculator.calculate(50);', 'calculate(50);', 'new TaxCalculator.calculate($50);']",0
+98,Is this an example of method overloading or overriding?,"['uses hashcode of objects when inserted', 'contains unordred elements', 'contains unique elements', 'contains sorted elements']",3
+99,Which choice is the best data type for working with money in Java?,"['1 3 2 4', '4 2 3 1', '1 2 3 4', '4 3 2 1']",2
+100,Which statement about constructors is not ture?,"['my', 'hellomyfriends', 'hello', 'friends']",2
+101,"What language feature allows types to be parameters on classes, interfaces, and methods in order to reuse the same code for different data types?","['2', 'When calling the put method, Java will throw an exception', '4', '3']",3
+102,What will be printed?,"['Clonable', 'Throwable', 'Object', 'Serializable']",1
+103,What is the value of forestCount after this code executes?,"['java.util.Vector', 'java.util.ArrayList', 'java.util.HashSet', 'java.util.HashMap']",3
+104,What is a problem with this code?,"['employees.collect(employee -> employee.getName());', 'employees.filter(Employee::getName).collect(Collectors.toUnmodifiableList());', 'employees.stream().map(Employee::getName).collect(Collectors.toList());', 'employees.stream().collect((e) -> e.getName());']",2
+105,How do you convert this method into a lambda expression?,"['Add a constructor that accepts a String parameter and assigns it to the field shortCode.', 'Remove the final keyword for the field shortCode.', 'All enums need to be defined on a single line of code.', 'Add a setter method for the field shortCode.']",0
+106,Which choice is a valid implementation of this interface?,"['try-catch-finally', 'try-finally-close', 'try-with-resources', 'try-catch-close']",2
+107,What is the result of this program?,"['int[][] array = new int[][];', 'int[][] array = new int[3][3];', 'int[][] array = new int[2][2];', 'int[][] array = [][];']",1
+108,Which statement must be inserted on line 1 to print the value true?,"['neither', 'both', 'overloading', 'overriding']",1
+109,"What will this code print, assuming it is inside the main method of a class?","['float', 'String', 'double', 'BigDecimal']",3
+110,What will this code print?,"['A class can have multiple constructors with a different parameter list.', 'You can call another constructor with this or super.', 'A constructor does not define a return value.', 'Every class must explicitly define a constructor without parameters.']",3
+111,"Which code checks whether the characters in two Strings,named time and money, are the same?","['Regular Expressions', 'Reflection', 'Generics', 'Concurrency']",2
+112,An _ is a serious issue thrown by the JVM that the JVM is unlikely to recover from. An _ is an unexpected event that an application may be able to deal with in order to continue execution.,"['raspberry', 'strawberry', 'blueberry', 'rasp']",1
+113,Which keyword would not be allowed here?,"['3', '4', '2', 'When calling the put method, Java will throw an exception']",0
+114,Which OOP concept is this code an example of?,"['String should be compared using == method instead of equals.', 'Modifying a collection while iterating through it can throw a ConcurrentModificationException.', 'The List interface does not allow an argument of type String to be passed to the remove method.', 'ArrayList does not implement the List interface.']",1
+115,What does this code print?,"['Function<Integer, Integer> squareLambda = (int x) -> { x * x };', 'Function<Integer, Integer> squareLambda = () -> { return x * x };', 'Function<Integer, Integer> squareLambda = x -> x * x;', 'Function<Integer, Integer> squareLambda = x -> return x * x;']",2
+116,What keyword is added to a method declaration to ensure that two threads do not simultaneously execute it on the same object instance?,['A'],-1
+117,Which is a valid type for this lambda function?,['B'],-1
+118,What is displayed when this code is compiled and executed?,['C'],0
+119,What variable type should be declared for capitalize?,['D'],-1
+120,Which is the correct return type for the processFunction method?,"['10', '20', 'null', 'An error will occur when compiling.']",3
+121,What function could you use to replace slashes for dashes in a list of dates?,"['Integer val = 15;', 'String val = ""Sam"";', 'String val = null;', 'Optional<String> val = Optional.empty();']",1
+122,From which class do all other classes implicitly extend?,"['false  true', 'true  true', 'true  false', 'false  false']",2
+123,How do you create and run a Thread for this class?,"['[Two]', '[One, Two, Three]', '[One, Three]', 'Two']",1
+124,Which expression is a functional equivalent?,"['if(time <> money){}', 'if(time.equals(money)){}', 'if(time == money){}', 'if(time = money){}']",1
+125,Which is not one of the standard input/output streams provided by java.lang.System?,"['exception,assertion', 'AbnormalException, AccidentalException', 'error, exception', 'exception, error']",2
+126,The compiler is complaining about this assignment of the variable pickle to the variable jar. How woulld you fix this?,"['static', 'protected', 'public', 'void']",0
+127,What value should x have to make this loop execute 10 times?,"['composition', 'generics', 'polymorphism', 'encapsulation']",2
+128,"The _ runs compiled Java code, while the _ compiles Java files.","['true; false', 'false; false', 'false; true', 'true; true']",1
+129,Which packages are part of Java Standard Edition,"['native', 'volatile', 'synchronized', 'lock']",2
+130,"What values for x and y will cause this code to print ""btc""?","['Function<Integer, Boolean>', 'Function<String>', 'Function<Integer, String>', 'Function<Integer>']",2
+131,Which keyword would you add to make this method the entry point of the program?,"['6', '3', '4', '7']",3
+132,You have a list of Bunny objects that you want to sort by weight using Collections.sort. What modification would you make to the Bunny class?,"['Function<String, String>', 'Stream<String>', 'String<String, String>', 'Map<String, String>']",0
+133,,"['Integer', 'String', 'Consumer', 'Function<Integer, String>']",1
+134,,"['UnaryOperator<String> replaceSlashes = date -> date.replace(""/"", ""-"");', 'Function<String, String> replaceSlashes = dates -> dates.replace(""-"", ""/"");', 'Map<String, String> replaceSlashes = dates.replace(""/"", ""-"");', 'Consumer<Date> replaceSlashes = date -> date.replace(""/"", ""-"");']",0
+135,,"['Object', 'Main', 'Java', 'Class']",0
+136,,"['Thread thread = new Thread(new CurrentDateRunnable()); thread.start();', 'new Thread(new CurrentDateRunnable()).join();', 'new CurrentDateRunnable().run();', 'new CurrentDateRunnable().start();']",0
+137,,['A'],-1
+138,,['B'],-1
+139,,['C'],-1
+140,,['D'],0
+141,,"['print', 'out', 'err', 'in']",0
+142,,"['Use the method toInt() to convert pickle before assigning it to jar.', 'Cast pickle to an int before assigning it to jar.', 'Make pickle into a double by adding + "".0""', 'Use the new keyword to create a new Integer from pickle before assigning it to jar.']",1
+143,,"['10', '3', '1', '0']",1
+144,,"['IDE; JRE', 'JDK; IDE', 'JRE; JDK', 'JDK; JRE']",2
+145,,"['java.net', 'java.util', 'java.lang', 'All above']",3
+146,,"['exception', 'args', 'static', 'String']",2
+147,,"['Implement the comparable interface by overriding the compareTo method.', 'Add the keyword default to the weight variable.', 'Override the equals method inside the Bunny class.', 'Implement Sortable and override the sortBy method.']",0

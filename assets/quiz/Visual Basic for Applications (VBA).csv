@@ -1,0 +1,74 @@
+,Question,Answers,Right Index
+0,Which two sets of values are printed by this function and sub?,[':'],-1
+1,This code shows the first statement of CalledSub. Which calling statement will work properly?,[':'],0
+2,What is the principal difference between a class and an object?,[':'],-1
+3,What value does the MsgBox statement display?,[':'],-1
+4,What object is needed to put a userform module in a VBA project?,"['call Calledsub ""smith"",26', 'calledsub (surname=""smith"", Age = 26)', 'calledsub (Surname:=""Smith"", Age:=26)', 'calledsub ""smith"", 26']",3
+5,What is the output?,"['There is no meaningful difference. The terms are used interchangeably.', ""A class declares an object's properties. An object completes the declaration by defining events and methods."", 'An object is a template for a class.', 'A class describes the design of an object. An object is an instance of that design.']",3
+6,The Driver subroutine is declared by Sub Driver (Y). Which statement results in a compile error?,"['2', '10', 'First arg', '3.1416']",2
+7,"You have several variables to display on a user form, and there are too many variables to display at once. Which control best enables the user to see all the variables?","['associated standard code module', 'UserForm', 'associated class module', 'userForm class']",-1
+8,Below is a function named SquareIt. Which version of the subroutine named Area results in a compile error?,"['3', '0', '9', '6']",0
+9,"EmailAddress() is an array. It is declared by Dim EmailAddress(10) As String, and option Base 1 is in effect. How many rows and columns are in EmailAddress()?","['Driver x', 'call Driver(x)', 'call Driver x', 'Driver (X)']",-1
+10,Which cell is selected if you run this code?,"['Frame', 'multipage', 'TabStrip', 'ListBox']",3
+11,Which variable name is valid in VBA?,['sub Area()'],-1
+12,Which is a valid definition of a user-defined data type?,['Sub Area()'],-1
+13,What is one way to duplicate a user form from one project into a different project?,"['10 rows and 10 columns', '10 rows and 1 column', '10 rows and 0 columns', '1 row and 10 columns']",1
+14,The recording of a macro in Word is likely to be an incomplete record of the user's actions. Why?,"['F5', 'F3', 'B3', 'E3']",1
+15,Which statement should precede a subroutine's error handler?,"['_MyVar', 'My_Var', 'My-Var', '1MyVar']",1
+16,How many values can MyArray hold?,[':'],0
+17,Which statement is true?,[':'],-1
+18,"A declaration has scope, which has three levels. What are they?",[':'],-1
+19,There are two references that must be selected in the Visual Basic Editor in order for any Visual Basic code to run in Excel. What are these two references?,[':'],-1
+20,Which action will cause your project to reset its variables?,"['] :', 've and close the project with the existing user form.', 'ck Insert > File.', 'wse to the location of the existing project.', 'ght-click it and select the user-form you want to duplicate.', '] :', 'en the existing user form in Desing Mode.', 'ht-click the form and select Copy.', 'tch to the other project.', 'ght-click Module and select Paste.', '] :', 'the Project Explorer, right-click the user form and select Copy.', 'tch to the new project.', 'ght-click UserForms and select Paste.', '] :', 'en the existing user form in Design Mode.', 'ck File > Export File.', 'tch to the other project.', 'ck File > Import File.']",-1
+21,Which keyboard shortcut causes VBE to locate the declaration of a procedure?,"[""Word's Macro Recorder does not record actions initiated by keyboard shortcuts."", ""Word's Macro Recorder does not support Find & Replace edits."", ""Word's Macro Recorder does not record actions initiated by clicking a button on the Ribbon's Developer tab."", ""Word's Macro Recorder does not record actions that inlove selection of text by pointing with the mouse pointer.""]",3
+22,"When you define a new class of object, where do you assign a name to it?","['End', 'Return', 'Exit Sub', 'Stop']",2
+23,How does a class module indicate that it uses a particular interface?,"['0', '32,769', '5', '6']",3
+24,"What is needed for the contents of Module1 to be available to other modules in a VBA project, but not to any other VBA project?","['Set establishes a value in a class; Let returns a value from a class.', 'Let establishes a value in a class; Set returns a value from a class.', 'Let establishes a value in a class; Get returns a value from a class.', 'Get establishes a value in a class; Set returns a value from a class.']",2
+25,"When used with an array named MyArray, what is the preferred way to set beginning and ending values of a loop control variable?","['Module, Project and Automation', 'Procedure, Private Module and Public Module', 'Subroutine, Module and Project', 'Procedure, Project and Global']",1
+26,What is the value of Test3?,"['MS Excel object library and MS Office object library', 'VBA and MS Office object library', 'VBA and Excel object library', 'MS Excel object library and OLE automation']",2
+27,Which statement declares an array?,"['Edit the list of arguments of the current routine while in debug mode.', 'Click End in a run-time error dialog.', 'Add an ActiveXcontrol to a worksheet.', 'all of these answers']",1
+28,"To use VBA code to maintain a different VBA project, you can make use of VBA's extensibility. What is needed to enable extensibility?","['Shift+F3', 'Alt+F (Windows) or Option+F (Mac)', 'Shift+F2', 'Ctrl+F (Windows) or Command+F (Mac)']",2
+29,How do you add a user form to a VBA project?,"[""in the class module's name"", ""in the class module's code"", ""in a standard module's code"", ""in a standard module's Properties""]",3
+30,Explicit variable declaration is required. MyVar is declared at both the module and the procedure level. What is the value of MyVar after first AAA() and then BBB() are run?,"['The interface itself is part of the class module.', 'by means of the Interface keyword and the name of the interface', 'by means of the Implements keyword and the name of the interface', 'The name of the interface is passed as a parameter.']",3
+31,Which code block from class modules returns a compile error?,"['Set Option Global at the top of Module1', 'Declare module-level variables as Private', 'Set Module Level Scope at the top of Module1', 'Set Option Private Module at the top of Module1']",3
+32,"If VBA code declares FileCount as a constant rather than a variable, the code tends to run faster. Why is this?","['For i = 0 To UBound(MyArray,1)', 'For i = 1 To UBound(MyArray,1)', 'For i = LBound(MyArray,1) To UBound(MyArray,1)', 'It depends on whether Option Base 0 or Option Base 1 is in use.']",2
+33,A VBA project must declare four classes. How many class modules are needed?,"['0', '1', '3', '2']",3
+34,What does this code display?,"['Dim MyArray() As Integer', 'Dim MyArray() As Array', 'Dim MyArray As Integer', 'Dim MyArray As Array']",0
+35,"The VBA code block shown in the following four options runs when UserForm1's CommandButton1 button is clicked. Which block of code leaves UserForm1 loaded but not visible until the FoundErrors function has checked it, and then enables processing to continue if no errors are found?","['Set Macro Security to Trust Access to the VBA Project Object Model', ""The project's workbook should be protected in the Ribbon's Review tab"", 'Include a reference to Microsoft VBA Extensibility 5.3', 'Include a reference to Microsoft VBA Extensibility 5.3 and set Macro Security to Trust Access to the VBA Project Object Model']",2
+36,Which is the correct way to structure a With block?,"['] :', 'lect the project in the Project window of the Visual Basic Editor', 'ick the Design Mode button and select Insert Mode', '] :', 'lect the project in the Project window of the Visual Basic Editor', 'ick the Toolbox button and select UserForm', '] :', 'lect the project in the Project window of the Visual Basic Editor', 'ght-click the Run menu and select Customize', '] :', 'lect the project in the Project window of the Visual Basic Editor', 'ck Insert > UserForm']",-1
+37,"Why does this code generate a ""Subscript out of range"" error?","['MyVar equals ""Procedure AAA Scope""', 'ISNULL(MyVar) is TRUE', 'MyVar equals ""Procedure BBB Scope""', 'MyVar is NULL']",2
+38,Which subroutine declaration does not cause a compile error?,[':'],-1
+39,"How can a user enter data on a worksheet or document, or switch windows, while UserForm1 is displayed on the screen?",[':'],-1
+40,SubA passes MyVar to SubB. How can you ensure that MyVar has its original value when control returns to SubA?,[':'],-1
+41,Which procedure declaration is syntactically correct?,[':'],0
+42,What are the two principal kinds of procedure in VBA?,"['The scope of constants is limited to the procedure that declares them', 'Constants are declared at compile time, but variables are declared at run time', 'Once declared in a project, the value of a constant cannot be changed. There is no need to look up the current value of FileCount when it is a constant.', ""The Const declaraton specifies the most efficient type given the constant's value""]",3
+43,Which code block compiles without error?,"['two (one for the properties and one for the methods)', 'one (each class is declared in the same module)', 'four (one for each class)', 'as many as are required by the variable types that the objects return']",3
+44,What is used in the Immediate window to display the current value of the variable CountValues?,"['an error message', 'Y and Z', 'Z = in a message box and then a subsequent error message', 'Y = in a message box and then a subsequent error message']",2
+45,At which level can you declare a variable in this way: Private TopSecret As String?,[':'],-1
+46,"How can a user enter data on a worksheet or document, or switch windows, while UserForm1 is displayed on the screen?",[':'],-1
+47,SubA passes MyVar to SubB. How can you ensure that MyVar has its original value when control returns to SubA?,[':'],0
+48,Arrays cannot be resized more than once.,[':'],-1
+49,Which block of code ends with the variable i equal to 5 and the variable X equal to 10?,[':'],-1
+50,How does a class module indicate that it uses a particular interface?,[':'],0
+51,,[':'],-1
+52,,[':'],-1
+53,,"['Arrays cannot be resized more than once.', 'MyArr was originally declared with three ""rows"".', 'You can resize only the last dimension of an array when you specify ReDim Preserve.', 'The correct syntax is ReDim Preserve MyArr(0 To 4, 0 To 4).']",-1
+54,,"['Sub Called(Salary As Long, ParamArray Vals() As Variant)', 'Sub Called(ParamArray Vals() As Variant, Salary As Long)', 'Sub Called(Optional Salary As Long, ParamArray Vals() As Variant)', 'Sub Called(Salary As Long, ParamArray Vals() As String)']",-1
+55,,"['Show the form with this statement: UserForm1.Show vbModal', 'Include this statement in the code: UserForm1.Hwnd = False.', ""Set the user from's SpecialEffect property to frmShowModal"", ""Set the user from's ShowModal property to False.""]",-1
+56,,"['Declare SubB as Sub SubB(ByRef MyVar).', 'Declare SubB as Sub SubB(MyVar).', 'Declare SubB as Sub SubB(Static MyVar).', 'Declare SubB as Sub SubB(ByVal MyVar).']",3
+57,,[':'],-1
+58,,[':'],-1
+59,,[':'],-1
+60,,[':'],-1
+61,,"['Function and EventFunction and Event', 'Function and ScopeFunction and Scope', 'Subroutine and EventSubroutine and Event', 'Subroutine and Function']",-1
+62,,"['Sub Decs() Dim MyFixed As String * 0 MyFixed = ""A"" MsgBox MyFixed End Sub', 'Sub Decs() Dim MyInt% * 1 MyInt = 7 MsgBox MyInt End Sub', 'Sub Decs() Dim MyInt% As Integer * 1 MyInt = 5 MsgBox MyInt End Sub', 'Sub Decs() Dim MyInt, MyNum As Integer MyInt = ""A"" MsgBox MyInt End Sub']",-1
+63,,"['= CountValues= CountValues', '| CountValues| CountValues', ': CountValues: CountValues', '? CountValues? CountValues']",3
+64,,"['function', 'module', 'subroutine', 'procedure']",-1
+65,,"['Show the form with this statement: UserForm1.Show vbModal.', ""Set the user form's SpecialEffect property to frmShowModal."", 'Include this statement in the code: UserForm1.Hwnd = False.', ""Set the user form's ShowModal property to False.""]",3
+66,,"['Declare SubB as Sub SubB(Static MyVar).', 'Declare SubB as Sub SubB(ByVal MyVar).', 'Declare SubB as Sub SubB(MyVar).', 'Declare SubB as Sub SubB(ByRef MyVar).']",-1
+67,,"['The correct syntax is ReDim Preserve MyArr(0 To 4, 0 To 4).', 'You can resize only the last dimension of an array when you specify ReDim Preserve.', 'MyArr was originally declared with three ""rows.""', 'Declare SubB as Sub SubB(ByRef MyVar).']",-1
+68,,[''],-1
+69,,[''],-1
+70,,[''],-1
+71,,[''],-1
+72,,"['by means of the Implemets keyword and the name of interface.', 'bymeans of the Interface keyword and the name of the interface.', 'The name of the interface is passed as a parameter.', 'The interface itself is part of the class module.']",0

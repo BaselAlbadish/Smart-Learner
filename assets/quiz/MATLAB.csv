@@ -1,0 +1,107 @@
+,Question,Answers,Right Index
+0,From what distribution does the rand() function return value?,"['normal', 'poisson', 'binomial', 'uniform']",3
+1,"Based on the code below, c is the _ of a.","['median', 'mode', 'mean', 'margin']",0
+2,What does the Profiler track?,"['execution time', 'command history', 'errors', 'the value of variables']",0
+3,Which code block contains the correct syntax for a while loop?,[''],-1
+4,What does b contain?,[''],-1
+5,You have written a function myfun and want to measure how long it takes to run. Which code segment will return in t the time in seconds it takes myfun to run?,[''],-1
+6,What is %% used for?,[''],0
+7,what is the . character NOT used for?,[''],0
+8,Which function could you use for multiple linear regression?,[''],-1
+9,"For which of these arrays do mean, median, and mode return the same value?",[''],-1
+10,"You are in the middle of a long MATLAB session where you have performed many analyses and made many plots. You run the following commands, yet a figure window doesn't pop up on the top of your screen with your plot. What might be the issue?",[''],0
+11,How do you access the value for the field name in structure S?,[''],-1
+12,What built-in definition does i have?,[''],-1
+13,Which statement is equivalent to this for loop?,"['argument placeholder', 'block quotes', 'code sections', 'conversion specifier']",2
+14,"You have plotted values of cosine from -10 to 10 and want to change the x-axis tick marks to every pi, from -3pi to 3pi. Which statement will do that?","['structure field access', 'a decimal point', 'cell array access', 'element-wise operations']",2
+15,What is the value of c?,"['polyval', 'regress', 'solve', 'polyfit']",1
+16,Which function CANNOT be used to randomly sample data?,"['[0 1 1 1 2]', '[1 3 5 5 6]', '[0 1 1 1 1]', '[0 0 5 5 5]']",0
+17,Which choice is correct syntax for a switch statement?,"[""Your plot doesn't plot in a figure window because figure was not called immediately in advance."", 'Your plot syntax is incorrect.', 'Your plot is in a figure window that was already open, hidden behind other windows on your screen.', 'Your plot was saved to an image file but not displayed.']",2
+18,What is the result of this code?,"[""S['name']"", 'S.name', ""S('name')"", ""S{'name'}""]",1
+19,What is true of a handle class object?,"['basic imaginary unit', 'index function', 'infinity', 'index variable']",0
+20,Which choice has a different final result in f10 than the other three?,"['b = a*a;', 'b = a.^2;', 'b = a^2;', 'b = pow2(a);']",1
+21,Which choice will NOT give you a 5 x 5 identity matrix?,"['xticks(-3pi:3.14:3pi)', 'xticks(-3pi:pi:3pi)', 'xticks(linespace(-3pi(), 3pi(), pi()))', 'xticks(linespace(-3pi, 3pi, pi)']",1
+22,Which statement creates this structure?,"['[-1 2 -1]', '[1 3 6 5 3]', '6', '[1 -2 1]']",1
+23,my_func is a function as follows. What is the value of a at the end of the code beneath?,"['datasample', 'randi', 'resample', 'randperm']",2
+24,Which statement could create this cell array?,[''],0
+25,Which choice adds b to each row of a?,[''],-1
+26,Which choice replaces all as with os?,[''],-1
+27,Which statement returns the roots for the polynomial x^2 + 2x - 4?,[''],-1
+28,Which choice is the proper syntax to append a new elements a to the end of 1x 2 dimensional cell array C?,"['Error', '']",-1
+29,"You have loaded a dataset of people's heights into a 100 x 1 array called height. Which statement will return a 100 x 1 array, sim_height, with values from a normal distribution with the same mean and variance as your height data?",[''],0
+30,Which statement returns a cell array of the strings containing 'burger' from menu?,[''],-1
+31,What is the set of possible values that a may contain?,"['When you pass a handle object to a function, a new object is made that is independent of the original.', 'All copies of handle objects refer to the same underlying object.', 'Handle object cannot reference one another.', 'Handle object do not have a default eq function.']",1
+32,Which statement is true about the sparse matrices?,[''],-1
+33,Which statement using logical indices will result in an error?,"['f10 = factorial(10)', '']",1
+34,Which statement turns menu into the variable menu_string below?,['f10 = prod(1:10)'],-1
+35,Which code snippet sets a new random seed based on the current time and saves the current settings of the random number generator?,[''],-1
+36,"You have a matrix data in which each column is mono audio recording from a room in your house. You've noticed that each column has a very different mean and when you plot them all on the same graph, the spread across the y axis make it impossible to see anything. You want to subtract the mean from each column. Which code block will accomplish this?","['diag(ones(5, 1))', 'identity(5)', 'eye(5)']",1
+37,Which code block results in an array b containing the mean values of each array within C?,"[""dog = struct('name', 'Bindy'; 'breed', 'border collie'; 'weight', 32);"", '']",1
+38,Which statement creates a logical array that is 1 if the element in passwords contains a digit and 0 if it does not?,[''],-1
+39,Which is NOT a function that adds text to a plot?,[''],-1
+40,Which code block most likely produced this graph?,"['4', '3', '0', '1']",3
+41,What kind of files are stored with the .mat extension?,"['c = {""hello world"" {""hello""} ""goodbye"" [1 2 ]};', 'c = {""hello world"" {""hello""} ""goodbye"" {[1 2 3]}};', 'c = {""hello world"" {""hello""} ""goodbye"" [1 2 3]};', 'c = {""hello world"" {""hello"" ""hello""} ""goodbye"" {[1 2 3]}};']",2
+42,You would like to randomly reorder every element in array a and put the result into another array b. Which code is NOT necessary to do that?,"['a = a + reshape(b, 4, 1);', ""a = a + b';"", 'a = a + repmat(b, 4, 1);', 'a = a + [b b b b];']",2
+43,Which statement returns 1 (true)?,[''],-1
+44,Which does E contain?,[''],-1
+45,"Where in the UI can you see what variables have been created, their values, and their class?",[''],0
+46,"Given the following x and y coordinates, which choice calculates a linear regression for the x and y coordinates, and which plots the points of the x,y data and the regression line on the same graph?",[''],-1
+47,"If you run this piece of code, you will get an error. Why?","['poly([1 2 -4])', 'solve(x^2 + 2x - 4 == 0)', 'polyfit(x^2 + 2x - 4 == 0)', 'roots([1 2 -4])']",3
+48,Which command will create a 10-element vector v with values from 1 to 10?,"['C = {C a};', 'C = cellcat(C a)', 'C = cat(2, {a}, C)', 'C{end+1}=a']",3
+49,"For a 5 x 5 array, the two subscript index (4,2) indexes the same location as linear index ___.","['sim_height = std(height) + mean(height) * randn(100, 1);', 'sim_height = mean(height) + std(height) * randn(100, 1);', 'sim_height = randn(std(height), mean(height), [100, 1]);', 'sim_height = randn(mean(height), std(height), [100, 1]);']",1
+50,What is a difference between global variable and persistent variables?,"[""menu{strfind(menu, 'burger')}"", ""menu(strfind(menu, 'burger'))"", ""menu{contains(menu, 'burger')}"", ""menu(contains(menu, 'burger'))""]",3
+51,How is the random seed for MATLAB's random number generator first initializedin a MATLAB Session?,"['3, 4, 5, 6, 7, 8, 9, 10, 11, 12', '1, 2, 12', '2, 11, 12', '1, 12']",1
+52,At what will MATLAB look first for a called function?,"['You can use the sparse function to remove empty cells from cell array variables.', 'Sparse matrices always use less memory than their associated full matrices.', ""Mixtures of sparse and full matrices can be combined in all of MATLAB's built-in arithmetic operations."", 'The sparse function requires its input to be a full matrix with at least 50% zero elements.']",1
+53,Which choice is the correct syntax for declaring a function that returns the input value as the output?,"['b = a(a ~= 11)', 'b = a(a == 1)', 'b = a(a>6 && a<9)', 'b = a(a | 1)']",2
+54,What is the state of a at the end of this code?,"['menu_string = cell2mat(join(menu, newline))', ""menu_string = cell2mat(join(menu, '\\n'))"", 'menu_string = join(menu, newline)', 'menu_string = cell2mat(pad(menu))']",0
+55,You've just plotted some data and want to change the color behind the lines you've plotted to black. Which code block will accomplish this?,"[""rng_settings_curr = rng('shuffle');"", '']",0
+56,Which statement will return all the odd numbers from 1 to 9?,"[""rng_settings_curr = rand('shuffle');"", '']",-1
+57,"In MATLAB, the imfilter command performs a convolution operation between an image and a matrix. Suppose you have an image loaded in MATLAB into the variable img and you apply the following code. The original image appears slightly blurred because the convolution smoothed out the image (removed noise). Why do you think this happened?","['data_nomean = data - repmat(median(data), size(data, 1), 1);', 'data_nomean = bsxfun(@minus, data, mean(data));', '']",1
+58,What is the size of b?,"[""data_nomean = zscore(data');""]",-1
+59,Which statement reverses vector a?,[''],-1
+60,"Which command will create a column vector with the values 7, 8, and 9?","['b = cellfun(@mean, C);', '']",-1
+61,What do you call in the command window to see all the variables in the workspace and their classes?,"['b = cellfun(@(m) mean(m(:)), C)']",0
+62,"You wrote a new function named snap in an m-file and when you call it, you're not getting the output you expect. You previously wrote a different function named snap, which you think might also be on the search path. Which command can you use to see if the old snap function is being called?","[""contains(password, '\\d')"", ""~isempty(regexp(passwords, '\\d'))"", ""cellfun(@(x) ~isempty(regexp(x, '\\d')), passwords)"", ""regexp(passwords, '\\d')""]",2
+63,What is a reason to save a MAT-file using the -v7.3 flag?,"['title', 'text', 'label', 'legend']",2
+64,Which choice cannot add a directory to the search path?,[''],-1
+65,Which is not a function to plot three-dimensional data?,[''],0
+66,What is the reason to save a MAT-file using the v-7.3 flag?,"['figure files', 'script files', 'function files', 'stored variable files']",3
+67,This graph could be the result of which block of code?,"['b = a(randi(10, 1, 10));', '']",0
+68,What is a key difference between && and &?,[''],-1
+69,What is the result of this code?,[''],-1
+70,,"['a == b', 'ischar(b)', 'length(a) == length(b)', 'class(a) == class(b)']",0
+71,,"[""E = {'cat'} {'dog'}"", ""E = {'mouse'}"", ""E = {'cat'} {'cow'} {'dog'} {'piranha'}"", 'E =']",0
+72,,"['Editor', 'command window', 'details', 'workspace']",3
+73,,[''],0
+74,,[''],-1
+75,,[''],-1
+76,,[''],-1
+77,,"['You are attempting to multiply a non-square matrix by itself, causing a dimension mismatch.', 'MATLAB does not allow you to square all the elements in the matrix in a single operation.', 'You must use the ** operator instead of the ^ operator.', 'You cannot square matrices that have a 0 as the first element.']",0
+78,,"['v = {1:10}', 'v = [1-10]', 'v = 1:10', 'v = (10)']",2
+79,,"['7', '8', '17', '9']",3
+80,,"['Global variables have a higher performance overhead than persistent variables.', 'Global variables remain in memory after clear all; persistent variables do not.', 'Global variables can be used to cache data in memory; persistent variables cannot.', 'Global variables are accessible outside the function scope; persistent variables are not.']",3
+81,,"['Seed is undefined until it is initialized by the user.', 'Seed is set to a value based on the current time when user first calls rand()', 'Seed is set to a value based on the current time on startup.', 'Seed is set to a static default value on startup.']",3
+82,,"['functions on the path', 'built-in functions', 'functions within the current file', 'functions within the current directory']",3
+83,,[''],-1
+84,,[''],0
+85,,[''],-1
+86,,[''],-1
+87,,[''],-1
+88,,[''],0
+89,,[''],-1
+90,,[''],-1
+91,,"[""h_f = figure; set(h_f,'Color', [0 0 0]);"", ""h_a = gca; set(h_a,'Color', [0 0 0]);"", ""h_a = axes; set(h_a,'Color', [0 0 0]);"", ""h_f = gcf; set(h_a,'Color', [0 0 0]);""]",1
+92,,"['2*[1:5]+1', '1:2:9', 'isodd(1:9)', '1:odd:9']",1
+93,,"['h is a Gaussian filter that adds to 1. Its intended effect is to highlight image edges.', 'h is an averaging filter uniformly distributed that adds to 1. Its intended effect is to smooth out images (remove noise).', 'h is a Laplacian filter that adds up to 0. Its intended effect is to smooth out images (remove noise).', 'imfilter is a function that always blurs the images.']",1
+94,,"['1x3', '3x2', '2x3', '2x9']",3
+95,,"['reverse(a)', 'a(end:- 1:1)', 'rev(a)', 'a(::-1)']",1
+96,,"['c = [7,8,9]', 'c = [7: 8: 9]', 'c = [7; 8; 9]', 'c = [7 8 9]']",2
+97,,"['who', 'vars', 'whos', 'who all']",2
+98,,"['which', 'who', 'lookfor', 'what']",0
+99,,"['to ensure backward compatibility', 'to avoid HDF5 overhead in MAT-file', 'to include a variable greater that 2GB', 'to use compression by default']",2
+100,,"['the path function', 'the savepath function', 'using Set Path in the Environment menu', 'the addpath function']",1
+101,,"['mesh', 'surf', 'contour', 'grid']",3
+102,,"['to use compression by default', 'to ensure backward compatibility', 'to include a variable greater than 2GB', 'to avoid HDF5 overhead in MAT-file']",2
+103,,"[""a = randn(1,1000); histogram(a) ylabel('counts')"", ""a = rand(1,1000); histogram(a) ylabel('counts')"", ""a = randi(1,1000); histogram(a) ylabel('counts')"", ""a = rng(1,1000); histogram(a) ylabel('counts')""]",0
+104,,"['&& is a logical operator and & is not.', '&& is always slower than &', '&& employs short-circuiting behavior and & does not.', '&& is a bitwise operator and & is not.']",2
+105,,"['""abxd""', 'abxd', 'a 1x 3 string array', 'a run-time error']",2

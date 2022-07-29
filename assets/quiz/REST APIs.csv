@@ -1,0 +1,67 @@
+,Question,Answers,Right Index
+0,"What type of relationship is defined as one resource existing only if another parent resource exist-for example, pages in a book?","['Partial', 'dependent', 'associative', 'linked']",1
+1,Which URL pattern is recommended when working with one resource and a collection of resources?,"['/companies/{id} and/company', '/company/{id} and/companies', '/companies/{id} and/companies', '/company/{id} and/company']",2
+2,"When dealing with JSON web Tokens (JWTs), what is a claim?","['data in the token', 'Ownership', 'a permission', 'and integer']",0
+3,Which REST constraint specifies that knowledge and understanding obtained from one component of the API should be generally applicable elsewhere in the API?,"['Uniform Interface', 'Client-Server', 'Stateless', 'Chacheable']",0
+4,What would you enable to allow a browser on another site to make an AJAX request to your API?,"['HTTP', 'REST', 'OPTIONS', 'CORS']",3
+5,APIs commonly use webhooks to _.,"['notify other systems of an event', 'catch error faster', 'improve error logging', 'log additional data']",0
+6,What is the underlying goal of all APIs?,"[""to add new technologies to an organization's infrastructure."", 'to share features and functionality with other system.', 'to move infrastructure to the cloud.', 'to appease the latest digital transformation effort.']",1
+7,Which is a common command-line tool for using or exploring an API?,"['bash', 'curl', 'ssh', 'powerShell']",1
+8,What is the modern specification for describing an API?,"['OpenAPI (Swagger)', 'WADL', 'WSDL', 'OAuth']",0
+9,Which HTTP verb is normally used to update or create a resource in an API?,"['SUBMIT', 'WRITE', 'POST', 'CREATE']",2
+10,What is one benefit of server-side caching in APIs?,"['Mobile app work better.', 'It improves uptime.', 'It offers better security.', 'It reduce load on servers.']",3
+11,"Your API resource does no allow deletion, and a client application attempted to delete the resource. What HTTP response code should you return?","['409 Conflict', '400 Bad Request', '406 Not Acceptable', '405 Method Not Allowed']",3
+12,What is OpenID Connect?,"['an identify layer on top of OAuth 2.0', 'the new name for SAML 3.0', 'a modern replacement for API keys', 'an SSO competitor for OAuth 2.0']",0
+13,What is one benefit of GraphQl over REST approaches?,"['flexible querying/responses', 'more stable APIs', 'compatible with more gateways', 'more secure by default']",0
+14,Which REST constraint specifies that there should be no shared context?,"['Stateless', 'Client-Server', 'Uniform Interface', 'Cacheable']",0
+15,What purpose does a User-Agent serve?,"['It identifies the user ID.', 'It identifies the client application or SDK.', 'It identifies if the API should expect a user authentication.', 'It identifies if the API should accept microservice traffic.']",1
+16,"If you were to add versioning by using the Accept and Content-Type header, what would be the correct format of the header value?","['application/json', 'application/json_version2', 'text/html', 'application/vnd.myapp.v2+json']",3
+17,What is one benefit that OAuth provides over an API key approach?,"['A token is encrypted.', 'A token is encoded.', 'A token is scoped to the use case.', 'A token can be shared between systems.']",2
+18,The ability to execute the same API request over and over again without changing the resource's state is an example of _.,"['stateless architecture', 'idempotency', 'a uniform interface', 'cacheability']",1
+19,What component can you use to wrap legacy architectures or protocols into a REST interface for easier consumption and integration?,"['API proxy', 'API gateway', 'OpenAPI', 'OAuth authorization server']",0
+20,What protection does a JSON Web Token (JWT) offer to mitigate tampering with its contents?,"['transport over SSL', 'encrypted payload', 'a signature', 'encoded payload']",2
+21,What OAuth term is used to represent permissions?,"['token', 'scope', 'claim', 'back channel']",1
+22,What additional type of token would you see when using OpenID Connect?,"['ID token', 'refresh token', 'access token', 'auth code token']",0
+23,What should you add to a Cache-Control response header to specify that a response should not be stored in an intermediary cache?,"['no-proxy', 'client-only', 'restricted', 'private']",3
+24,Which OAuth grant type can support a refresh token?,"['Authorization Code Grant', 'Client Credentials Grant', 'Implicit Grant', 'Authentication Grant']",0
+25,"Using OAuth, what scope would you request for write access to the API?","['It varies from API to API.', 'admin', 'write', 'read-write']",1
+26,Which property would you use to include subresources directly into a JSON document?,"['_embedded', 'resources', 'subresources', '_links']",2
+27,What is the best way to track SDK and version usage?,"['tracking downloads', 'Accept headers', 'user agents', 'polling users']",0
+28,"Which REST constraint allows for the presence of caching, routing, and other systems between the client and server?","['Layered System', 'Stateless', 'Client-Server', 'Cacheable']",0
+29,Which content is best to include in your documentation?,"['your tech stack', 'reasoning for your naming schema', 'your mission statement', 'sample code']",3
+30,What metric tracks overall availability for your API?,"['Response Time', 'Time to First Hello World', 'TTL', 'Uptime']",3
+31,What is the recommended method and URL pattern for retrieving a specific user?,"['GET /user/{id}', 'GET /users/{id}', 'GET /user?id={id}', 'GET /users?id={id}']",1
+32,What is the purpose of a link relation?,"['to describe relationships between resources or actions', 'to describe subresources related to the current one', 'to link two resources together', 'to describe a resource and its purpose']",2
+33,"When building SDKs, which languages should you support?","['Java, Javascript, and .NET', 'and you can support', 'PHP, Python, and Go', 'the languages that your target users use']",3
+34,Which property would you use to include references to other resources in a JSON document?,"['resources', '_embedded', 'subresources', '_links']",0
+35,What is OAuth?,"['an authorization framework for granted delegated access', 'an approach to single sign-on for APIs', 'a method for API authentication', 'HTTP Basic Authentication 2.0']",0
+36,What should your API documentation describe?,"['JSON', 'HTTP', 'common use cases', 'your tech stack']",2
+37,What is the purpose of an OAuth refresh token?,"['to share user profile information', 'to update an API configuration', 'to keep a web session active', 'to retrieve an access token']",3
+38,What is Time to First Hello World?,"['how long it takes for a developer to do something with your API', 'how long it takes to start a new programming language', 'how long it takes to install your SDK', 'how long it takes to read your documentation']",0
+39,Which response header tells the client and intermediaries that the response is not to be cached anywhere?,"['Cache-State: none', 'Expires:-1', 'Cache-Control: no-cache', 'Cache-Control: no-store']",3
+40,What component hides the distinctions or boundaries between various microservices from end-client applications?,"['API gateway', 'API logging', 'a layered system', 'API proxy']",0
+41,The textbook approach to api versioning is to use _.,"['common knowledge', 'URLs', 'no versioning', 'the Accept header']",3
+42,Which is the most secure method to transmit an API key?,"['URL parameter', 'Authorization header', 'Base64 encoding', 'Basic Auth']",1
+43,"Within Oauth, what component validates the user's identity?","['client', 'not specified', 'authorization server', 'resource server']",2
+44,API traffic that is entirely internal to your organization is normally called _?,"['inbound traffic', 'north-south traffic', 'internal traffic', 'east-west traffic']",2
+45,What is the best approach for requesting JSON instead of XML from an API?,"['Add .json to the URL.', 'APIs do not use XML.', 'Use the Content-Type header.', 'Use the Accept header.']",3
+46,"When a user attempts to access a record that is not their own, which HTTP response code is the most appropriate?","['403', '404', '401', '405']",2
+47,Which is a benefit of using an API gateway?,"['HTTP verbs', 'JSON payloads', 'HTTP response codes', 'rate limiting/throttling']",3
+48,API testing must be treated as _?,"['red team testing', 'white box testing', 'blue box testing', 'black box testing']",3
+49,Which HTTP verb is used in a CORS preflight request?,"['PUT', 'POST', 'GET', 'OPTIONS']",3
+50,Which response header will tell the client that the response is cached for 1 minute ?,"['Expires: 1 minute', 'Cache-Control: max-age=60', 'Expires: 1 January 2020', 'Cache-Expires: max-age=60']",1
+51,What is the concept that allows an API client to explore an API via links embedded in payloads?,"['hypermedia', 'link relations', 'parsing', 'browsing']",1
+52,Which HTTP response code describes a new resource as created successfully?,"['200', '201', '204', '202']",1
+53,Which is an example of Code on Demand?,"['AWS Lambda', 'downloading open-source software', 'Serverless', 'JavaScript on a webpage']",3
+54,Which URL pattern should you follow for accessing a subresource attached to a specific resource?,"['/companies/employees/{companyId}/{employeeId}', '/company/{companyId}/employees/{employeeId}', '/companies/{companyId}/employees/{employeeId}', '/companies/{companyId}/employee/{employeeId}']",2
+55,Which REST constraint essentially prohibits the use of cookies?,"['Stateless', 'Cacheable', 'Layered System', 'Uniform Interface']",0
+56,Which HTTP verb is used to delete a resource?,"['FLUSH', 'DELETE', 'CLEAR', 'DESTROY']",1
+57,Which verb is not considered idempotent?,"['DELETE', 'GET', 'PUT', 'POST']",3
+58,Which REST constraint specifies that each request should stand on its own and not have a specific required order?,"['Uniform Interface', 'Cacheable', 'Stateless', 'Client-Server']",2
+59,"When you get a 429 response code, what should you do next?","['Check you JSON structure.', 'Check the API uptime status.', 'Slow down your requests.', 'Check you API key.']",2
+60,"When exploring record sets, what is the best approach for pagination?","['date-based filtering', 'next/previous cursors', 'page size and filters', 'database IDs']",1
+61,What is not a method for API authentication or authorization?,"['OAuth', 'biometrics', 'API Keys', 'username and password']",1
+62,Which HTTP response code usually means the requested work is still processing and may or may not result in an error later?,"['200 OK', '204 No Content', '201 Created', '202 Accepted']",3
+63,"When validating a JWT, what are some of the claims that you must confirm? (Select all that apply.)","['A,B,E,H', 'B,C,F,G', 'A,D,G,H', 'A,C,E,G']",0
+64,"To create a new resource, what HTTP response code should you receive?","['405', '201', '200', '204']",1
+65,API traffic that enters and leaves your organization is normally called ___?,"['east-west traffic', 'inbound traffic', 'north-south traffic', 'external traffic']",2

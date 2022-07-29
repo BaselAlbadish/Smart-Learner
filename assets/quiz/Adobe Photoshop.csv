@@ -1,0 +1,74 @@
+,Question,Answers,Right Index
+0,How can you open a file selected in Lightroom CC for retouching in Photoshop CC?,"['Double-click the file', 'Choose File > Edit in Photoshop', 'Choose File > Save to Photoshop', 'Press Cmd/Ctrl+E']",1.0
+1,How can you undo one or more changes just made to an image?,"['Use the keyboard shortcut Cmd/Ctrl+Z', 'Click a state in the history panel', 'Choose File > Undo', 'Press Cmd/Ctrl+U']",1.0
+2,How can you select a specific layer? (find all that apply),"['Click the eye icon in the layers panel', 'Use the Move tool with auto-select enabled', 'Right-click the image and select layer', 'Press Cmd/Ctrl and click the layer']",1.0
+3,How can you avoid having transparent edges along the edge of a panoramic photo while retaining the largest image size?,"['Choose the Cylindrical method.', 'Choose the Perspective method.', 'Adjust the Boundary Warp slider.', 'Select Auto Crop.']",3.0
+4,How do you crop a document without permanently discarding pixels along the edge?,"['Clear the Delete Cropped Pixels box.', 'Select the Delete Cropped Pixels box.', 'Use the Smart Crop tool.', 'Hold the Alt (Windows) or Option (Mac) key.']",2.0
+5,What feature should you use to simulate the in-camera development recipes applied by manufacturers with your own raw files?,"['presets', 'Camera Matching profiles', 'calibration', 'snapshots']",1.0
+6,"When working in an RGB document, which option is NOT a method for the Select Color Range command?","['Sampled Colors', 'Skin Tones', 'Key (Blacks)', 'Out of Gamut']",2.0
+7,How do you access the Auto Color Correction Options dialog box?,"['Select Image > Auto Tone.', 'Select Image > Auto Color.', 'Alt-click (Option-click) the Auto button in the Properties panel when you have a Levels or Curves adjustment layer targeted in the Layers panel.', 'Hold down the Alt (Option) key and select Image > Auto Color.']",1.0
+8,Which options are available when using the Free Transform command on a Smart Object?,"['C,D', 'D,E', 'B,C', 'C,E']",2.0
+9,What is considered the minimum DPI for photographic-quality inkjet printing?,"['300', '100', '1,000', '72']",0.0
+10,Which scanner type is capable of producing the highest resolution scans?,"['flatbed scanner', 'slide scanner', 'all-in-one unit', 'drum scanner']",0.0
+11,Which format does NOT support an alpha channel?,"['PSD', 'PNG', 'TIFF', 'BMP']",1.0
+12,What is the best way to save multiple images into a single PDF?,"['Save each PDF separately first and then combine them.', 'Check to see if you have Acrobat Professional installed.', 'Use the PDF Presentation command.', 'Click File > Export > Export Layers to Files.']",2.0
+13,What option cannot be adjusted with the Print command directly in the Print window?,"['size of the image', 'position on the page', 'paper quality', 'color management policies']",2.0
+14,Which statement best describes the Quick Mask feature?,"['It allows you to use the Pen tool to edit a selection', 'It allows you to use the Brush tool to create or refine a selection', 'It allows you to duplicate a mask quickly.', 'It allows you to convert a vector mask to a layer mask.']",1.0
+15,What Photoshop feature was used to convert this image to black and white?,"['Black and White adjustment layer', 'Posterize', 'Threshold', 'Image > Mode > Grayscale']",2.0
+16,"In the image shown, why is Sharpen Edges grayed out?","[""The filter doesn't work on a 16-bit image."", 'The filer is not correctly installed.', ""The filter doesn't work on a 32-bit image."", 'The filter requires a selection to be made first.']",3.0
+17,"In the image shown, which Camera Raw feature was used to restrict the graduated filter to avoid the statue?","['Adjustment Brush', 'Depth Range Mask', 'Luminance Range Mask', 'Color Range Mask']",0.0
+18,What can you use to save a common crop size?,"['tool sets', 'preferences', 'modifier keys', 'tool presets']",3.0
+19,Which Camera Raw Transform method is being used in the example shown?,"['Guided', 'Vertical', 'Level', 'Full']",0.0
+20,"To reduce the file size of a PDF, what should you do?","['Upsample large images', 'Convert 8-bit images to 16-bit', 'Apply compression to the document', 'all of these answers']",2.0
+21,Which image adjustment is not available as an adjustment layer?,"['Levels', 'Shadows/Highlights', 'Curves', 'Hue/Saturation']",1.0
+22,"With default Essentials settings, where would you find the Red Eye tool?","['grouped with the Eyedropper tool', 'Image > Mode > Red Eye', 'Edit > Red Eye', 'grouped with the Spot Healing Brush tool']",3.0
+23,Which option was not selected in the Magic Wand tool to create a selection like the one shown below?,"['Contiguous', 'Anti-alias', 'Auto-Enhance', 'Sample All Layers']",0.0
+24,Where should you click to open a dialog box in which you can then choose to open a raw file as a Smart Object?,"['A', 'B', 'C', 'D']",2.0
+25,Which option would you use to clone while respecting perspective planes?,"['Patch', 'Vanishing Point', 'Clone Stamp', 'Healing Brush']",1.0
+26,"In order to run a filter on an entire video file, what must you do first?","['Convert the video file to an image sequence.', 'Convert the video file to a Smart Object.', 'Actually, you cannot use filters on video files.', 'Convert the video file to an animated gif.']",1.0
+27,Which file format does not support layers?,"['Photoshop EPS', 'Photoshop PDF', 'Large Document Format', 'Photoshop PSD']",0.0
+28,"Of these formats, which supports 16-bit images?","['JPEG', 'GIF', 'PNG', 'Photoshop EPS']",2.0
+29,What does the small black triangle in the lower-right corner of a tool indicate?,"['that the tool is currently deselected', 'tool options', 'that the tool is currently selected', 'grouped or hidden tools']",3.0
+30,Which command makes it easier to adjust selected areas of color in two images in order to make them similar?,"['Match Color', 'Replace Color', 'Hue/Saturation', 'Levels']",0.0
+31,"If you scan a film or slide negative, which command turns it into a positive?","['Reverse', 'Threshold', 'Invert', 'Inverse']",2.0
+32,A filter recipe can be saved as an action and set to your desktop for drag-and-drop usage by converting the filter recipe into a ___.,"['droplet', 'batch', 'scriptlet', 'image process']",0.0
+33,Which tool is not found in the Select and Mask taskspace?,"['Refine Edge', 'Quick Select', 'Magic Wand', 'Lasso']",2.0
+34,"To use blending modes with a filter, choose the ___ command.","['Mix', 'Fade', 'Smooth', 'Blend']",3.0
+35,Which image adjustment is optimized for 32-bit images?,"['Exposure', 'Color Lookup', 'Brightness/Contrast', 'Curves']",1.0
+36,"To hide the white borders around pixels that are viewed at a high magnification, which option do you disable?","['Window > Workspace > Grid', 'View > Show > Slices', 'View > Show > Selection Edges', 'View > Show > Pixel Grid']",3.0
+37,"To save a panel layout arrangement, what should you create?","['A tool set', 'A layer set', 'A keyboard shortcut', 'A workspace']",3.0
+38,Which filter should you use to create photorealistic blurs?,"['Gaussian Blur', 'Lens Blur', 'Shape Blur', 'Surface Blur']",1.0
+39,"When using the Type tool, what do you call the space between lines?","['Vertical scale', 'Kerning', 'Leading', 'Tracking']",0.0
+40,"If you want the most control over color when inkjet printing, which option should you select?","['Color Handling: Photoshop Manages Colors', 'Separations', 'Color Handling: Printer Manages Colors', 'Hard Proofing']",0.0
+41,"You have an RGB image that you want to convert to a duotone, but in the image > Mode menu, the Duotone option in grayed out. Why is this happening?","['You must add a spot color channel first', 'You must remove all existing color by Image > Adjustments > Desaturate first', 'Duotones require a single channel, so you must convert to grayscale first', 'Duotones require two channels, so you must delete one of RGB channels in the Channels panel first']",2.0
+42,"For smoother, curved edges on a selection, be sure to enable the ___ option.","['anti-alias', 'fade', 'blend', 'curve']",0.0
+43,Which web-ready format supports transparency and is optimized for continuous tone images such as photos?,"['GIF', 'PNG-8', 'PNG-24', 'JPEG']",2.0
+44,"You're trying to use the Healing Brush tool, but don't see results. What is the problem?","['You forgot to Shift-click to set the source point for the tool', 'You forgot to Alt-click (Windows) or Option-click (Mac) to set the source point for the tool', 'You forgot to double-click to set the source point for the tool', 'You forgot to Ctrl-click (Windows) or Command-click (Mac) to set the source point for the tool']",0.0
+45,Which color space is best for web graphics?,"['Adobe RGB', 'ProPhoto RGB', 'RGB', 'sRGB']",3.0
+46,Which option do you use with the Dodge and Burn tools to prevent unwanted color changes like those shown in the image?,"['Sample All Layers', 'Protect Tones', 'Use Pressure for Size', 'Protect Colors']",1.0
+47,Which command in the Smart Objects submenu would you see to save the original file for the selected layer?,"['Edit Contents', 'Replace Contents', 'Relink to File', 'Export Contents']",3.0
+48,"In the image shown, which Blur method is being used to control focus with a series of pins?","['Path Blur', 'Tilt-Shift Blur', 'Iris Blur', 'Field Blur']",3.0
+49,"In the image shown, what do the blue areas represent?","['Color cast', 'Clipped shadow detail', 'Overexposed details', 'Clipped highlight detail']",2.0
+50,What does the grayscale image in this figure show?,"['the edges affected by the Sharpen command as refined by the Masking slider', 'the edges affected by the Sharpen command as refined by the Radius slider', 'the edges affected by the Sharpen command as refined by the Detail slider', 'the edges affected by the Sharpen command as refined by the Amount slider']",0.0
+51,Where do you click to adjust the blending mode for a Smart Filter?,"['A', 'C', 'D', 'B']",2.0
+52,Where do you find natural media brushes?,"['Photoshop does not have natural media brushes.', 'In the Brushes panel, select a brush and then select Convert to natural media.', 'In the Brushes panel, select Legacy Brushes.', 'in the Tool Presents panel.']",2.0
+53,"The option bar, which is normally above the canvas, is not visible. Where would you go to reopen it?","['View > Show > Show Extra Options', 'Window > Tool Presets', 'Window > Options', 'Edit > Toolbar']",0.0
+54,What would you use to create a vector path for the purpose of altering a letter or shape?,"['Pencil tool', 'Vanishing Point', 'Pen tool', 'Trace Contour filter']",2.0
+55,How do you browse images on your hard drive using the companion application that is included with the Adobe Creative Cloud plans?,"['Click File > Browse in Bridge', 'Click File > Browse in Lightroom Classic CC.', 'Use the Creative Cloud application.', 'Click File > Browse in Lightroom CC.']",0.0
+56,Which command allows you to combine multiple channels into a new selection channel?,"['Flatten', 'Calculations', 'Multiply', 'Merge']",1.0
+57,How do you nondestructively crop an image without permanently discarding pixels?,"['Make a selection and click Image > Crop.', 'Clear the Deleted Cropped Pixels check box.', 'Click Image > Trim and select Transparent Pixels.', 'Select the Delete Cropped Pixels check box.']",1.0
+58,Which step is the most effective at making one image show through another to emulate a traditional double-exposure from film photography effect?,"['Apply the Multiply blend mode to the bottom image.', 'Apply the Screen blend mode to the top image.', 'Apply the Hue blend mode to the top imagee.', 'Apply the Saturation blend mode to the top image.']",1.0
+59,Which special layer type applies nondestructive color corrections to all of the layers below it?,"['layer company', 'fill layer', 'adjustment Layer', 'layer Mask']",2.0
+60,Why can you nondestructively scale a smart object?,"['It converts the image from a raster image to a vector infographics', 'It uses Adobe Sensei technology to reconstruct pixels that have been interpolated.', 'It references an image in a separate file that retains its resolutions.', 'It uses a layer mask for nondestructive editing.']",-1.0
+61,Which Select and Mask workspace tool allows you to select fine hairs?,"['Brush', 'Object Selection', 'Refine Edge', 'Quick selection']",2.0
+62,What is the difference between the Lasso tool and the Polygonal Lasso tool?,"['You can draw a free-form selection with the Lasso tool, but you must make Bezier curves with the Polygonal Lasso tool.', 'The Lasso tool makes free-form selections. The Polygonal Lasso tool makes a selection with a series of connected line segments.', 'You can draw a free-form selection with the Lasso tool. You click and drag with the Polygonal Lasso tool to create Rectangular Marquee selections.', 'The Lass tool can select anything, including enclosed portions of raster images or shapes, but the Polygonal Lasso tool can select only shapes.']",1.0
+63,What is the outcome if you make a selection and then add an adjustment layer?,"['The adjustment layer contains a vector mask that applies the adjustment only to the unselected pixels.', 'The adjustment layer contains a layer mask that applies the adjustment only to the selected pixels.', 'The adjustment layer contains a layer mask that applies the adjustment only to the unselected pixels.', 'The adjustment layer contains a vector mask that applies the adjustment only to the selected pixels.']",-1.0
+64,Which filter is useful for removing lens distortion from JPEG photos based on lens-specific settings?,"['Adaptive Wide Angle', 'Lens Blur', 'Lens Correction', 'Spherize']",2.0
+65,What image mode do professional offset printers usually use?,"['RGB', 'Bitmap', 'CMYK', 'Lab Color']",2.0
+66,How can you remove a single ruler guide while leaving others in place?,"['Click the guide with the Selection tool, then select Edit > Clear.', 'Select View > Clear Guides.', 'Double-click the point where the guide touches the ruler.', 'Drag the guide back to the ruler.']",-1.0
+67,"If you want to change the resolution of an image using the Pixels per Inch setting, which command do you use?","['Calculations', 'Image Size', 'Canvas Size', 'Apply Image']",1.0
+68,Which tool can you use to manually darken an area of an image,['The Burn Tool'],0.0
+69,How many layer masks can be added to an image?,['up to 8000'],0.0
+70,Wich method is a high quality scaling algorithm for enlarging image?,,
+71,How can you make the magic wand tool select fewer variations of a color?,,
+72,"For curved smoother-looking edges on a selection, what selection should you pick?",,

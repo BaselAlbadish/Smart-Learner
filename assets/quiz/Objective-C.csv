@@ -1,0 +1,41 @@
+,Question,Answers,Right Index
+0,What is the value of s?,"['123456', '123', '456', 'This code contains an error.']",0
+1,What's the value of i after these statements?,"['nil', '0 (technically nil == 0 but i will have a literal value of 0 and not the void* value of nil)', '-1', 'This code crashes.']",1
+2,What value is in str after this line in executed?,"['This code contains an error', 'test', 'nil', 'test more']",0
+3,What does this code print?,"['2', '1,2,3', '1,2', 'Nothing, since this code contains an error.']",0
+4,Property defaults include _?,"['atomic/strong', 'atomic/weak', 'nonatomic/weak', 'nonatomic/strong']",0
+5,What is the key difference between NSDictionary and NSMutableDictionary?,"[""NSMutableDictionary's values can change"", 'NSMutableDictionary has not initializers.', ""NSDictionary can't be copied."", ""NSDictionary's values can change.""]",0
+6,What is foo?,"['A function with a return type of float.', 'This code contains an error.', 'A variable declaration of type float.', 'A property of type float.']",0
+7,What can you glean from this line?,"['NameHelper is a category of NSString.', 'NameHelper is a subclass of NSString.', 'NSString implements the NameHelper protocol.', 'NSString has a helper class.']",0
+8,What's wrong with this code?,"['Nothing is wrong with this code.', 'Declarations do not need semicolons.', 'x=5 is an invalid float.', ""Variables can't be declared and initialized in the same state.""]",0
+9,How many times with this loop be executed?,"['50', '99', '100', 'This code contains an error.']",0
+10,What is this code an example of?,"['Key-Value Observing', 'Class Value Observing', 'Key-Data Observing', 'KeyPath Observing']",0
+11,What does ARC stand for?,"['Automatic Reference Counting', 'Automatic Retain Checking', 'Async Retain Cycles', 'Automatic Release Code']",0
+12,What is printed for this code?,"['1', '2', '0', 'This code contains an error.']",0
+13,What best describes class inheritance in Objective-C?,"['single inheritance but multiple protocol implementation', ""Objective-C doesn't support inheritance"", 'dual class inheritance', 'unlimited class inheritance and protocol adherence']",0
+14,How many keys does this NSDictionary have after this code is executed?,"['2', '4', '5', 'This code contains an error.']",0
+15,What is wrong with this code?,"['The key and value items are mixed', 'Nothing is wrong with it', ""You can't set the capacity of a dictionary"", ""NSMutableDictionary doesn't have a :setValue:forKey function.""]",1
+16,What is printed from this code?,"['print', 'This code is invalid', 'Nothing is printed from this code.', 'nil']",0
+17,What is different about this function?,"['It is static', 'It is abstract.', 'It is inline.', 'This code contains an error.']",0
+18,Structs can have _?,"['functions', 'initializers', 'fields', 'all of these answers']",2
+19,What is wrong with this code?,"['There is nothing wrong with this code.', 'There is not read-only directive.', ""MyClass doesn't implement NSObject."", 'Properties are declared in the implementation.']",0
+20,What is an enums base type for the code below?,"['There is no base type.', 'NSObject', 'int', 'NSNumber']",0
+21,"If you want to store a small amount of information (e.g., user settings), whats the best, built-in way to go?","['UserDefaults', 'plist file', 'CoreData', 'TextFile']",0
+22,What are categories used for?,"['to extend other classes', 'to manage access control', 'to coordinate objects', 'to group classes']",0
+23,What is this Objective-C code checking?,"['This code contains an error', 'if keyPath is an instance of NSString', ""if keyPath's baseclass is the same as NSString's baseclass"", 'if keyPath implements the same methods as NSString']",0
+24,What is this a declaration of?,"['an Extension', 'a Generic', 'a block of code', 'an abstract class']",2
+25,"For observing changes to a property, which of these two statements cause the related method to be called and why?","['Statement 2, since it calls the auto-created setter on the property.', 'Statement 1, since it uses the property directly.', 'Statement 2, since it specifies the class instance to use.', 'Statement 1, since it calls the auto-created setter on the property.']",0
+26,What is wrong with this code?,"[""Ints and floats can't be multiplied."", ""The parameter isn't declared correctly."", 'x is not in the right scope.', 'Nothing is wrong with this code.']",3
+27,What's the difference between an array and a set?,"['Arrays are ordered, non-unique values.', 'Arrays are stored sorted.', 'Sets are ordered, unique values.', 'Sets can contain nils.']",0
+28,Dot notation can be used for _?,"[""nothing, as they're never used in Objective-C"", 'function calls only', 'property getter/setter', 'parameter delimiters']",2
+29,What is the value of newVals after this code is executed?,"['2,3', 'nil', 'This code contains an error', '2,""3""']",0
+30,How would this function be called?,"['self.foo(5, b:10);', 'This code contains an error.', '[self foo:5:10:20];', '[self foo:5 b:10];']",3
+31,What is the type of the error return value stored in json?,"['NSString', 'NSArray', 'id', 'NSDictionary']",-1
+32,What is significant about this function declaration?,"['The parameter is passed by value and can not be changed', '** is not allowed on a parameter', 'The parameter may be nil', 'The parameter is passed by reference and may be changed']",3
+33,What is printed from this code execution?,"['0', '1', 'thing2', 'This code does not print anything']",1
+34,You are worried about threaded access to a property and possible collision in writing. What directive should you use on the property?,"['non-atomic', 'strong', 'weak', 'atomic']",3
+35,What is wrong with this line of code?,"['temp is a keyword.', '1==1 is invalid.', '1==1 evaluates to a Boolean.', 'Nothing is wrong with it.']",3
+36,What is special about the code within this block?,"['It executes on the main queue.', 'It is the last code to run before the app goes inactive.', 'It executes on a background thread.', 'It is queued to execute in the background.']",0
+37,How many items are in set1 after this code executes?,"['zero', 'six', 'one', 'five']",3
+38,What is wrong with this code?,"['NSDictionary cannot be printed this way.', 'The last key is missing a value.', 'Dictionaries cannot have mixed types as values.', 'd1 is assigned an NSArray of values.']",1
+39,What is the initial value of the property val?,"['8', 'nil', '-1', 'undefined']",-1

@@ -1,0 +1,70 @@
+,Question,Answers,Right Index
+0,"If you want to import just the Component from the React library, what syntax do you use?","[""import React.Component from 'react'"", ""import [ Component ] from 'react'"", ""import Component from 'react'"", ""import { Component } from 'react'""]",3
+1,"If a function component should always render the same way given the same props, what is a simple performance optimization available for it?","['Wrap it in the React.memo higher-order component.', 'Implement the useReducer Hook.', 'Implement the useMemo Hook.', 'Implement the shouldComponentUpdate lifecycle method.']",0
+2,How do you fix the syntax error that results from running this code?,"['Wrap the object in parentheses.', 'Call the function from another file.', 'Add a return statement before the first curly brace.', 'Replace the object with an array.']",0
+3,"If you see the following import in a file, what is being used for state management in the component?","['React Hooks', 'stateful components', 'math', 'class components']",0
+4,"Using object literal enhancement, you can put values back into an object. When you log person to the console, what is the output?","['{{name: ""Rachel"", age: 31}}', '{name: ""Rachel"", age: 31}', '{person: ""Rachel"", person: 31}}', '{person: {name: ""Rachel"", age: 31}}']",1
+5,What is the testing library most often associated with React?,"['Mocha', 'Chai', 'Sinon', 'Jest']",3
+6,"To get the first item from the array (""cooking"") using array destructuring, how do you adjust this line?","['const first = [""cooking"", ""art"", ""history""]', 'const [] = [""cooking"", ""art"", ""history""]', 'const [, first][""cooking"", ""art"", ""history""]', 'const [first] = [""cooking"", ""art"", ""history""]']",3
+7,How do you handle passing through the component tree without having to pass props down manually at every level?,"['React Send', 'React Pinpoint', 'React Router', 'React Context']",3
+8,What should the console read when the following code is run?,"['Horse', 'Cat', 'Mouse', 'undefined']",1
+9,What is the name of the tool used to take JSX and turn it into createElement calls?,"['JSX Editor', 'ReactDOM', 'Browser Buddy', 'Babel']",3
+10,Why might you use useReducer over useState in a React component?,"['when you want to replace Redux', 'when you need to manage more complex state in an app', 'when you want to improve performance', 'when you want to break your production app']",1
+11,Which props from the props object is available to the component with the following syntax?,"['any that have not changed', 'all of them', 'child props', 'any that have changed']",1
+12,Consider the following code from React Router. What do you call :id in the path prop?,"['This is a route modal', 'This is a route parameter', 'This is a route splitter', 'This is a route link']",1
+13,"If you created a component called Dish and rendered it to the DOM, what type of element would be rendered?","['div', 'section', 'component', 'h1']",3
+14,"What does this React element look like given the following function? (Alternative: Given the following code, what does this React element look like?)","[""<h1 props={null}>What's happening?</h1>"", ""<h1>What's happening?</h1>"", '<h1 id=""component"">What\'s happening?</h1>', '<h1 id=""element"">What\'s happening?</h1>']",1
+15,What property do you need to add to the Suspense component in order to display a spinner or loading state?,"['lazy', 'loading', 'fallback', 'spinner']",2
+16,What do you call the message wrapped in curly braces below?,"['a JS function', 'a JS element', 'a JS expression', 'a JSX wrapper']",2
+17,What can you use to handle code splitting?,"['React.memo', 'React.split', 'React.lazy', 'React.fallback']",2
+18,When do you use useLayoutEffect?,"['to optimize for all devices', 'to complete the update', 'to change the layout of the screen', 'when you need the browser to paint before the effect runs']",3
+19,What is the difference between the click behaviors of these two buttons (assuming that this.handleClick is bound correctly)?,"['Button A will not have access to the event object on click of the button.', 'Button B will not fire the handler this.handleClick successfully.', 'Button A will not fire the handler this.handleClick successfully.', 'There is no difference.']",3
+20,How do you destructure the properties that are sent to the Dish component?,"['function Dish([name, cookingTime]) { return <h1>{name} {cookingTime}</h1>; }', 'function Dish({name, cookingTime}) { return <h1>{name} {cookingTime}</h1>; }', 'function Dish(props) { return <h1>{name} {cookingTime}</h1>; }', 'function Dish(...props) { return <h1>{name} {cookingTime}</h1>; }']",1
+21,When might you use React.PureComponent?,"['when you do not want your component to have props', 'when you have sibling components that need to be compared', 'when you want a default implementation of shouldComponentUpdate()', 'when you do not want your component to have state']",2
+22,Why is it important to avoid copying the values of props into a component's state where possible?,"['because you should never mutate state', 'because getDerivedStateFromProps() is an unsafe method to use', 'because you want to allow a component to update in response to changes in the props', 'because you want to allow data to flow back up to the parent']",2
+23,What is the children prop?,"['a property that adds child components to state', 'a property that lets you pass components as data to other components', 'a property that lets you set an array as a property', 'a property that lets you pass data to child elements']",1
+24,Which attribute do you use to replace innerHTML in the browser DOM?,"['injectHTML', 'dangerouslySetInnerHTML', 'weirdSetInnerHTML', 'strangeHTML']",1
+25,Which of these terms commonly describe React applications?,"['declarative', 'integrated', 'closed', 'imperative']",0
+26,"When using webpack, why would you need to use a loader?","['to put together physical file folders', 'to preprocess files', 'to load external data', ""to load the website into everyone's phone""]",1
+27,"A representation of a user interface that is kept in memory and is synced with the ""real"" DOM is called what?","['virtual DOM', 'DOM', 'virtual elements', 'shadow DOM']",0
+28,You have written the following code but nothing is rendering. How do you fix this problem?,"['Add a render function.', 'Change the curly braces to parentheses or add a return statement before the h1 tag.', 'Move the h1 to another component.', 'Surround the h1 in a div.']",1
+29,"To create a constant in JavaScript, which keyword do you use?","['const', 'let', 'constant', 'var']",0
+30,What do you call a React component that catches JavaScript errors anywhere in the child component tree?,"['error bosses', 'error catchers', 'error helpers', 'error boundaries']",3
+31,In which lifecycle method do you make requests for data in a class component?,"['constructor', 'componentDidMount', 'componentWillReceiveProps', 'componentWillMount']",1
+32,React components are composed to create a user interface. How are components composed?,"['by putting them in the same file', 'by nesting components', 'with webpack', 'with code splitting']",1
+33,All React components must act like _ with respect to their props.,"['monads', 'pure functions', 'recursive functions', 'higher-order functions']",1
+34,What is [e.target.id] called in the following code snippet?,"['a computed property name', 'a set value', 'a dynamic key', 'a JSX code string']",2
+35,What is the name of this component?,"['Clock', 'It does not have a name prop.', 'React.Component', 'Component']",0
+36,What is sent to an Array.map() function?,"['a callback function that is called once for each element in the array', 'the name of another array to iterate over', 'the number of times you want to call the function', 'a string describing what the function should do']",0
+37,Why is it a good idea to pass a function to setState instead of an object?,"['It provides better encapsulation.', 'It makes sure that the object is not mutated.', 'It automatically updates a component.', 'setState is asynchronous and might result in out of sync values.']",3
+38,What package contains the render() function that renders a React element tree to the DOM?,"['React', 'ReactDOM', 'Render', 'DOM']",1
+39,How do you set a default value for an uncontrolled form field?,"['Use the value property.', 'Use the defaultValue property.', 'Use the default property.', 'It assigns one automatically.']",1
+40,What do you need to change about this code to get it to run?,"['Add quotes around the return value', 'Remove this', 'Remove the render method', 'Capitalize clock']",3
+41,Which Hook could be used to update the document's title?,"[""useEffect(function updateTitle() { document.title = name + ' ' + lastname; });"", ""useEffect(() => { title = name + ' ' + lastname; });"", ""useEffect(function updateTitle() { name + ' ' + lastname; });"", ""useEffect(function updateTitle() { title = name + ' ' + lastname; });""]",0
+42,What can you use to wrap Component imports in order to load them lazily?,"['React.fallback', 'React.split', 'React.lazy', 'React.memo']",2
+43,"How do you invoke setDone only when component mounts, using hooks?","['useEffect(() => { setDone(true); });', 'useEffect(() => { setDone(true); }, []);', 'useEffect(() => { setDone(true); }, [setDone]);', 'useEffect(() => { setDone(true); }, [done, setDone]);']",1
+44,"Currently, handleClick is being called instead of passed as a reference. How do you fix this?","['<button onClick={this.handleClick.bind(handleClick)}>Click this</button>', '<button onClick={handleClick()}>Click this</button>', '<button onClick={this.handleClick}>Click this</button>', '<button onclick={this.handleClick}>Click this</button>']",2
+45,Which answer best describes a function component?,"['A function component is the same as a class component.', 'A function component accepts a single props object and returns a React element.', 'A function component is the only way to create a component.', 'A function component is required to create a React component.']",1
+46,Which library does the fetch() function come from?,"['FetchJS', 'ReactDOM', 'No library. fetch() is supported by most browsers.', 'React']",2
+47,"What will happen when this useEffect Hook is executed, assuming name is not already equal to John?","['It will cause an error immediately.', 'It will execute the code inside the function, but only after waiting to ensure that no other component is accessing the name variable.', 'It will update the value of name once and not run again until name is changed from the outside.', 'It will cause an infinite loop.']",2
+48,Which choice will not cause a React component to rerender?,"['if the component calls this.setState(...)', ""the value of one of the component's props changes"", 'if the component calls this.forceUpdate()', ""one of the component's siblings rerenders""]",3
+49,"You have created a new method in a class component called handleClick, but it is not working. Which code is missing?","['this.handleClick.bind(this);', 'props.bind(handleClick);', 'this.handleClick.bind();', 'this.handleClick = this.handleClick.bind(this);']",3
+50,React does not render two sibling elements unless they are wrapped in a fragment. Below is one way to render a fragment. What is the shorthand for this?,['A'],-1
+51,"If you wanted to display the count state value in the component, what do you need to add to the curly braces in the h1?",['B'],-1
+52,"Per the following code, when is the Hello component displayed?",['C'],0
+53,"In the following code block, what type is orderNumber?",['D'],-1
+54,You have added a style property to the h1 but there is an unexpected token error when it runs. How do you fix this?,"['this.state.count', 'count', 'state', 'state.count']",0
+55,Which function is used to update state variables in a React class component?,"['never', 'when isLoggedIn is true', 'when a user logs in', 'when the Hello function is called']",1
+56,Consider the following component. What is the default color for the star?,"['string', 'boolean', 'object', 'number']",0
+57,What is the difference between the click behaviors of these two buttons(assuming that this.handleClick is bound correctly),"['const element = <h1 style=""backgroundColor: ""blue""""}>Hi</h1>;', 'const element = <h1 style={{backgroundColor: ""blue""}}>Hi</h1>;', 'const element = <h1 style={blue}>Hi</h1>;', 'const element = <h1 style=""blue"">Hi</h1>;']",1
+58,"How would you add to this code, from React Router, to display a component called About?","['replaceState', 'refreshState', 'updateState', 'setState']",3
+59,Which class-based component is equivalent to this function component?,"['black', 'red', 'grey', 'white']",2
+60,"Give the code below, what does the second argument that is sent to the render function describe?","['Button A will not have access to the event object on click of the button', 'Button A will not fire the handler this.handleClick successfully', 'There is no difference', 'Button B will not fire the handler this.handleClick successfully']",1
+61,,['A'],0
+62,,['B'],-1
+63,,['C'],-1
+64,,['D'],-1
+65,,['A'],-1
+66,,['B'],-1
+67,,['C'],0
+68,,['D'],-1
