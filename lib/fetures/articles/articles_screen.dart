@@ -5,8 +5,6 @@ import 'package:smart_learner/core/bottomBar.dart';
 import 'package:smart_learner/core/constant_logic.dart';
 import 'package:smart_learner/core/main_constants.dart';
 import 'package:smart_learner/fetures/Home/article_card.dart';
-import 'package:smart_learner/fetures/Home/study_plan_subjects.dart';
-import 'package:smart_learner/fetures/authentication/subject_card.dart';
 import 'package:smart_learner/fetures/articles/articles_directory.dart';
 
 class ArticlesScreen extends StatelessWidget {
