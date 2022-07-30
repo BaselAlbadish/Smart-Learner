@@ -1,78 +1,86 @@
-import 'package:dio/dio.dart';
 import 'package:smart_learner/models/student.dart';
+import 'package:http/http.dart' as http;
 
 class RemoteData {
-  Dio dio = Dio();
-
   Future<int> postStudent(Student student) async {
-    String url =
-        "http://127.0.0.1:5000/post_student?name=${student.name}&perception=${student.perception}&input=${student.input}&processing=${student.processing}&understanding=${student.understanding}";
-    Response res;
+    Uri url = Uri.parse(
+        "http://127.0.0.1:5000/post_student?name=${student.name}&perception=${student.perception}&input=${student.input}&processing=${student.processing}&understanding=${student.understanding}");
+    http.Response res;
     try {
-      res = await dio.post(url);
-      return res.statusCode!;
+      res = await http.post(url);
+      return int.parse(res.body);
     } catch (e) {
+      print(e);
       return 0;
     }
   }
 
   Future<List<String>> getSubCourse(String goal) async {
-    String url = "http://127.0.0.1:5000/get_course_by_goal?goalName=$goal";
-    Response res;
+    Uri url = Uri.parse("http://127.0.0.1:5000/get_course_by_goal?goalName=$goal");
+    http.Response res;
     try {
-      res = await dio.post(url);
+      res = await http.post(url);
       if (res.statusCode == 200) {
-        print(res.data.toString());
-        return res.data! as List<String>;
+        print(res.body.toString());
+        return res.body as List<String>;
       } else {
+        print(res.statusCode.toString());
         return [];
       }
     } catch (e) {
+      print(e);
       return [];
     }
   }
 
-  Future<List<String>> generateStudyPlan(int id, List<String> pk, String goal) async {
-    String url = "http://127.0.0.1:5000/";
-    Response res;
+  Future<List<String>> generateStudyPlan(int id, String goal) async {
+    Uri url = Uri.parse("http://127.0.0.1:5000/get_study_paln?student_id=$id&goal=$goal");
+
+    http.Response res;
     try {
-      res = await dio.post(url);
+      res = await http.post(url);
       if (res.statusCode == 200) {
-        return res.data! as List<String>;
+        return res.body as List<String>;
       } else {
+        print(res.statusCode.toString());
         return [];
       }
     } catch (e) {
+      print(e);
       return [];
     }
   }
 
   Future<List<String>> getRecommendedArticleBasedOnGoal(String goal) async {
-    String url = "http://127.0.0.1:5000/";
-    Response res;
+    Uri url = Uri.parse("http://127.0.0.1:5000/get_articles_based_on_goal?goal=$goal");
+    http.Response res;
     try {
-      res = await dio.post(url);
+      res = await http.post(url);
       if (res.statusCode == 200) {
-        return res.data! as List<String>;
+        return res.body as List<String>;
       } else {
+        print(res.statusCode.toString());
         return [];
       }
     } catch (e) {
+      print(e);
       return [];
     }
   }
 
-  Future<List<String>> getRecommendedArticleBasedOnArticle(String article) async {
-    String url = "http://127.0.0.1:5000/";
-    Response res;
+  Future<List<String>> getRecommendedArticleBasedOnArticle(int article) async {
+    Uri url = Uri.parse("http://127.0.0.1:5000/get_articles_based_on_article?article_id=$article");
+    http.Response res;
     try {
-      res = await dio.post(url);
+      res = await http.post(url);
       if (res.statusCode == 200) {
-        return res.data! as List<String>;
+        return res.body as List<String>;
       } else {
+        print(res.statusCode.toString());
         return [];
       }
     } catch (e) {
+      print(e);
       return [];
     }
   }

@@ -65,10 +65,10 @@ class TypeAhead extends StatelessWidget {
                 child: TypeAheadField<String>(
                   textFieldConfiguration: TextFieldConfiguration(
                       controller: text,
-                      onSubmitted: (value) {
-                        text.text = value;
-                        onChange(text.text);
-                      },
+                      // onSubmitted: (value) {
+                      //   text.text = value;
+                      //   onChange(text.text);
+                      // },
                       style: TextStyle(color: titleColor, fontSize: 20.sp),
                       decoration: InputDecoration(
                         suffixIcon: Icon(Icons.keyboard_arrow_down),

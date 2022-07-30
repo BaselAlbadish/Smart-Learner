@@ -3,9 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_learner/core/appBar.dart';
 import 'package:smart_learner/core/bottomBar.dart';
 import 'package:smart_learner/core/constant_logic.dart';
-import 'package:smart_learner/fetures/Home/study_plan_subjects.dart';
-import 'package:smart_learner/fetures/authentication/subject_card.dart';
-
+import 'package:smart_learner/data_source/remote_data.dart';
+import 'package:smart_learner/fetures/ILS_Quiz/ils_Store.dart';
 import '../../core/main_constants.dart';
 import '../study_plans/study_plans_directory.dart';
 import 'article_card.dart';
@@ -120,11 +119,11 @@ class _HomeState extends State<Home> {
                                   child: SizedBox(
                                     height: 300.h,
                                     child: ListView.builder(
-                                      itemCount: subjects.length,
+                                      itemCount: IlsStore.curriculum.length,
                                       itemBuilder: (BuildContext context, int index) {
                                         return Padding(
                                             padding: EdgeInsets.all(10),
-                                            child: Text(subjects[index]));
+                                            child: Text(IlsStore.curriculum[index]));
                                       },
                                     ),
                                   ),
@@ -201,8 +200,11 @@ class _HomeState extends State<Home> {
                                   borderRadius: const BorderRadius.all(Radius.circular(10)),
                                 ),
                                 child: TextButton(
-                                  onPressed: () {
-                                    //TODO""""" remote data
+                                  onPressed: () async {
+                                    RemoteData remote = RemoteData();
+                                    int studentId = 52;
+
+                                    IlsStore.studyPlan = await remote.generateStudyPlan(studentId, IlsStore.goal);
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:smart_learner/data_source/remote_data.dart';
 import 'package:smart_learner/fetures/Home/home.dart';
 import 'package:smart_learner/fetures/authentication/build_profile.dart';
 import 'package:smart_learner/fetures/authentication/sign_in.dart';
@@ -115,7 +116,9 @@ class _SignUpState extends State<SignUp> {
                   ),
                 ),
                 child: TextButton(
-                  onPressed: () {
+                  onPressed: () async {
+                    RemoteData remote = RemoteData();
+                    IlsStore.studentId = await remote.postStudent(IlsStore.student);
                     Navigator.push(
                       context,
                       MaterialPageRoute(

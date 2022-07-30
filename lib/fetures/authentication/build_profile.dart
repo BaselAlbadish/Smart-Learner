@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:file_picker/file_picker.dart';
+import 'package:smart_learner/data_source/remote_data.dart';
 import 'package:smart_learner/fetures/ILS_Quiz/ils_Store.dart';
 import '../../core/main_constants.dart';
 import '../../core/type_ahead.dart';
-import '../Home/home.dart';
-import '../Home/study_plan_subjects.dart';
 import '../ILS_Quiz/ILS_quizz.dart';
 import 'subject_card.dart';
 
@@ -19,6 +18,7 @@ class BuildProfile extends StatefulWidget {
 class _BuildProfileState extends State<BuildProfile> {
   FilePickerResult? result;
   String goal = "";
+  TextEditingController textEditingController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -54,15 +54,21 @@ class _BuildProfileState extends State<BuildProfile> {
                     title: 'Type your Goal',
                     titleColor: Colors.black,
                     fontSizeForTitle: 18.sp,
-                    text: TextEditingController(),
-                    items: const ["Java", "Algorithm", "AI", "python"],
+                    text: textEditingController,
+                    items: IlsStore.goals,
                     errorText: '',
-                    hintText: 'AI',
+                    hintText: 'you goal',
                     width: 360.w,
                     height: 50.h,
-                    onChange: (val) {
+                    onChange: (val) async {
+                      textEditingController.text = val.toString();
+                      RemoteData remote = RemoteData();
+
+                      List<String> temp = await remote.getSubCourse(val.toString());
+
                       setState(() {
                         goal = val.toString();
+                        IlsStore.subCourses = temp;
                       });
                     },
                   ),
@@ -99,7 +105,7 @@ class _BuildProfileState extends State<BuildProfile> {
                               border: InputBorder.none,
                             ),
                             onChanged: (v) {
-                              //TODO
+                              IlsStore.bio = v;
                             },
                           ),
                         ),
@@ -120,33 +126,35 @@ class _BuildProfileState extends State<BuildProfile> {
                         ),
                       ),
                       SizedBox(height: 10.h),
-                      Container(
-                        height: 250.h,
-                        width: 350.w,
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFEAECEF),
-                          boxShadow: [
-                            BoxShadow(
-                              color: const Color(0xFFEAECEF).withOpacity(0.2),
-                              spreadRadius: 2,
-                              blurRadius: 7,
-                              offset: const Offset(0, 0),
-                            ),
-                          ],
-                          borderRadius: const BorderRadius.all(Radius.circular(5)),
-                        ),
-                        child: SingleChildScrollView(
-                          child: SizedBox(
-                            height: 250.h,
-                            child: ListView.builder(
-                              itemCount: subjects.length,
-                              itemBuilder: (BuildContext context, int index) {
-                                return SubjectCard(subjectName: subjects[index]);
-                              },
-                            ),
-                          ),
-                        ),
-                      ),
+                      IlsStore.subCourses != []
+                          ? Container(
+                              height: 250.h,
+                              width: 350.w,
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFEAECEF),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: const Color(0xFFEAECEF).withOpacity(0.2),
+                                    spreadRadius: 2,
+                                    blurRadius: 7,
+                                    offset: const Offset(0, 0),
+                                  ),
+                                ],
+                                borderRadius: const BorderRadius.all(Radius.circular(5)),
+                              ),
+                              child: SingleChildScrollView(
+                                child: SizedBox(
+                                  height: 250.h,
+                                  child: ListView.builder(
+                                    itemCount: IlsStore.subCourses.length,
+                                    itemBuilder: (BuildContext context, int index) {
+                                      return SubjectCard(subjectName: IlsStore.subCourses[index]);
+                                    },
+                                  ),
+                                ),
+                              ),
+                            )
+                          : Container(),
                     ],
                   ),
                   const Spacer(flex: 3),
@@ -162,6 +170,8 @@ class _BuildProfileState extends State<BuildProfile> {
                         onPressed: goal != ""
                             ? () {
                                 IlsStore.goal = goal;
+                                IlsStore.getCurriculum();
+
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
