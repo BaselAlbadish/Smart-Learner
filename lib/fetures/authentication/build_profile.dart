@@ -64,11 +64,15 @@ class _BuildProfileState extends State<BuildProfile> {
                       textEditingController.text = val.toString();
                       RemoteData remote = RemoteData();
 
-                      List<String> temp = await remote.getSubCourse(val.toString());
+                      String temp = await remote.getSubCourse(val.toString());
+                      temp = temp.substring(1,temp.length - 2);
+                      List<String> list = temp.split("', '");
 
+                      print("888888888888888");
+                      print(temp.toString());
                       setState(() {
                         goal = val.toString();
-                        IlsStore.subCourses = temp;
+                        IlsStore.subCourses = list;
                       });
                     },
                   ),

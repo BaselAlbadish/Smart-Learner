@@ -204,7 +204,12 @@ class _HomeState extends State<Home> {
                                     RemoteData remote = RemoteData();
                                     int studentId = 52;
 
-                                    IlsStore.studyPlan = await remote.generateStudyPlan(studentId, IlsStore.goal);
+                                    String temp = await remote.generateStudyPlan(studentId, IlsStore.goal);
+                                    temp = temp.substring(1,temp.length - 2);
+                                    IlsStore.studyPlan = temp.split("', '");
+                                    print("IlsStore.studyPlan **************************** :");
+                                    print(IlsStore.studyPlan.toString());
+
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(

@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 class RemoteData {
   Future<int> postStudent(Student student) async {
     Uri url = Uri.parse(
-        "http://127.0.0.1:5000/post_student?name=${student.name}&perception=${student.perception}&input=${student.input}&processing=${student.processing}&understanding=${student.understanding}");
+        "http://127.0.0.1:5000/post_student?name=${student.name}&perception=${student.perception}&input=${student.input}&processing=${student.processing}&understanding=${student.understanding}&email=${student.email}&password=${student.password}");
     http.Response res;
     try {
       res = await http.post(url);
@@ -15,39 +15,39 @@ class RemoteData {
     }
   }
 
-  Future<List<String>> getSubCourse(String goal) async {
+  Future<String> getSubCourse(String goal) async {
     Uri url = Uri.parse("http://127.0.0.1:5000/get_course_by_goal?goalName=$goal");
     http.Response res;
     try {
       res = await http.post(url);
       if (res.statusCode == 200) {
         print(res.body.toString());
-        return res.body as List<String>;
+        return res.body.toString();
       } else {
         print(res.statusCode.toString());
-        return [];
+        return "";
       }
     } catch (e) {
       print(e);
-      return [];
+      return "";
     }
   }
 
-  Future<List<String>> generateStudyPlan(int id, String goal) async {
+  Future<String> generateStudyPlan(int id, String goal) async {
     Uri url = Uri.parse("http://127.0.0.1:5000/get_study_paln?student_id=$id&goal=$goal");
 
     http.Response res;
     try {
       res = await http.post(url);
       if (res.statusCode == 200) {
-        return res.body as List<String>;
+        return res.body;
       } else {
         print(res.statusCode.toString());
-        return [];
+        return "";
       }
     } catch (e) {
       print(e);
-      return [];
+      return "";
     }
   }
 

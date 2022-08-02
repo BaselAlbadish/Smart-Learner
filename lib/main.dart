@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_learner/core/welcome_screen/welcoming_screen.dart';
-import 'package:smart_learner/fetures/authentication/sign_in.dart';
 
 void main() async{
   SystemChrome.setSystemUIOverlayStyle(
@@ -32,7 +31,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
-          home: const SignIn(),
+          home: const WelcomingScreen(),
         );
       },
     );

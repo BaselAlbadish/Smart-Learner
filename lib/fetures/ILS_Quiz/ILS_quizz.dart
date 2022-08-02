@@ -8,6 +8,7 @@ import '../../core/appBar.dart';
 import '../../core/bottomBar.dart';
 import '../../core/constant_logic.dart';
 import '../../core/main_constants.dart';
+import '../../data_source/remote_data.dart';
 import 'ils_questions.dart';
 
 class ILSQuiz extends StatefulWidget {
@@ -255,7 +256,7 @@ class _ILSQuizState extends State<ILSQuiz> {
                                     borderRadius: const BorderRadius.all(Radius.circular(5)),
                                   ),
                                   child: TextButton(
-                                    onPressed: () {
+                                    onPressed: () async{
                                       Student student = Student(
                                           name: IlsStore.name,
                                           input: IlsStore.inputResult,
@@ -264,6 +265,9 @@ class _ILSQuizState extends State<ILSQuiz> {
                                           understanding: IlsStore.understandingResult);
 
                                       IlsStore.student = student;
+                                      RemoteData remote = RemoteData();
+                                      IlsStore.studentId = await remote.postStudent(IlsStore.student);
+
                                       print("input : " + IlsStore.inputResult.toString());
                                       print("perception : "+IlsStore.perceptionResult.toString());
                                       print("processing : "+IlsStore.processingResult.toString());

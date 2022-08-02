@@ -117,8 +117,6 @@ class _SignUpState extends State<SignUp> {
                 ),
                 child: TextButton(
                   onPressed: () async {
-                    RemoteData remote = RemoteData();
-                    IlsStore.studentId = await remote.postStudent(IlsStore.student);
                     Navigator.push(
                       context,
                       MaterialPageRoute(
