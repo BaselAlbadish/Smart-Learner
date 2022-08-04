@@ -7,6 +7,8 @@ import 'package:smart_learner/core/main_constants.dart';
 import 'package:smart_learner/fetures/Home/article_card.dart';
 import 'package:smart_learner/fetures/articles/articles_directory.dart';
 
+import '../../core/store.dart';
+
 class ArticlesScreen extends StatelessWidget {
   const ArticlesScreen({Key? key}) : super(key: key);
 
@@ -109,14 +111,23 @@ class ArticlesScreen extends StatelessWidget {
                         padding: EdgeInsets.symmetric(vertical: 52.h),
                         child: Center(child: Text('Recent readings',style: TextStyle(fontSize: 32.sp,fontWeight: FontWeight.w300,),),),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          ArticleCard(index: 0),
-                          ArticleCard(index: 1),
-                          ArticleCard(index: 3),
-                          ArticleCard(index: 2),
-                        ],
+                      Container(
+                        child: SingleChildScrollView(
+                          child: SizedBox(
+                            height: 300.h,
+                            child: ListView.builder(
+                              itemCount: Store.articlesName.length,
+                              itemBuilder: (BuildContext context, int index) {
+                                return Padding(
+                                    padding: EdgeInsets.all(30),
+                                    child: ArticleCard(
+                                      articleId: Store.articleId[index],
+                                      articleName: Store.articlesName[index],
+                                    ));
+                              },
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   )
@@ -143,14 +154,23 @@ class ArticlesScreen extends StatelessWidget {
                         padding: EdgeInsets.symmetric(vertical: 52.h),
                         child: Center(child: Text('Recent readings',style: TextStyle(fontSize: 32.sp,fontWeight: FontWeight.w300,),),),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          ArticleCard(index: 0),
-                          ArticleCard(index: 1),
-                          ArticleCard(index: 3),
-                          ArticleCard(index: 2),
-                        ],
+                      Container(
+                        child: SingleChildScrollView(
+                          child: SizedBox(
+                            height: 300.h,
+                            child: ListView.builder(
+                              itemCount: Store.articlesName.length,
+                              itemBuilder: (BuildContext context, int index) {
+                                return Padding(
+                                    padding: EdgeInsets.all(30),
+                                    child: ArticleCard(
+                                      articleId: Store.articleId[index],
+                                      articleName: Store.articlesName[index],
+                                    ));
+                              },
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   )
@@ -176,14 +196,23 @@ class ArticlesScreen extends StatelessWidget {
                         padding: EdgeInsets.symmetric(vertical: 52.h),
                         child: Center(child: Text('Recent readings',style: TextStyle(fontSize: 32.sp,fontWeight: FontWeight.w300,),),),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          ArticleCard(index: 0),
-                          ArticleCard(index: 1),
-                          ArticleCard(index: 3),
-                          ArticleCard(index: 2),
-                        ],
+                      Container(
+                        child: SingleChildScrollView(
+                          child: SizedBox(
+                            height: 300.h,
+                            child: ListView.builder(
+                              itemCount: Store.articlesName.length,
+                              itemBuilder: (BuildContext context, int index) {
+                                return Padding(
+                                    padding: EdgeInsets.all(30),
+                                    child: ArticleCard(
+                                      articleId: Store.articleId[index],
+                                      articleName: Store.articlesName[index],
+                                    ));
+                              },
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   )

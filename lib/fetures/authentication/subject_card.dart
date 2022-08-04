@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../core/main_constants.dart';
-import '../ILS_Quiz/ils_Store.dart';
+import '../../core/store.dart';
 
 class SubjectCard extends StatefulWidget {
   SubjectCard({required this.subjectName, Key? key}) : super(key: key);
@@ -30,10 +30,10 @@ class _SubjectCardState extends State<SubjectCard> {
               onChanged: (inputValue) {
                 setState(() {
                   if (!valueT) {
-                    IlsStore.previousKnowledge.add(widget.subjectName);
+                    Store.previousKnowledge.add(widget.subjectName);
                     valueT = !valueT;
                   } else {
-                    IlsStore.previousKnowledge.remove(widget.subjectName);
+                    Store.previousKnowledge.remove(widget.subjectName);
                     valueT = !valueT;
                   }
                 });

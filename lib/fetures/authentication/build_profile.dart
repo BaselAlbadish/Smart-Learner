@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:smart_learner/data_source/remote_data.dart';
-import 'package:smart_learner/fetures/ILS_Quiz/ils_Store.dart';
+import 'package:smart_learner/core/store.dart';
 import '../../core/main_constants.dart';
 import '../../core/type_ahead.dart';
 import '../ILS_Quiz/ILS_quizz.dart';
@@ -55,7 +55,7 @@ class _BuildProfileState extends State<BuildProfile> {
                     titleColor: Colors.black,
                     fontSizeForTitle: 18.sp,
                     text: textEditingController,
-                    items: IlsStore.goals,
+                    items: Store.goals,
                     errorText: '',
                     hintText: 'you goal',
                     width: 360.w,
@@ -68,11 +68,10 @@ class _BuildProfileState extends State<BuildProfile> {
                       temp = temp.substring(1,temp.length - 2);
                       List<String> list = temp.split("', '");
 
-                      print("888888888888888");
-                      print(temp.toString());
+                      print(temp);
                       setState(() {
                         goal = val.toString();
-                        IlsStore.subCourses = list;
+                        Store.subCourses = list;
                       });
                     },
                   ),
@@ -109,7 +108,7 @@ class _BuildProfileState extends State<BuildProfile> {
                               border: InputBorder.none,
                             ),
                             onChanged: (v) {
-                              IlsStore.bio = v;
+                              Store.bio = v;
                             },
                           ),
                         ),
@@ -130,7 +129,7 @@ class _BuildProfileState extends State<BuildProfile> {
                         ),
                       ),
                       SizedBox(height: 10.h),
-                      IlsStore.subCourses != []
+                      Store.subCourses != []
                           ? Container(
                               height: 250.h,
                               width: 350.w,
@@ -150,9 +149,9 @@ class _BuildProfileState extends State<BuildProfile> {
                                 child: SizedBox(
                                   height: 250.h,
                                   child: ListView.builder(
-                                    itemCount: IlsStore.subCourses.length,
+                                    itemCount: Store.subCourses.length,
                                     itemBuilder: (BuildContext context, int index) {
-                                      return SubjectCard(subjectName: IlsStore.subCourses[index]);
+                                      return SubjectCard(subjectName: Store.subCourses[index]);
                                     },
                                   ),
                                 ),
@@ -173,8 +172,8 @@ class _BuildProfileState extends State<BuildProfile> {
                       child: RaisedButton(
                         onPressed: goal != ""
                             ? () {
-                                IlsStore.goal = goal;
-                                IlsStore.getCurriculum();
+                                Store.goal = goal;
+                                Store.getCurriculum();
 
                                 Navigator.push(
                                   context,

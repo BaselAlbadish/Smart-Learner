@@ -3,9 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_learner/core/appBar.dart';
 import 'package:smart_learner/core/bottomBar.dart';
 import 'package:smart_learner/core/constant_logic.dart';
+import 'package:smart_learner/fetures/study_plans/study_plan_card.dart';
 import '../../core/main_constants.dart';
 
-String testText =  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem'
+String testText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem'
     'por incididunt ut labore et dolore magna aliqua. Ut en'
     'im ad minim veniam, quis nostrud exercitation ullamco laboris nisi'
     ' ut aliquip ex ea commodo consequat. Duis aute irure dolor in rep'
@@ -13,7 +14,6 @@ String testText =  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
     'llum dolore eu fugiat nulla pariatur. Excepteur sint occaecat'
     ' cupidatat non proident, sunt in culpa qui officia deserunt mollit'
     ' anim id est laborum.';
-
 
 class StudyPlansDirectory extends StatelessWidget {
   const StudyPlansDirectory({Key? key}) : super(key: key);
@@ -83,137 +83,20 @@ class StudyPlansDirectory extends StatelessWidget {
                       ),
                       borderRadius: const BorderRadius.all(Radius.circular(10)),
                     ),
-                    child: Column(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.symmetric(
-                              horizontal: 110.w, vertical: 40.h),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text('test'),
-                              Container(
-                                margin: EdgeInsets.symmetric(horizontal: 27.w),
-                                height: 208.h,
-                                width: 287.w,
-                                color: Colors.blue,
-                              ),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text('test'),
-                                  SizedBox(
-                                    height: 25.h,
-                                  ),
-                                  Container(
-                                    width: 750.w,
-                                    child: Text(
-                                     testText,
-                                    ),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
+                    child: SingleChildScrollView(
+                      child: SizedBox(
+                        height: 300.h,
+                        child: ListView.builder(
+                          itemCount: 4,
+                          itemBuilder: (BuildContext context, int index) {
+                            return StudyPlanCard(
+                              courseIndex: index,
+                              courseDescription: testText,
+                              courseName: "Anthropology (An)",
+                            );
+                          },
                         ),
-                        Container(
-                          margin: EdgeInsets.symmetric(
-                              horizontal: 110.w, vertical: 40.h),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text('test'),
-                              Container(
-                                margin: EdgeInsets.symmetric(horizontal: 27.w),
-                                height: 208.h,
-                                width: 287.w,
-                                color: Colors.blue,
-                              ),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text('test'),
-                                  SizedBox(
-                                    height: 25.h,
-                                  ),
-                                  Container(
-                                    width: 750.w,
-                                    child: Text(
-                                      testText,
-                                    ),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.symmetric(
-                              horizontal: 110.w, vertical: 40.h),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text('test'),
-                              Container(
-                                margin: EdgeInsets.symmetric(horizontal: 27.w),
-                                height: 208.h,
-                                width: 287.w,
-                                color: Colors.blue,
-                              ),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text('test'),
-                                  SizedBox(
-                                    height: 25.h,
-                                  ),
-                                  Container(
-                                    width: 750.w,
-                                    child: Text(
-                                      testText,
-                                    ),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.symmetric(
-                              horizontal: 110.w, vertical: 40.h),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text('test'),
-                              Container(
-                                margin: EdgeInsets.symmetric(horizontal: 27.w),
-                                height: 208.h,
-                                width: 287.w,
-                                color: Colors.blue,
-                              ),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text('test'),
-                                  SizedBox(
-                                    height: 25.h,
-                                  ),
-                                  Container(
-                                    width: 750.w,
-                                    child: Text(
-                                      testText,
-                                    ),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
                   )
                 ],

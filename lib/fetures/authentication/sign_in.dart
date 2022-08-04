@@ -14,6 +14,8 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
+  bool secretField = true;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -60,6 +62,8 @@ class _SignInState extends State<SignIn> {
                   fontSizeForTitle: 14.sp,
                   titleColor: grey,
                   title: 'Name',
+                  iconData: Icons.person,
+                  obscureText: false,
                 ),
               ),
               SizedBox(height: 25.h),
@@ -68,6 +72,14 @@ class _SignInState extends State<SignIn> {
                   height: 60.h,
                   width: 550.w,
                   onChange: (value) {},
+                  iconData: Icons.lock_outlined,
+                  obscureText: secretField,
+                  suffix: secretField ? Icons.visibility_off_outlined : Icons.visibility_outlined,
+                  suffixFunction: () {
+                    setState(() {
+                      secretField = !secretField;
+                    });
+                  },
                   fontSizeForTitle: 14.sp,
                   titleColor: grey,
                   title: 'Password',
@@ -85,17 +97,14 @@ class _SignInState extends State<SignIn> {
                 ),
                 child: TextButton(
                   onPressed: () {
-                    LocalData local = LocalData();
-                    local.initQuiz("C");
-
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) {
-                    //       return const Home();
-                    //     },
-                    //   ),
-                    // );
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return const Home();
+                        },
+                      ),
+                    );
                   },
                   child: Center(
                     child: Text(

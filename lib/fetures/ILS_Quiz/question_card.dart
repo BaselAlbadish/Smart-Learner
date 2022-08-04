@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:smart_learner/fetures/ILS_Quiz/ils_Store.dart';
+import 'package:smart_learner/core/store.dart';
 import '../../core/main_constants.dart';
 
 class QuestionCard extends StatefulWidget {
@@ -53,14 +53,14 @@ class _QuestionCardState extends State<QuestionCard> {
                   setState(
                     () {
                       if (value2) {
-                        IlsStore.calculate(widget.stackIndex, 2);
+                        Store.calculate(widget.stackIndex, 2);
                         value2 = false;
                       }
                       if (value1) {
-                        IlsStore.calculate(widget.stackIndex, 2);
+                        Store.calculate(widget.stackIndex, 2);
                         value1 = !value1;
                       } else {
-                        IlsStore.calculate(widget.stackIndex, 1);
+                        Store.calculate(widget.stackIndex, 1);
                         value1 = !value1;
                       }
                     },
@@ -89,14 +89,14 @@ class _QuestionCardState extends State<QuestionCard> {
                   setState(
                     () {
                       if (value1) {
-                        IlsStore.calculate(widget.stackIndex, 1);
+                        Store.calculate(widget.stackIndex, 1);
                         value1 = false;
                       }
                       if (value2) {
-                        IlsStore.calculate(widget.stackIndex, 1);
+                        Store.calculate(widget.stackIndex, 1);
                         value2 = !value2;
                       } else {
-                        IlsStore.calculate(widget.stackIndex, 2);
+                        Store.calculate(widget.stackIndex, 2);
                         value2 = !value2;
                       }
                     },

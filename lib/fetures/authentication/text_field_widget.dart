@@ -11,12 +11,20 @@ class TextFieldWidget extends StatelessWidget {
   double? height;
   double? width;
   String? initValue;
+  IconData? suffix;
+  VoidCallback? suffixFunction;
   TextInputType? type;
+  bool obscureText;
+  IconData? iconData;
 
   TextFieldWidget(
       {this.initValue,
+      this.iconData,
       required this.title,
       this.errorLabel,
+      this.suffix,
+      this.suffixFunction,
+      required this.obscureText,
       required this.fontSizeForTitle,
       required this.onChange,
       this.titleColor = primaryColor,
@@ -42,26 +50,37 @@ class TextFieldWidget extends StatelessWidget {
               height: height,
               width: width,
               decoration: BoxDecoration(
-                border: Border.all(color: Colors.black12),
+                border: Border.all(color: Colors.black26),
                 borderRadius: const BorderRadius.all(Radius.circular(5)),
               ),
             ),
             SizedBox(
               height: height,
               width: width,
-              child: Padding(
-                padding: EdgeInsets.only(left: 25.w),
-                child: TextFormField(
-                  initialValue: initValue,
-                  keyboardType: type,
-                  decoration: InputDecoration(
-                    fillColor: Colors.white,
-                    hintStyle: TextStyle(color: const Color(0xff9d9d9d).withOpacity(0.5)),
-                    errorText: errorLabel == '' ? null : errorLabel,
-                    border: InputBorder.none,
-                  ),
-                  onChanged: onChange,
+              child: TextFormField(
+                obscureText: obscureText,
+                initialValue: initValue,
+                keyboardType: type,
+                decoration: InputDecoration(
+                  fillColor: Colors.white,
+                  hintStyle: TextStyle(color: const Color(0xff9d9d9d).withOpacity(0.5)),
+                  errorText: errorLabel == '' ? null : errorLabel,
+                  suffixIcon: suffix != null
+                      ? IconButton(
+                          onPressed: suffixFunction,
+                          icon: Icon(suffix,color: primaryColor,),
+                        )
+                      : null,
+                  prefixIcon: iconData != null
+                      ? Icon(
+                          iconData,
+                          // size: 3.0,
+                          color: primaryColor,
+                        )
+                      : null,
+                  border: InputBorder.none,
                 ),
+                onChanged: onChange,
               ),
             ),
           ],

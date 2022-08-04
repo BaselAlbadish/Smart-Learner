@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_learner/core/main_constants.dart';
 
-import 'articles.dart';
-
 class ArticleCard extends StatefulWidget {
-  ArticleCard({required this.index, Key? key}) : super(key: key);
+  ArticleCard({required this.articleId,required this.articleName, Key? key}) : super(key: key);
 
-  int index;
+  int articleId;
+  String articleName;
 
   @override
   State<ArticleCard> createState() => _ArticleCardState();
@@ -26,11 +25,12 @@ class _ArticleCardState extends State<ArticleCard> {
               color: primaryColor,
               borderRadius: BorderRadius.all(Radius.circular(5)),
             ),
-            child: Image.asset(images[widget.index], fit: BoxFit.cover),
+            //TODO article image
+            child: Image.asset("", fit: BoxFit.cover),
           ),
           SizedBox(height: 10.h),
           Text(
-            names[widget.index],
+            widget.articleName,
             style: getTextStyle(
               fontWeight: FontWeight.normal,
               context: context,
@@ -43,13 +43,15 @@ class _ArticleCardState extends State<ArticleCard> {
             onTap: () {
               //TODO
             },
-            child: Text("Read Article",
-                style: TextStyle(
-                  decoration: TextDecoration.underline,
-                  fontWeight: FontWeight.normal,
-                  fontSize: 16.sp,
-                  color: const Color(0xFF007E7E),
-                ),),
+            child: Text(
+              "Read Article",
+              style: TextStyle(
+                decoration: TextDecoration.underline,
+                fontWeight: FontWeight.normal,
+                fontSize: 16.sp,
+                color: const Color(0xFF007E7E),
+              ),
+            ),
           ),
         ],
       ),

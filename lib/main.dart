@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_learner/core/welcome_screen/welcoming_screen.dart';
 
+import 'fetures/study_plans/study_plans_directory.dart';
+
 void main() async{
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(

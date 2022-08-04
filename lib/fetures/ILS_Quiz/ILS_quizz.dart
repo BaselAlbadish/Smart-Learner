@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_learner/fetures/Home/home.dart';
-import 'package:smart_learner/fetures/ILS_Quiz/ils_Store.dart';
+import 'package:smart_learner/core/store.dart';
 import 'package:smart_learner/fetures/ILS_Quiz/question_card.dart';
 import 'package:smart_learner/models/student.dart';
 import '../../core/appBar.dart';
@@ -62,7 +62,7 @@ class _ILSQuizState extends State<ILSQuiz> {
                           itemBuilder: (context, index) {
                             if (index == 11) {
                               return Container(
-                                margin: EdgeInsets.only(left: 260.w, right: 260.w, top: 50.h, bottom: 50.h),
+                                margin: EdgeInsets.only(left: 360.w, right: 360.w, top: 80.h, bottom: 80.h),
                                 child: Container(
                                   height: 60.h,
                                   width: 260.w,
@@ -88,7 +88,7 @@ class _ILSQuizState extends State<ILSQuiz> {
                                       "Next",
                                       style: getTextStyle(
                                         context: context,
-                                        fontSize: 16.sp,
+                                        fontSize: 20.sp,
                                         color: white,
                                       ),
                                     ),
@@ -121,7 +121,7 @@ class _ILSQuizState extends State<ILSQuiz> {
                           itemBuilder: (context, index) {
                             if (index == 11) {
                               return Container(
-                                margin: EdgeInsets.only(left: 260.w, right: 260.w, top: 50.h, bottom: 50.h),
+                                margin: EdgeInsets.only(left: 360.w, right: 360.w, top: 80.h, bottom: 80.h),
                                 child: Container(
                                   height: 60.h,
                                   width: 260.w,
@@ -147,7 +147,7 @@ class _ILSQuizState extends State<ILSQuiz> {
                                       "Next",
                                       style: getTextStyle(
                                         context: context,
-                                        fontSize: 16.sp,
+                                        fontSize: 20.sp,
                                         color: white,
                                       ),
                                     ),
@@ -180,7 +180,7 @@ class _ILSQuizState extends State<ILSQuiz> {
                           itemBuilder: (context, index) {
                             if (index == 11) {
                               return Container(
-                                margin: EdgeInsets.only(left: 260.w, right: 260.w, top: 50.h, bottom: 50.h),
+                                margin: EdgeInsets.only(left: 360.w, right: 360.w, top: 80.h, bottom: 80.h),
                                 child: Container(
                                   height: 60.h,
                                   width: 260.w,
@@ -206,7 +206,7 @@ class _ILSQuizState extends State<ILSQuiz> {
                                       "Next",
                                       style: getTextStyle(
                                         context: context,
-                                        fontSize: 16.sp,
+                                        fontSize: 20.sp,
                                         color: white,
                                       ),
                                     ),
@@ -239,7 +239,7 @@ class _ILSQuizState extends State<ILSQuiz> {
                           itemBuilder: (context, index) {
                             if (index == 11) {
                               return Container(
-                                margin: EdgeInsets.only(left: 260.w, right: 260.w, top: 50.h, bottom: 50.h),
+                                margin: EdgeInsets.only(left: 360.w, right: 360.w, top: 80.h, bottom: 80.h),
                                 child: Container(
                                   height: 60.h,
                                   width: 260.w,
@@ -258,35 +258,30 @@ class _ILSQuizState extends State<ILSQuiz> {
                                   child: TextButton(
                                     onPressed: () async{
                                       Student student = Student(
-                                          name: IlsStore.name,
-                                          input: IlsStore.inputResult,
-                                          perception: IlsStore.perceptionResult,
-                                          processing: IlsStore.processingResult,
-                                          understanding: IlsStore.understandingResult);
+                                          name: Store.name,
+                                          input: Store.inputResult,
+                                          perception: Store.perceptionResult,
+                                          processing: Store.processingResult,
+                                          understanding: Store.understandingResult);
 
-                                      IlsStore.student = student;
+                                      Store.student = student;
                                       RemoteData remote = RemoteData();
-                                      IlsStore.studentId = await remote.postStudent(IlsStore.student);
+                                      Store.studentId = await remote.postStudent(Store.student);
 
-                                      print("input : " + IlsStore.inputResult.toString());
-                                      print("perception : "+IlsStore.perceptionResult.toString());
-                                      print("processing : "+IlsStore.processingResult.toString());
-                                      print("understanding : "+IlsStore.understandingResult.toString());
+                                      print("input : " + Store.inputResult.toString());
+                                      print("perception : "+Store.perceptionResult.toString());
+                                      print("processing : "+Store.processingResult.toString());
+                                      print("understanding : "+Store.understandingResult.toString());
 
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) {
-                                            return const Home();
-                                          },
-                                        ),
-                                      );
+                                      setState(() {
+                                        stackIndex++;
+                                      });
                                     },
                                     child: Text(
                                       "Next",
                                       style: getTextStyle(
                                         context: context,
-                                        fontSize: 16.sp,
+                                        fontSize: 20.sp,
                                         color: white,
                                       ),
                                     ),
@@ -342,54 +337,99 @@ class _ILSQuizState extends State<ILSQuiz> {
                                 ],
                                 borderRadius: const BorderRadius.all(Radius.circular(15)),
                               ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Text(
-                                        "Input : " + IlsStore.inputResult.toString(),
-                                        style: getTextStyle(
-                                          fontWeight: FontWeight.normal,
-                                          context: context,
-                                          fontSize: 25.sp,
-                                          color: black,
+                                  Padding(
+                                    padding: EdgeInsets.only(top: 20.h),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            Text(
+                                              "Input : " + Store.inputResult.toString(),
+                                              style: getTextStyle(
+                                                fontWeight: FontWeight.normal,
+                                                context: context,
+                                                fontSize: 25.sp,
+                                                color: black,
+                                              ),
+                                            ),
+                                            Text(
+                                              "Perception : " + Store.perceptionResult.toString(),
+                                              style: getTextStyle(
+                                                fontWeight: FontWeight.normal,
+                                                context: context,
+                                                fontSize: 25.sp,
+                                                color: black,
+                                              ),
+                                            ),
+                                          ],
                                         ),
-                                      ),
-                                      Text(
-                                        "Perception : " + IlsStore.perceptionResult.toString(),
-                                        style: getTextStyle(
-                                          fontWeight: FontWeight.normal,
-                                          context: context,
-                                          fontSize: 25.sp,
-                                          color: black,
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            Text(
+                                              "Processing : " + Store.processingResult.toString(),
+                                              style: getTextStyle(
+                                                fontWeight: FontWeight.normal,
+                                                context: context,
+                                                fontSize: 25.sp,
+                                                color: black,
+                                              ),
+                                            ),
+                                            Text(
+                                              "Understanding : " + Store.understandingResult.toString(),
+                                              style: getTextStyle(
+                                                fontWeight: FontWeight.normal,
+                                                context: context,
+                                                fontSize: 25.sp,
+                                                color: black,
+                                              ),
+                                            ),
+                                          ],
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Text(
-                                        "Processing : " + IlsStore.processingResult.toString(),
-                                        style: getTextStyle(
-                                          fontWeight: FontWeight.normal,
-                                          context: context,
-                                          fontSize: 25.sp,
-                                          color: black,
+                                  Padding(
+                                    padding: EdgeInsets.only(bottom: 20.h),
+                                    child: Container(
+                                      height: 60.h,
+                                      width: 200.w,
+                                      decoration: BoxDecoration(
+                                        color: const Color(0xFF83D6D4),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.grey.withOpacity(0),
+                                            spreadRadius: 2,
+                                            blurRadius: 7,
+                                            offset: const Offset(0, 0), // changes position of shadow
+                                          ),
+                                        ],
+                                        borderRadius: const BorderRadius.all(Radius.circular(5)),
+                                      ),
+                                      child: TextButton(
+                                        onPressed: () {
+                                          Navigator.pushReplacement(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) => Home(),
+                                            ),
+                                          );
+                                        },
+                                        child: Text(
+                                          "Next",
+                                          style: getTextStyle(
+                                            context: context,
+                                            fontSize: 20.sp,
+                                            color: white,
+                                          ),
                                         ),
                                       ),
-                                      Text(
-                                        "Understanding : " + IlsStore.understandingResult.toString(),
-                                        style: getTextStyle(
-                                          fontWeight: FontWeight.normal,
-                                          context: context,
-                                          fontSize: 25.sp,
-                                          color: black,
-                                        ),
-                                      ),
-                                    ],
+                                    ),
                                   ),
                                 ],
                               ),

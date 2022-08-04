@@ -6,7 +6,7 @@ import 'package:smart_learner/fetures/authentication/build_profile.dart';
 import 'package:smart_learner/fetures/authentication/sign_in.dart';
 import 'package:smart_learner/fetures/authentication/text_field_widget.dart';
 import '../../core/main_constants.dart';
-import '../ILS_Quiz/ils_Store.dart';
+import '../../core/store.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -16,6 +16,7 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  bool secretField = true;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -59,11 +60,13 @@ class _SignUpState extends State<SignUp> {
                   height: 60.h,
                   width: 550.w,
                   onChange: (value) {
-                    IlsStore.name = value;
+                    Store.name = value;
                   },
                   fontSizeForTitle: 14.sp,
                   titleColor: grey,
+                  iconData: Icons.person,
                   title: 'Name',
+                  obscureText: false,
                 ),
               ),
               SizedBox(height: 25.h),
@@ -72,20 +75,32 @@ class _SignUpState extends State<SignUp> {
                   height: 60.h,
                   width: 550.w,
                   onChange: (value) {
-                    IlsStore.email = value;
+                    Store.email = value;
                   },
                   fontSizeForTitle: 14.sp,
                   titleColor: grey,
                   title: 'Email',
+                  iconData: Icons.email_outlined,
+                  obscureText: false,
                 ),
               ),
               SizedBox(height: 25.h),
               Center(
                 child: TextFieldWidget(
+                  iconData: Icons.lock_outlined,
+                  obscureText: secretField,
+                  suffix: secretField
+                      ? Icons.visibility_off_outlined
+                      : Icons.visibility_outlined,
+                  suffixFunction: (){
+                    setState(() {
+                      secretField = !secretField;
+                    });
+                  },
                   height: 60.h,
                   width: 550.w,
                   onChange: (value) {
-                    IlsStore.password = value;
+                    Store.password = value;
                   },
                   fontSizeForTitle: 14.sp,
                   titleColor: grey,
@@ -98,11 +113,13 @@ class _SignUpState extends State<SignUp> {
                   height: 60.h,
                   width: 550.w,
                   onChange: (value) {
-                    IlsStore.accountType = value;
+                    Store.accountType = value;
                   },
                   fontSizeForTitle: 14.sp,
                   titleColor: grey,
                   title: 'Account type',
+                  iconData: Icons.type_specimen_outlined,
+                  obscureText: false,
                 ),
               ),
               SizedBox(height: 25.h),
