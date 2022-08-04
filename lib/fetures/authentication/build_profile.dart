@@ -174,7 +174,6 @@ class _BuildProfileState extends State<BuildProfile> {
                             ? () {
                                 Store.goal = goal;
                                 Store.getCurriculum();
-
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(

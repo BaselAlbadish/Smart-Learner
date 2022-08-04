@@ -5,6 +5,7 @@ import 'package:smart_learner/core/bottomBar.dart';
 import 'package:smart_learner/core/constant_logic.dart';
 import 'package:smart_learner/fetures/study_plans/study_plan_card.dart';
 import '../../core/main_constants.dart';
+import '../../core/store.dart';
 
 String testText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem'
     'por incididunt ut labore et dolore magna aliqua. Ut en'
@@ -30,7 +31,7 @@ class StudyPlansDirectory extends StatelessWidget {
               ),
               Container(
                 width: getScreenWidth(context),
-                height: 250.h,
+                height: 200.h,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage("assets/images/s_blue.png"),
@@ -50,11 +51,11 @@ class StudyPlansDirectory extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 70.h,
+                height: 50.h,
                 color: Colors.white,
               ),
               SizedBox(
-                height: 90.h,
+                height: 20.h,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -70,8 +71,8 @@ class StudyPlansDirectory extends StatelessWidget {
                   ),
                   // SizedBox(height: 50.h,),
                   Container(
-                    width: 1400.w,
-                    //
+                    width: 1500.w,
+                    height: 1000.h,
                     margin: EdgeInsets.symmetric(
                       horizontal: 257.w,
                       vertical: 50.h,
@@ -85,14 +86,14 @@ class StudyPlansDirectory extends StatelessWidget {
                     ),
                     child: SingleChildScrollView(
                       child: SizedBox(
-                        height: 300.h,
+                        height: 1000.h,
                         child: ListView.builder(
-                          itemCount: 4,
+                          itemCount: Store.studyPlan.length,
                           itemBuilder: (BuildContext context, int index) {
                             return StudyPlanCard(
                               courseIndex: index,
                               courseDescription: testText,
-                              courseName: "Anthropology (An)",
+                              courseName: Store.studyPlan[index],
                             );
                           },
                         ),

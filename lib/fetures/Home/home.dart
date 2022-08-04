@@ -214,7 +214,29 @@ class _HomeState extends State<Home> {
                                               Store.studyPlan = temp.split("', '");
                                               print("IlsStore.studyPlan **************************** :");
                                               print(Store.studyPlan.toString());
-                                              return StudyPlansDirectory();
+                                              return SizedBox(
+                                                height: getScreenHeight(context) / 10,
+                                                child: Column(
+                                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                                  children: [
+                                                    const Text("has been Generated successfully"),
+                                                    Center(
+                                                      child: TextButton(
+                                                          onPressed: () {
+                                                            Navigator.push(
+                                                              context,
+                                                              MaterialPageRoute(
+                                                                builder: (context) {
+                                                                  return const StudyPlansDirectory();
+                                                                },
+                                                              ),
+                                                            );
+                                                          },
+                                                          child: Text("view it")),
+                                                    ),
+                                                  ],
+                                                ),
+                                              );
                                             } else {
                                               return SizedBox(
                                                 height: getScreenHeight(context) / 10,
@@ -312,10 +334,7 @@ class _HomeState extends State<Home> {
                                 ),
                               );
                             } else {
-                              return SizedBox(
-                                  width: 50.w,
-                                  height: 50.w,
-                                  child: const CircularProgressIndicator());
+                              return SizedBox(width: 50.w, height: 50.w, child: const CircularProgressIndicator());
                             }
                           }),
                     ),
