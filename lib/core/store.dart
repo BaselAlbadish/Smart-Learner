@@ -1,3 +1,5 @@
+import 'package:smart_learner/models/article.dart';
+import 'package:smart_learner/models/course.dart';
 import 'package:smart_learner/models/student.dart';
 
 class Store {
@@ -9,7 +11,7 @@ class Store {
   static List<String> subCourses = [];
   static List<String> previousKnowledge = [];
   static List<String> roadMap = [];
-  static List<String> studyPlan = [];
+  static List<Course> studyPlan = [];
   static String goal = "";
   static String bio = "";
 
@@ -21,8 +23,10 @@ class Store {
   static String password = "";
   static String accountType = "";
 
-  static List<String> articlesName = [];
-  static List<int> articleId = [];
+  static List<Article> articlesBasedOnGoal = [];
+  static List<Article> articlesBasedOnArticle = [];
+  static List<Article> articlesBasedOnFavorite = [];
+  static List<Article> articlesTrending = [];
 
   static getCurriculum() {
     if (previousKnowledge != []) {

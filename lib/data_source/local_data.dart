@@ -1,11 +1,20 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
+import 'dart:convert';
+import 'dart:io';
 
 class LocalData {
   List<String> questions = [];
   List<String> answers = [];
   List<String> rightAnswerIndex = [];
+
+
+  Future<List<Map>> readJsonFile(String filePath) async {
+    var input = await File(filePath).readAsString();
+    var map = jsonDecode(input);
+    return map['questions'];
+  }
 
   initQuiz(String quizName) async {
     String text = await rootBundle.loadString("assets/quiz/$quizName.csv");

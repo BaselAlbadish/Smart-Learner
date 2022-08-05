@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_learner/core/welcome_screen/welcoming_screen.dart';
+import 'package:smart_learner/data_source/remote_data.dart';
 
 import 'fetures/study_plans/study_plans_directory.dart';
+import 'models/article.dart';
 
 void main() async{
   SystemChrome.setSystemUIOverlayStyle(
@@ -13,6 +15,7 @@ void main() async{
       statusBarIconBrightness: Brightness.dark,
     ),
   );
+
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }

@@ -14,6 +14,7 @@ class StudyPlanCard extends StatefulWidget {
 }
 
 class _StudyPlanCardState extends State<StudyPlanCard> {
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,9 +24,9 @@ class _StudyPlanCardState extends State<StudyPlanCard> {
         children: [
           Text(widget.courseIndex.toString()),
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 27.w),
-            height: 208.h,
-            width: 287.w,
+            margin: EdgeInsets.symmetric(horizontal: 25.w),
+            height: 210.h,
+            width: 300.w,
             color: Colors.blue,
             child: Image(
               fit: BoxFit.cover,

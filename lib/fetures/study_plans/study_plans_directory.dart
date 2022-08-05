@@ -7,15 +7,6 @@ import 'package:smart_learner/fetures/study_plans/study_plan_card.dart';
 import '../../core/main_constants.dart';
 import '../../core/store.dart';
 
-String testText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem'
-    'por incididunt ut labore et dolore magna aliqua. Ut en'
-    'im ad minim veniam, quis nostrud exercitation ullamco laboris nisi'
-    ' ut aliquip ex ea commodo consequat. Duis aute irure dolor in rep'
-    'rehenderit in voluptate velit esse ci'
-    'llum dolore eu fugiat nulla pariatur. Excepteur sint occaecat'
-    ' cupidatat non proident, sunt in culpa qui officia deserunt mollit'
-    ' anim id est laborum.';
-
 class StudyPlansDirectory extends StatelessWidget {
   const StudyPlansDirectory({Key? key}) : super(key: key);
 
@@ -40,7 +31,7 @@ class StudyPlansDirectory extends StatelessWidget {
                 ),
                 child: Center(
                   child: Text(
-                    "Study plans directory",
+                    Store.goal.toString(),
                     style: getTextStyle(
                       fontWeight: FontWeight.normal,
                       context: context,
@@ -54,53 +45,37 @@ class StudyPlansDirectory extends StatelessWidget {
                 height: 50.h,
                 color: Colors.white,
               ),
-              SizedBox(
-                height: 20.h,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    "Aerospace",
-                    style: getTextStyle(
-                      fontWeight: FontWeight.normal,
-                      context: context,
-                      fontSize: 30.sp,
-                      color: black,
+              Center(
+                child: Container(
+                  width: 1500.w,
+                  height: 1000.h,
+                  margin: EdgeInsets.symmetric(
+                    horizontal: 257.w,
+                    vertical: 50.h,
+                  ),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color(0xFFD9D9D9),
+                      width: 2.w,
+                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(10)),
+                  ),
+                  child: SingleChildScrollView(
+                    child: SizedBox(
+                      height: 1000.h,
+                      child: ListView.builder(
+                        itemCount: Store.studyPlan.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return StudyPlanCard(
+                            courseIndex: index,
+                            courseDescription: Store.studyPlan[index].decription!,
+                            courseName: Store.studyPlan[index].title!,
+                          );
+                        },
+                      ),
                     ),
                   ),
-                  // SizedBox(height: 50.h,),
-                  Container(
-                    width: 1500.w,
-                    height: 1000.h,
-                    margin: EdgeInsets.symmetric(
-                      horizontal: 257.w,
-                      vertical: 50.h,
-                    ),
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: const Color(0xFFD9D9D9),
-                        width: 2.w,
-                      ),
-                      borderRadius: const BorderRadius.all(Radius.circular(10)),
-                    ),
-                    child: SingleChildScrollView(
-                      child: SizedBox(
-                        height: 1000.h,
-                        child: ListView.builder(
-                          itemCount: Store.studyPlan.length,
-                          itemBuilder: (BuildContext context, int index) {
-                            return StudyPlanCard(
-                              courseIndex: index,
-                              courseDescription: testText,
-                              courseName: Store.studyPlan[index],
-                            );
-                          },
-                        ),
-                      ),
-                    ),
-                  )
-                ],
+                ),
               ),
               const MyBottomBar(),
             ],

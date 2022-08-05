@@ -5,6 +5,8 @@ import 'package:smart_learner/core/bottomBar.dart';
 import 'package:smart_learner/core/constant_logic.dart';
 import 'package:smart_learner/data_source/remote_data.dart';
 import 'package:smart_learner/core/store.dart';
+import 'package:smart_learner/models/article.dart';
+import 'package:smart_learner/models/course.dart';
 import '../../core/main_constants.dart';
 import '../study_plans/study_plans_directory.dart';
 import 'article_card.dart';
@@ -124,7 +126,10 @@ class _HomeState extends State<Home> {
                                     child: ListView.builder(
                                       itemCount: Store.roadMap.length,
                                       itemBuilder: (BuildContext context, int index) {
-                                        return Padding(padding: EdgeInsets.all(10), child: Text(Store.roadMap[index]));
+                                        return Padding(
+                                          padding: EdgeInsets.all(10),
+                                          child: Text(Store.roadMap[index]),
+                                        );
                                       },
                                     ),
                                   ),
@@ -206,14 +211,9 @@ class _HomeState extends State<Home> {
                                       builder: (context) => AlertDialog(
                                         content: FutureBuilder(
                                           future: remoteData.generateStudyPlan(Store.studentId, Store.goal),
-                                          builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
+                                          builder: (context, snapshot) {
                                             if (snapshot.hasData) {
-                                              String temp = snapshot.data
-                                                  .toString()
-                                                  .substring(1, snapshot.data.toString().length - 2);
-                                              Store.studyPlan = temp.split("', '");
-                                              print("IlsStore.studyPlan **************************** :");
-                                              print(Store.studyPlan.toString());
+                                              Store.studyPlan = snapshot.data as List<Course>;
                                               return SizedBox(
                                                 height: getScreenHeight(context) / 10,
                                                 child: Column(
@@ -278,7 +278,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
               Container(
-                height: 480.h,
+                height: 600.h,
                 width: getScreenWidth(context),
                 decoration: BoxDecoration(
                   color: const Color(0xFFF7F9FD),
@@ -294,7 +294,7 @@ class _HomeState extends State<Home> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: 52.h),
+                      padding: EdgeInsets.symmetric(vertical: 25.h),
                       child: Center(
                         child: Text(
                           'Recommended Articles',
@@ -305,28 +305,26 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: getScreenWidth(context),
                       child: FutureBuilder(
                           future: remoteData.getRecommendedArticleBasedOnGoal(Store.goal),
-                          builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
+                          builder: (BuildContext context, snapshot) {
                             if (snapshot.hasData) {
-                              String temp = snapshot.data.toString();
-                              //TODO
+                              Store.articlesBasedOnGoal = snapshot.data as List<Article>;
                               return SingleChildScrollView(
                                 scrollDirection: Axis.horizontal,
                                 child: SizedBox(
-                                  height: 300.h,
+                                  height: 500.h,
                                   child: ListView.builder(
                                     scrollDirection: Axis.horizontal,
                                     shrinkWrap: true,
-                                    itemCount: Store.articlesName.length,
+                                    itemCount: Store.articlesBasedOnGoal.length,
                                     itemBuilder: (BuildContext context, int index) {
                                       return Padding(
-                                        padding: EdgeInsets.all(30),
+                                        padding: const EdgeInsets.all(30),
                                         child: ArticleCard(
-                                          articleId: Store.articleId[index],
-                                          articleName: Store.articlesName[index],
+                                          article: Store.articlesBasedOnGoal[index],
                                         ),
                                       );
                                     },
@@ -334,7 +332,14 @@ class _HomeState extends State<Home> {
                                 ),
                               );
                             } else {
-                              return SizedBox(width: 50.w, height: 50.w, child: const CircularProgressIndicator());
+                              return Padding(
+                                  padding: EdgeInsets.only(
+                                      left: (getScreenWidth(context) / 2) - 25,
+                                      right: (getScreenWidth(context) / 2) - 25),
+                                  child: SizedBox(
+                                    height: 50.h,
+                                    child: Center(child: const CircularProgressIndicator()),
+                                  ));
                             }
                           }),
                     ),

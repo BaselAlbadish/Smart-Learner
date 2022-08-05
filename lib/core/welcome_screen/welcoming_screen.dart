@@ -13,6 +13,11 @@ class WelcomingScreen extends StatefulWidget {
 
 class _WelcomingScreenState extends State<WelcomingScreen> {
   @override
+  dispose() {
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return WelcomeScreen(
       colors: const [Color(0xFF012236), Colors.lightBlue, Colors.lightBlue, Color(0xFF012236)],
@@ -22,11 +27,10 @@ class _WelcomingScreenState extends State<WelcomingScreen> {
         color: const Color(0xFF11476C),
       ),
       textType2: TextType.colorizeAnimationText,
-      speed: 80,
+      speed: 100,
       pageRouteTransition: PageRouteTransition.slideTransition,
       navigateRoute: Builder(builder: (context) {
         return const SignIn();
-
       }),
       duration: 6000,
       textStyle: getTextStyle(

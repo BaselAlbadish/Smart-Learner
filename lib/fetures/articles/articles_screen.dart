@@ -6,11 +6,19 @@ import 'package:smart_learner/core/constant_logic.dart';
 import 'package:smart_learner/core/main_constants.dart';
 import 'package:smart_learner/fetures/Home/article_card.dart';
 import 'package:smart_learner/fetures/articles/articles_directory.dart';
-
 import '../../core/store.dart';
+import '../../data_source/remote_data.dart';
+import '../../models/article.dart';
 
-class ArticlesScreen extends StatelessWidget {
+class ArticlesScreen extends StatefulWidget {
   const ArticlesScreen({Key? key}) : super(key: key);
+
+  @override
+  State<ArticlesScreen> createState() => _ArticlesScreenState();
+}
+
+class _ArticlesScreenState extends State<ArticlesScreen> {
+  RemoteData remoteData = RemoteData();
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +27,9 @@ class ArticlesScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              MyAppBar(selectedIndex: 1,),
+              MyAppBar(
+                selectedIndex: 1,
+              ),
               Container(
                 width: getScreenWidth(context),
                 height: 250.h,
@@ -90,94 +100,85 @@ class ArticlesScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(height: 70.h,color: Colors.white,),
               Container(
-                  height: 480.h,
-                  width: getScreenWidth(context),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFF7F9FD),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 1,
-                        blurRadius: 1,
-                        offset: const Offset(0, 3),
-                      ),
-                    ],
-                  ),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.symmetric(vertical: 52.h),
-                        child: Center(child: Text('Recent readings',style: TextStyle(fontSize: 32.sp,fontWeight: FontWeight.w300,),),),
-                      ),
-                      Container(
-                        child: SingleChildScrollView(
-                          child: SizedBox(
-                            height: 300.h,
-                            child: ListView.builder(
-                              itemCount: Store.articlesName.length,
-                              itemBuilder: (BuildContext context, int index) {
-                                return Padding(
-                                    padding: EdgeInsets.all(30),
-                                    child: ArticleCard(
-                                      articleId: Store.articleId[index],
-                                      articleName: Store.articlesName[index],
-                                    ));
-                              },
-                            ),
+                height: 50.h,
+                color: Colors.white,
+              ),
+              Container(
+                height: 600.h,
+                width: getScreenWidth(context),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFF7F9FD),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.2),
+                      spreadRadius: 1,
+                      blurRadius: 1,
+                      offset: const Offset(0, 3),
+                    ),
+                  ],
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 52.h),
+                      child: Center(
+                        child: Text(
+                          'Most Trending',
+                          style: TextStyle(
+                            fontSize: 32.sp,
+                            fontWeight: FontWeight.w300,
                           ),
                         ),
                       ),
-                    ],
-                  )
+                    ),
+                    SizedBox(
+                      width: getScreenWidth(context),
+                      child: FutureBuilder(
+                          future: remoteData.getTrendingArticles(),
+                          builder: (BuildContext context, snapshot) {
+                            if (snapshot.hasData) {
+                              Store.articlesTrending = snapshot.data as List<Article>;
+                              return SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: SizedBox(
+                                  height: 500.h,
+                                  child: ListView.builder(
+                                    scrollDirection: Axis.horizontal,
+                                    shrinkWrap: true,
+                                    itemCount: Store.articlesTrending.length,
+                                    itemBuilder: (BuildContext context, int index) {
+                                      return Padding(
+                                        padding: const EdgeInsets.all(30),
+                                        child: ArticleCard(
+                                          article: Store.articlesTrending[index],
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                ),
+                              );
+                            } else {
+                              return Padding(
+                                  padding: EdgeInsets.only(
+                                      left: (getScreenWidth(context) / 2) - 25,
+                                      right: (getScreenWidth(context) / 2) - 25),
+                                  child: SizedBox(
+                                    height: 50.h,
+                                    child: const Center(child: CircularProgressIndicator()),
+                                  ));
+                            }
+                          }),
+                    ),
+                  ],
+                ),
               ),
-              Container(height: 70.h,color: Colors.white,),
-
               Container(
-                  height: 480.h,
-                  width: getScreenWidth(context),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFF7F9FD),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 1,
-                        blurRadius: 7,
-                        offset: const Offset(0, 3),
-                      ),
-                    ],
-                  ),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.symmetric(vertical: 52.h),
-                        child: Center(child: Text('Recent readings',style: TextStyle(fontSize: 32.sp,fontWeight: FontWeight.w300,),),),
-                      ),
-                      Container(
-                        child: SingleChildScrollView(
-                          child: SizedBox(
-                            height: 300.h,
-                            child: ListView.builder(
-                              itemCount: Store.articlesName.length,
-                              itemBuilder: (BuildContext context, int index) {
-                                return Padding(
-                                    padding: EdgeInsets.all(30),
-                                    child: ArticleCard(
-                                      articleId: Store.articleId[index],
-                                      articleName: Store.articlesName[index],
-                                    ));
-                              },
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  )
+                height: 50.h,
+                color: Colors.white,
               ),
-              Container(height: 70.h,color: Colors.white,),
               Container(
-                  height: 480.h,
+                  height: 600.h,
                   width: getScreenWidth(context),
                   decoration: BoxDecoration(
                     color: const Color(0xFFF7F9FD),
@@ -194,30 +195,60 @@ class ArticlesScreen extends StatelessWidget {
                     children: [
                       Padding(
                         padding: EdgeInsets.symmetric(vertical: 52.h),
-                        child: Center(child: Text('Recent readings',style: TextStyle(fontSize: 32.sp,fontWeight: FontWeight.w300,),),),
-                      ),
-                      Container(
-                        child: SingleChildScrollView(
-                          child: SizedBox(
-                            height: 300.h,
-                            child: ListView.builder(
-                              itemCount: Store.articlesName.length,
-                              itemBuilder: (BuildContext context, int index) {
-                                return Padding(
-                                    padding: EdgeInsets.all(30),
-                                    child: ArticleCard(
-                                      articleId: Store.articleId[index],
-                                      articleName: Store.articlesName[index],
-                                    ));
-                              },
+                        child: Center(
+                          child: Text(
+                            'Recommended For You',
+                            style: TextStyle(
+                              fontSize: 32.sp,
+                              fontWeight: FontWeight.w300,
                             ),
                           ),
                         ),
                       ),
+                      SizedBox(
+                        width: getScreenWidth(context),
+                        child: FutureBuilder(
+                            future: remoteData.getFavoriteRecommendation(Store.studentId),
+                            builder: (BuildContext context, snapshot) {
+                              if (snapshot.hasData) {
+                                Store.articlesTrending = snapshot.data as List<Article>;
+                                return SingleChildScrollView(
+                                  scrollDirection: Axis.horizontal,
+                                  child: SizedBox(
+                                    height: 500.h,
+                                    child: ListView.builder(
+                                      scrollDirection: Axis.horizontal,
+                                      shrinkWrap: true,
+                                      itemCount: Store.articlesTrending.length,
+                                      itemBuilder: (BuildContext context, int index) {
+                                        return Padding(
+                                          padding: const EdgeInsets.all(30),
+                                          child: ArticleCard(
+                                            article: Store.articlesTrending[index],
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                  ),
+                                );
+                              } else {
+                                return Padding(
+                                    padding: EdgeInsets.only(
+                                        left: (getScreenWidth(context) / 2) - 25,
+                                        right: (getScreenWidth(context) / 2) - 25),
+                                    child: SizedBox(
+                                      height: 50.h,
+                                      child: const Center(child: CircularProgressIndicator()),
+                                    ));
+                              }
+                            }),
+                      ),
                     ],
-                  )
+                  )),
+              Container(
+                height: 50.h,
+                color: Colors.white,
               ),
-              Container(height: 70.h,color: Colors.white,),
               MyBottomBar(),
             ],
           ),

@@ -4,6 +4,9 @@ import 'package:smart_learner/data_source/local_data.dart';
 import 'package:smart_learner/fetures/authentication/sign_up.dart';
 import 'package:smart_learner/fetures/authentication/text_field_widget.dart';
 import '../../core/main_constants.dart';
+import '../../data_source/remote_data.dart';
+import '../../models/article.dart';
+import '../../models/course.dart';
 import '../Home/home.dart';
 
 class SignIn extends StatefulWidget {
@@ -57,7 +60,7 @@ class _SignInState extends State<SignIn> {
               Center(
                 child: TextFieldWidget(
                   height: 60.h,
-                  width: 550.w,
+                  width: 450.w,
                   onChange: (value) {},
                   fontSizeForTitle: 14.sp,
                   titleColor: grey,
@@ -70,7 +73,7 @@ class _SignInState extends State<SignIn> {
               Center(
                 child: TextFieldWidget(
                   height: 60.h,
-                  width: 550.w,
+                  width: 450.w,
                   onChange: (value) {},
                   iconData: Icons.lock_outlined,
                   obscureText: secretField,
@@ -88,7 +91,7 @@ class _SignInState extends State<SignIn> {
               SizedBox(height: 25.h),
               Container(
                 height: 60.h,
-                width: 550.w,
+                width: 450.w,
                 decoration: const BoxDecoration(
                   color: primaryColor,
                   borderRadius: BorderRadius.all(
@@ -96,8 +99,8 @@ class _SignInState extends State<SignIn> {
                   ),
                 ),
                 child: TextButton(
-                  onPressed: () {
-                    Navigator.pushReplacement(
+                  onPressed: () async {
+                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                         builder: (context) {
