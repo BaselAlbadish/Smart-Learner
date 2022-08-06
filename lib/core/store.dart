@@ -28,6 +28,18 @@ class Store {
   static List<Article> articlesBasedOnFavorite = [];
   static List<Article> articlesTrending = [];
 
+  static int quizResult = 0;
+  static List<int> userAnswers = [];
+
+  static bool makeSure(int index){
+    for (int i = 0; i < previousKnowledge.length; i++) {
+      if(subCourses.indexOf(previousKnowledge[i]) == index){
+        return true;
+      }
+    }
+    return false;
+  }
+
   static getCurriculum() {
     if (previousKnowledge != []) {
       List<String> temp = subCourses;

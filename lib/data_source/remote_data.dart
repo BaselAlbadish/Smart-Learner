@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:smart_learner/models/article.dart';
+import 'package:smart_learner/models/quiz.dart';
 import 'package:smart_learner/models/student.dart';
 import 'package:http/http.dart' as http;
 
@@ -107,7 +108,7 @@ class RemoteData {
     }
   }
 
-  Future<bool> addToFavorite(int userId,articleId) async {
+  Future<bool> addToFavorite(int userId, articleId) async {
     Uri url = Uri.parse("$ritaIP/add_to_favorite?id=$articleId&userid=$userId");
     http.Response res;
     try {
@@ -149,6 +150,59 @@ class RemoteData {
 
   Future<List<Article>> getTrendingArticles() async {
     Uri url = Uri.parse("$ritaIP/get_random_articles");
+    http.Response res;
+    try {
+      res = await http.post(url);
+      if (res.statusCode == 200) {
+        List<Article> articles = [];
+        final Map<String, dynamic> parsed = json.decode(res.body);
+
+        for (int i = 0; i < parsed.length; i++) {
+          articles.add(Article.fromJson(parsed[i.toString()]));
+        }
+        return articles;
+      } else {
+        print(res.statusCode.toString());
+        return [];
+      }
+    } catch (e) {
+      print(e);
+      return [];
+    }
+  }
+
+  Future<List<Quiz>> getQuiz(int quizId) async {
+    Uri url = Uri.parse("$ritaIP/get_quiz_by_id?id=$quizId");
+    http.Response res;
+    try {
+      res = await http.post(url);
+      if (res.statusCode == 200) {
+        List<Quiz> quizzes = [];
+        final Map<String, dynamic> parsed = json.decode(res.body);
+        print(parsed[0.toString()]["answers"]);
+        for (int i = 0; i < parsed.length; i++) {
+          List<String> answers = parsed[i.toString()]['answers'].toString().split(",");
+          int id = parsed[i.toString()]['id'];
+          String question = parsed[i.toString()]['question'];
+          int right = parsed[i.toString()]['right'];
+
+          Quiz quiz = Quiz(right: right, answers: answers, question: question, id: id);
+
+          quizzes.add(quiz);
+        }
+        return quizzes;
+      } else {
+        print(res.statusCode.toString());
+        return [];
+      }
+    } catch (e) {
+      print(e);
+      return [];
+    }
+  }
+
+  Future<List<Article>> searchArticle(String word) async{
+    Uri url = Uri.parse("$ritaIP/search_articles?text_to_search=$word");
     http.Response res;
     try {
       res = await http.post(url);

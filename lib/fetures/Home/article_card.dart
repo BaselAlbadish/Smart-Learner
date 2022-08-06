@@ -17,7 +17,7 @@ class ArticleCard extends StatefulWidget {
 }
 
 class _ArticleCardState extends State<ArticleCard> {
-  Color favorite = Colors.white;
+  Color favorite = Colors.black54;
   RemoteData remoteData = RemoteData();
 
   @override

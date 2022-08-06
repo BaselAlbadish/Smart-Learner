@@ -1,13 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_learner/core/appBar.dart';
-import 'package:smart_learner/core/bottomBar.dart';
-import 'package:smart_learner/core/constant_logic.dart';
 import 'package:smart_learner/core/main_constants.dart';
-import 'package:smart_learner/fetures/Home/article_card.dart';
+import 'package:smart_learner/data_source/remote_data.dart';
 
-class ArticlesDirectory extends StatelessWidget {
+import '../../core/constant_logic.dart';
+import '../../models/article.dart';
+import '../Home/article_card.dart';
+
+class ArticlesDirectory extends StatefulWidget {
   const ArticlesDirectory({Key? key}) : super(key: key);
+
+  @override
+  State<ArticlesDirectory> createState() => _ArticlesDirectoryState();
+}
+
+class _ArticlesDirectoryState extends State<ArticlesDirectory> {
+  RemoteData remoteData = RemoteData();
+  List<Article> searchResult = [];
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +33,12 @@ class ArticlesDirectory extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              MyAppBar(isBlack: false, selectedIndex: 1,),
+              MyAppBar(
+                isBlack: false,
+                selectedIndex: 1,
+              ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 75.h),
+                padding: EdgeInsets.symmetric(vertical: 0.h),
                 child: Text(
                   "Articles Directory",
                   style: getTextStyle(
@@ -55,214 +68,60 @@ class ArticlesDirectory extends StatelessWidget {
                       hintStyle: const TextStyle(color: Colors.black),
                       border: InputBorder.none,
                     ),
-                    onChanged: (value) {
-                      //TODO
+                    onFieldSubmitted: (value) async {
+                      List<Article> temp = await remoteData.searchArticle(value);
+                      setState(() {
+                        searchResult = temp;
+                      });
                     },
                   ),
                 ),
               ),
-              Flexible(
-                fit: FlexFit.loose,
-                child: Container(
-                  width: double.infinity,
-                  padding:
-                      EdgeInsets.symmetric(vertical: 72.h, horizontal: 150.w),
-                  child: SingleChildScrollView(
-                    child: Wrap(
-                      alignment: WrapAlignment.start,
-                      children: [
-                        Container(
-                          width: 300.w,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                '# A',
-                                style:
-                                    TextStyle(fontSize: 24.sp, color: Colors.white),
+              searchResult != []
+                  ? SizedBox(
+                      height: 600.h,
+                      width: getScreenWidth(context),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 25.h),
+                            child: Center(
+                              child: Text(
+                                'Your Search Result',
+                                style: TextStyle(
+                                  fontSize: 32.sp,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w300,
+                                ),
                               ),
-                              SizedBox(
-                                height: 60.h,
-                              ),
-                              Column(
-                                children: [
-                                  Text(
-                                    "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
-                                    style: TextStyle(
-                                        fontSize: 16.sp, color: Colors.white),
-                                  ),
-                                  SizedBox(
-                                    height: 50.h,
-                                  ),
-                                  Text(
-                                    "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
-                                    style: TextStyle(
-                                        fontSize: 16.sp, color: Colors.white),
-                                  ),
-                                  SizedBox(
-                                    height: 50.h,
-                                  ),
-                                  Text(
-                                    "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
-                                    style: TextStyle(
-                                        fontSize: 16.sp, color: Colors.white),
-                                  ),
-                                  SizedBox(
-                                    height: 50.h,
-                                  ),
-                                  Text(
-                                    "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
-                                    style: TextStyle(
-                                        fontSize: 16.sp, color: Colors.white),
-                                  ),
-                                  SizedBox(
-                                    height: 50.h,
-                                  ),
-                                  Text(
-                                    "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
-                                    style: TextStyle(
-                                        fontSize: 16.sp, color: Colors.white),
-                                  ),
-                                  SizedBox(
-                                    height: 50.h,
-                                  ),
-                                ],
-                              )
-                            ],
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 360.w,
-                        ),
-                        Container(
-                          width: 300.w,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                '# B',
-                                style:
-                                    TextStyle(fontSize: 24.sp, color: Colors.white),
+                          SizedBox(
+                            width: getScreenWidth(context),
+                            child: SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: SizedBox(
+                                height: 500.h,
+                                child: ListView.builder(
+                                  scrollDirection: Axis.horizontal,
+                                  shrinkWrap: true,
+                                  itemCount: searchResult.length,
+                                  itemBuilder: (BuildContext context, int index) {
+                                    return Padding(
+                                      padding: const EdgeInsets.all(30),
+                                      child: ArticleCard(
+                                        article: searchResult[index],
+                                      ),
+                                    );
+                                  },
+                                ),
                               ),
-                              SizedBox(
-                                height: 60.h,
-                              ),
-                              Column(
-                                children: [
-                                  Text(
-                                    "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
-                                    style: TextStyle(
-                                        fontSize: 16.sp, color: Colors.white),
-                                  ),
-                                  SizedBox(
-                                    height: 50.h,
-                                  ),
-                                  Text(
-                                    "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
-                                    style: TextStyle(
-                                        fontSize: 16.sp, color: Colors.white),
-                                  ),
-                                  SizedBox(
-                                    height: 50.h,
-                                  ),
-                                  Text(
-                                    "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
-                                    style: TextStyle(
-                                        fontSize: 16.sp, color: Colors.white),
-                                  ),
-                                  SizedBox(
-                                    height: 50.h,
-                                  ),
-                                  Text(
-                                    "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
-                                    style: TextStyle(
-                                        fontSize: 16.sp, color: Colors.white),
-                                  ),
-                                  SizedBox(
-                                    height: 50.h,
-                                  ),
-                                  Text(
-                                    "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
-                                    style: TextStyle(
-                                        fontSize: 16.sp, color: Colors.white),
-                                  ),
-                                  SizedBox(
-                                    height: 50.h,
-                                  ),
-                                ],
-                              )
-                            ],
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 360.w,
-                        ),
-                        Container(
-                          width: 300.w,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                '# C',
-                                style:
-                                    TextStyle(fontSize: 24.sp, color: Colors.white),
-                              ),
-                              SizedBox(
-                                height: 60.h,
-                              ),
-                              Column(
-                                children: [
-                                  Text(
-                                    "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
-                                    style: TextStyle(
-                                        fontSize: 16.sp, color: Colors.white),
-                                  ),
-                                  SizedBox(
-                                    height: 50.h,
-                                  ),
-                                  Text(
-                                    "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
-                                    style: TextStyle(
-                                        fontSize: 16.sp, color: Colors.white),
-                                  ),
-                                  SizedBox(
-                                    height: 50.h,
-                                  ),
-                                  Text(
-                                    "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
-                                    style: TextStyle(
-                                        fontSize: 16.sp, color: Colors.white),
-                                  ),
-                                  SizedBox(
-                                    height: 50.h,
-                                  ),
-                                  Text(
-                                    "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
-                                    style: TextStyle(
-                                        fontSize: 16.sp, color: Colors.white),
-                                  ),
-                                  SizedBox(
-                                    height: 50.h,
-                                  ),
-                                  Text(
-                                    "lrewmGFL SGLM ZFDLK AZDFBLKM AFZD SZSDYGDFYOIU,,OIUO,TMYN",
-                                    style: TextStyle(
-                                        fontSize: 16.sp, color: Colors.white),
-                                  ),
-                                  SizedBox(
-                                    height: 50.h,
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              // MyBottomBar(),
+                        ],
+                      ),
+                    )
+                  : Container(),
             ],
           ),
         ),
